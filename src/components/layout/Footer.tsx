@@ -17,7 +17,7 @@ export function Footer() {
           {/* Logo and tagline */}
           <div>
             <Link to="/" className="inline-block">
-              <img src={logoImage} alt="Auxilio" className="h-10 w-auto" />
+              <img src={logoImage} alt="Auxilio" className="h-20 w-auto" />
             </Link>
             <p className="mt-2 text-sm text-muted-foreground max-w-xs">
               Building the infrastructure for the AI-native era.

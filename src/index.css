@@ -11,9 +11,9 @@
 
 @layer base {
   :root {
-    /* Warm off-white background with deep charcoal text */
-    --background: 40 20% 98%;
-    --foreground: 220 20% 10%;
+    /* Cool porcelain background with deep ink text */
+    --background: 222 30% 97%;
+    --foreground: 224 35% 12%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 20% 10%;
@@ -21,26 +21,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 10%;
 
-    /* Slate blue accent - refined and professional */
-    --primary: 220 60% 50%;
+    /* Deep indigo accent - refined and modern */
+    --primary: 230 65% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 225 25% 92%;
+    --secondary-foreground: 224 35% 12%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 225 20% 90%;
+    --muted-foreground: 224 15% 42%;
 
-    /* Subtle violet accent for highlights */
-    --accent: 250 50% 60%;
+    /* Cool teal accent for highlights */
+    --accent: 190 70% 42%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 60% 50%;
+    --border: 225 20% 84%;
+    --input: 225 20% 84%;
+    --ring: 230 65% 45%;
 
     --radius: 0.75rem;
 
@@ -57,33 +57,33 @@
 
   .dark {
     /* Rich dark background */
-    --background: 220 25% 6%;
-    --foreground: 220 15% 92%;
+    --background: 225 30% 6%;
+    --foreground: 220 20% 92%;
 
-    --card: 220 25% 8%;
-    --card-foreground: 220 15% 92%;
+    --card: 225 30% 9%;
+    --card-foreground: 220 20% 92%;
 
-    --popover: 220 25% 8%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 225 30% 9%;
+    --popover-foreground: 220 20% 92%;
 
-    --primary: 220 60% 60%;
-    --primary-foreground: 220 25% 6%;
+    --primary: 230 70% 62%;
+    --primary-foreground: 225 30% 6%;
 
-    --secondary: 220 20% 14%;
-    --secondary-foreground: 220 15% 92%;
+    --secondary: 225 22% 15%;
+    --secondary-foreground: 220 20% 92%;
 
-    --muted: 220 20% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 225 22% 15%;
+    --muted-foreground: 224 12% 60%;
 
-    --accent: 250 50% 65%;
-    --accent-foreground: 220 25% 6%;
+    --accent: 190 70% 55%;
+    --accent-foreground: 225 30% 6%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 220 60% 60%;
+    --border: 225 22% 20%;
+    --input: 225 22% 20%;
+    --ring: 230 70% 62%;
 
     --sidebar-background: 220 25% 8%;
     --sidebar-foreground: 220 15% 92%;
@@ -149,5 +149,22 @@
 
   .section-padding-sm {
     @apply py-16 md:py-24;
+  }
+
+  .hero-surface {
+    background-color: hsl(228 36% 14%);
+    color: hsl(var(--background));
+    background-image:
+      radial-gradient(900px 500px at 80% 10%, hsl(190 80% 45% / 0.35), transparent 60%),
+      radial-gradient(700px 420px at 20% 20%, hsl(230 70% 50% / 0.45), transparent 55%),
+      radial-gradient(900px 600px at 50% 85%, hsl(200 80% 35% / 0.25), transparent 60%),
+      linear-gradient(180deg, hsl(228 35% 16%) 0%, hsl(228 40% 11%) 100%);
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, hsl(210 40% 70% / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(210 40% 70% / 0.08) 1px, transparent 1px);
+    background-size: 90px 90px;
   }
 }

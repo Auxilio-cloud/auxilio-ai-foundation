@@ -1,98 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Auxilio Design System - Modern, minimal, corporate technology aesthetic
-   Inspired by Stripe/Notion with clean typography and generous whitespace
+/* Auxilio Design System - Dark navy with cyan glow and lime green accents
+   Inspired by MEGA AI aesthetic with particle effects and bold typography
    All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Warm off-white background with deep charcoal text */
-    --background: 40 20% 98%;
-    --foreground: 220 20% 10%;
+    /* Deep navy blue background */
+    --background: 220 50% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card: 220 50% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover: 220 50% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Slate blue accent - refined and professional */
-    --primary: 220 60% 50%;
-    --primary-foreground: 0 0% 100%;
+    /* Lime green accent - vibrant and energetic */
+    --primary: 90 70% 50%;
+    --primary-foreground: 220 50% 8%;
 
-    --secondary: 220 15% 94%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 220 45% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 220 40% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    /* Subtle violet accent for highlights */
-    --accent: 250 50% 60%;
-    --accent-foreground: 0 0% 100%;
+    /* Cyan/teal accent for glow effects */
+    --accent: 185 80% 55%;
+    --accent-foreground: 220 50% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 88%;
-    --input: 220 15% 88%;
-    --ring: 220 60% 50%;
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 90 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    /* Sidebar (keeping defaults) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom glow colors */
+    --glow-cyan: 185 80% 55%;
+    --glow-green: 90 70% 50%;
+
+    /* Sidebar */
+    --sidebar-background: 220 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 90 70% 50%;
+    --sidebar-primary-foreground: 220 50% 8%;
+    --sidebar-accent: 220 45% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 40% 20%;
+    --sidebar-ring: 90 70% 50%;
   }
 
   .dark {
-    /* Rich dark background */
-    --background: 220 25% 6%;
-    --foreground: 220 15% 92%;
+    /* Keep same as root since we're dark by default */
+    --background: 220 50% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 220 25% 8%;
-    --card-foreground: 220 15% 92%;
+    --card: 220 50% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 220 25% 8%;
-    --popover-foreground: 220 15% 92%;
+    --popover: 220 50% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 220 60% 60%;
-    --primary-foreground: 220 25% 6%;
+    --primary: 90 70% 50%;
+    --primary-foreground: 220 50% 8%;
 
-    --secondary: 220 20% 14%;
-    --secondary-foreground: 220 15% 92%;
+    --secondary: 220 45% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 220 20% 14%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 220 40% 18%;
+    --muted-foreground: 210 20% 65%;
 
-    --accent: 250 50% 65%;
-    --accent-foreground: 220 25% 6%;
+    --accent: 185 80% 55%;
+    --accent-foreground: 220 50% 8%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 18%;
-    --ring: 220 60% 60%;
+    --border: 220 40% 20%;
+    --input: 220 40% 20%;
+    --ring: 90 70% 50%;
 
-    --sidebar-background: 220 25% 8%;
-    --sidebar-foreground: 220 15% 92%;
-    --sidebar-primary: 220 60% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 20% 14%;
-    --sidebar-accent-foreground: 220 15% 92%;
-    --sidebar-border: 220 20% 18%;
-    --sidebar-ring: 220 60% 60%;
+    --sidebar-background: 220 50% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 90 70% 50%;
+    --sidebar-primary-foreground: 220 50% 8%;
+    --sidebar-accent: 220 45% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 40% 20%;
+    --sidebar-ring: 90 70% 50%;
   }
 }
 
@@ -137,7 +141,7 @@
     transform: translateY(-2px);
   }
 
-  /* Gradient text utility */
+  /* Gradient text utility - lime green */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
@@ -149,5 +153,18 @@
 
   .section-padding-sm {
     @apply py-16 md:py-24;
+  }
+
+  /* Glow effects */
+  .glow-cyan {
+    box-shadow: 0 0 60px 20px hsl(185 80% 55% / 0.3);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 40px 10px hsl(90 70% 50% / 0.3);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 20px hsl(90 70% 50% / 0.5);
   }
 }

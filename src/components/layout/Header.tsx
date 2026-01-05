@@ -54,7 +54,7 @@ export function Header() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-medium transition-colors",
+                  "text-xs font-medium uppercase tracking-widest transition-colors",
                   location.pathname === item.href
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground"
@@ -63,7 +63,7 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button asChild size="sm" className="ml-4">
+            <Button asChild size="sm" className="ml-4 uppercase tracking-wide text-xs font-semibold border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground" variant="outline">
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>

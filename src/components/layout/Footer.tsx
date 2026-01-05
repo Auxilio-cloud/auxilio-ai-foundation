@@ -11,8 +11,17 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-6 lg:px-8 py-12">
+    <footer className="border-t border-border bg-background relative overflow-hidden">
+      {/* Subtle glow effect */}
+      <div 
+        className="absolute bottom-0 right-0 w-[400px] h-[300px] opacity-10"
+        style={{
+          background: "radial-gradient(ellipse at center, hsl(185 80% 55% / 0.5) 0%, transparent 70%)",
+          filter: "blur(60px)",
+        }}
+      />
+      
+      <div className="container relative mx-auto px-6 lg:px-8 py-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* Logo and tagline */}
           <div>
@@ -30,7 +39,7 @@ export function Footer() {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-xs uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
               >
                 {item.name}
               </Link>
@@ -39,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-xs uppercase tracking-widest text-muted-foreground">
             © {new Date().getFullYear()} Auxilio. All rights reserved.
           </p>
         </div>

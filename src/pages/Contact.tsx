@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Calendar, Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -143,34 +143,15 @@ const Contact = () => {
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Book a call
                   </h2>
-                  <div className="p-8 rounded-2xl bg-secondary/50 border border-border">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Calendar className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">
-                          Schedule a meeting
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          30 minutes • Video call
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-muted-foreground mb-6">
-                      Book a time to discuss your project, explore partnership opportunities, or learn more about our platforms.
-                    </p>
-                    {/* Calendly placeholder - would be replaced with actual embed */}
-                    <Button variant="outline" className="w-full" asChild>
-                      <a
-                        href="https://calendly.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Open Booking Calendar
-                        <Calendar className="ml-2 h-4 w-4" />
-                      </a>
-                    </Button>
+                  <div className="rounded-2xl overflow-hidden border border-border bg-background">
+                    <iframe
+                      src="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1"
+                      width="100%"
+                      height="650"
+                      frameBorder="0"
+                      title="Schedule a call with Auxilio"
+                      className="bg-background"
+                    />
                   </div>
                 </div>
 

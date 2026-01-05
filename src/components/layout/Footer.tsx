@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoImage from "@/assets/logo_dark.png";
 
 const navigation = {
   main: [
@@ -15,11 +16,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* Logo and tagline */}
           <div>
-            <Link
-              to="/"
-              className="text-xl font-semibold tracking-tight text-foreground"
-            >
-              Auxilio
+            <Link to="/" className="inline-block">
+              <img src={logoImage} alt="Auxilio" className="h-8 w-auto" />
             </Link>
             <p className="mt-2 text-sm text-muted-foreground max-w-xs">
               Building the infrastructure for the AI-native era.

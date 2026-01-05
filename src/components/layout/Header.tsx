@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logoImage from "@/assets/logo_dark.png";
 
 const navigation = [
   { name: "Platforms", href: "/platforms" },
@@ -41,9 +42,9 @@ export function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl font-semibold tracking-tight text-foreground hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
           >
-            Auxilio
+            <img src={logoImage} alt="Auxilio" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

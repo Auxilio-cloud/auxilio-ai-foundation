@@ -44,7 +44,7 @@ export function Header() {
             to="/"
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={logoImage} alt="Auxilio" className="h-10 w-auto" />
+            <img src={logoImage} alt="Auxilio" className="h-20 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

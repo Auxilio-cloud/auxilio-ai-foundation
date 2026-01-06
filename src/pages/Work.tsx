@@ -1,0 +1,146 @@
+import { Layout } from "@/components/layout/Layout";
+import { ArrowUpRight } from "lucide-react";
+
+const projects = [
+  {
+    name: "Promptly",
+    domain: "promptly.digital",
+    url: "https://promptly.digital",
+    industry: "AI Tools",
+    description: "AI-powered prompt engineering and workflow automation platform for teams and enterprises.",
+    features: ["Prompt Library", "Team Collaboration", "API Integration"],
+    gradient: "from-primary to-accent",
+  },
+  {
+    name: "Auxilio Health",
+    domain: "health.auxilio.cloud",
+    url: "https://health.auxilio.cloud",
+    industry: "Healthcare",
+    description: "Intelligent healthcare management system with AI-driven diagnostics and patient care optimization.",
+    features: ["Patient Analytics", "AI Diagnostics", "Care Coordination"],
+    gradient: "from-accent to-primary",
+  },
+  {
+    name: "Auxilio Finance",
+    domain: "finance.auxilio.cloud",
+    url: "https://finance.auxilio.cloud",
+    industry: "Finance",
+    description: "Next-generation financial intelligence platform with automated reporting and predictive analytics.",
+    features: ["Financial Analytics", "Automated Reports", "Risk Assessment"],
+    gradient: "from-primary via-accent to-primary",
+  },
+  {
+    name: "Auxilio Legal",
+    domain: "legal.auxilio.cloud",
+    url: "https://legal.auxilio.cloud",
+    industry: "Legal",
+    description: "AI-powered legal document analysis and contract management for modern law practices.",
+    features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
+    gradient: "from-accent via-primary to-accent",
+  },
+];
+
+const Work = () => {
+  return (
+    <Layout>
+      {/* Hero Section */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-background">
+        {/* Background glow effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow" />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: "2s" }} />
+        </div>
+
+        <div className="container relative z-10 px-6 lg:px-8 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-6 animate-fade-in">
+            Portfolio
+          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-slide-up">
+            What We've <span className="gradient-text">Built</span>
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
+            Real-world AI solutions powering businesses across industries. 
+            Each project represents our commitment to transforming operations through intelligent automation.
+          </p>
+        </div>
+      </section>
+
+      {/* Projects Grid */}
+      <section className="py-24 md:py-32 bg-background">
+        <div className="container px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <a
+                key={project.name}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative bg-card border border-border rounded-2xl p-8 transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Gradient accent line */}
+                <div className={`absolute top-0 left-8 right-8 h-px bg-gradient-to-r ${project.gradient} opacity-50 group-hover:opacity-100 transition-opacity`} />
+                
+                {/* Industry tag */}
+                <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
+                  {project.industry}
+                </span>
+
+                {/* Project name and external link */}
+                <div className="flex items-start justify-between mb-4">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {project.name}
+                  </h2>
+                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                </div>
+
+                {/* Domain */}
+                <p className="text-sm text-muted-foreground mb-4 font-mono">
+                  {project.domain}
+                </p>
+
+                {/* Description */}
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Features */}
+                <div className="flex flex-wrap gap-2">
+                  {project.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 md:py-32 bg-card border-t border-border">
+        <div className="container px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Ready to build something <span className="gradient-text">extraordinary</span>?
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
+            Let's discuss how AI can transform your business operations.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+          >
+            Start a Conversation
+            <ArrowUpRight className="w-5 h-5" />
+          </a>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Work;

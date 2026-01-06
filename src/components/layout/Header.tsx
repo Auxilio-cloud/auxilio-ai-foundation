@@ -33,8 +33,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-lg border-b border-neutral-200 shadow-sm"
+          : "bg-white/90 backdrop-blur-sm"
       )}
     >
       <nav className="container mx-auto px-6 lg:px-8">
@@ -54,16 +54,16 @@ export function Header() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-xs font-medium uppercase tracking-widest transition-colors",
+                  "text-xs font-semibold uppercase tracking-widest transition-colors",
                   location.pathname === item.href
-                    ? "text-foreground"
-                    : "text-muted-foreground hover:text-foreground"
+                    ? "text-neutral-900"
+                    : "text-neutral-600 hover:text-neutral-900"
                 )}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild size="sm" className="ml-4 uppercase tracking-wide text-xs font-semibold border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground" variant="outline">
+            <Button asChild size="sm" className="ml-4 uppercase tracking-wide text-xs font-semibold border-neutral-900 bg-neutral-900 text-white hover:bg-neutral-700 hover:border-neutral-700">
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
@@ -71,7 +71,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-neutral-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -84,23 +84,23 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-background border-b border-border animate-fade-in">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in">
             <div className="px-6 py-6 space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "block text-base font-medium transition-colors",
+                    "block text-base font-semibold transition-colors",
                     location.pathname === item.href
-                      ? "text-foreground"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-neutral-900"
+                      : "text-neutral-600 hover:text-neutral-900"
                   )}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="w-full mt-4">
+              <Button asChild className="w-full mt-4 bg-neutral-900 text-white hover:bg-neutral-700">
                 <Link to="/contact">Get in Touch</Link>
               </Button>
             </div>

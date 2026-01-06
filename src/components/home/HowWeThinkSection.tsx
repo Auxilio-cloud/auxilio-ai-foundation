@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import principalImage from "@/assets/principal.jpg";
 
 export function HowWeThinkSection() {
   return (
@@ -29,16 +30,12 @@ export function HowWeThinkSection() {
 
             {/* Right visual */}
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-secondary to-muted border border-border overflow-hidden">
-                {/* Abstract geometric pattern */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative w-3/4 h-3/4">
-                    <div className="absolute inset-0 border-2 border-primary/20 rounded-2xl transform rotate-12" />
-                    <div className="absolute inset-4 border-2 border-primary/30 rounded-xl transform -rotate-6" />
-                    <div className="absolute inset-8 border-2 border-primary/40 rounded-lg transform rotate-3" />
-                    <div className="absolute inset-12 bg-primary/10 rounded-md" />
-                  </div>
-                </div>
+              <div className="aspect-square rounded-3xl overflow-hidden">
+                <img 
+                  src={principalImage} 
+                  alt="Team collaboration - First principles thinking" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

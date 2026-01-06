@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import meridianImage from "@/assets/meridian.jpg";
 
 const platforms = [
   {
@@ -38,18 +39,11 @@ const platforms = [
       "Adaptive workflow design",
     ],
     visual: (
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div className="grid grid-cols-3 gap-3">
-          {[...Array(9)].map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/30"
-              style={{ animationDelay: `${i * 0.1}s` }}
-            />
-          ))}
-        </div>
-        <div className="absolute inset-0 border-2 border-dashed border-accent/20 rounded-2xl" />
-      </div>
+      <img 
+        src={meridianImage} 
+        alt="Meridian - Operational Fabric visualization" 
+        className="w-full h-full object-cover rounded-3xl"
+      />
     ),
   },
   {

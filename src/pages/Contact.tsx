@@ -143,7 +143,7 @@ const Contact = () => {
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Book a call
                   </h2>
-                  <div className="rounded-2xl overflow-hidden border border-border bg-card">
+                  <div className="rounded-2xl overflow-hidden bg-card">
                     <iframe
                       src="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
                       width="100%"

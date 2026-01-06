@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import meridianImage from "@/assets/meridian.jpg";
+import synthesisImage from "@/assets/synthesis.jpg";
 
 const platforms = [
   {
@@ -17,14 +18,11 @@ const platforms = [
       "Enterprise-grade governance",
     ],
     visual: (
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div className="w-24 h-24 rounded-full border-2 border-primary/30 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full border-2 border-primary/50 flex items-center justify-center">
-            <div className="w-8 h-8 rounded-full bg-primary/20" />
-          </div>
-        </div>
-        <div className="absolute w-40 h-40 rounded-full border border-primary/10 animate-pulse" />
-      </div>
+      <img 
+        src={synthesisImage} 
+        alt="Synthesis - Intelligence Coordination visualization" 
+        className="w-full h-full object-cover rounded-3xl"
+      />
     ),
   },
   {

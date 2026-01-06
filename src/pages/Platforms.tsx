@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import meridianImage from "@/assets/meridian.jpg";
 import synthesisImage from "@/assets/synthesis.jpg";
+import atlasImage from "@/assets/atlas.jpg";
 
 const platforms = [
   {
@@ -56,17 +57,11 @@ const platforms = [
       "Collaborative knowledge building",
     ],
     visual: (
-      <div className="relative w-full h-full flex items-center justify-center">
-        <div className="relative">
-          <div className="w-20 h-1 bg-muted-foreground/20 rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-          <div className="w-20 h-1 bg-muted-foreground/20 -rotate-45 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-          <div className="w-4 h-4 rounded-full bg-primary/30 absolute -top-2 -left-2" />
-          <div className="w-4 h-4 rounded-full bg-primary/40 absolute -top-2 -right-2" />
-          <div className="w-4 h-4 rounded-full bg-primary/50 absolute -bottom-2 -left-2" />
-          <div className="w-4 h-4 rounded-full bg-primary/60 absolute -bottom-2 -right-2" />
-          <div className="w-6 h-6 rounded-full bg-primary/80 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-        </div>
-      </div>
+      <img 
+        src={atlasImage} 
+        alt="Atlas - Knowledge Architecture visualization" 
+        className="w-full h-full object-cover rounded-3xl"
+      />
     ),
   },
 ];

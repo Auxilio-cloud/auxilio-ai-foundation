@@ -4,6 +4,7 @@ import logoImage from "@/assets/logo_dark.png";
 const navigation = {
   main: [
     { name: "Platforms", href: "/platforms" },
+    { name: "Work", href: "/work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],

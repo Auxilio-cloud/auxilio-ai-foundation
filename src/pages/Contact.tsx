@@ -1,11 +1,24 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
+
+const locations = [
+  {
+    country: "United States",
+    address: "7911 Handy Court, Fort Collins, CO 80525, USA",
+    mapsUrl: "https://maps.google.com/?q=7911+Handy+Court,+Fort+Collins,+CO+80525,+USA",
+  },
+  {
+    country: "United Kingdom",
+    address: "London, United Kingdom",
+    mapsUrl: "https://maps.google.com/?q=London,+United+Kingdom",
+  },
+];
 
 const Contact = () => {
   const { toast } = useToast();
@@ -138,7 +151,7 @@ const Contact = () => {
               </div>
 
               {/* Booking & Info */}
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div>
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Book a call
@@ -155,26 +168,86 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="p-8 rounded-2xl bg-card border border-border">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Email us</h3>
-                      <p className="text-sm text-muted-foreground">
-                        We typically respond within 24 hours
-                      </p>
+                {/* Contact Info Cards */}
+                <div className="grid gap-4">
+                  {/* Email */}
+                  <div className="p-6 rounded-2xl bg-card border border-border">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Mail className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground">Email us</h3>
+                        <a
+                          href="mailto:info@auxilio.cloud"
+                          className="text-primary hover:underline underline-offset-4"
+                        >
+                          info@auxilio.cloud
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <a
-                    href="mailto:hello@auxilio.tech"
-                    className="text-primary hover:underline underline-offset-4"
-                  >
-                    hello@auxilio.tech
-                  </a>
+
+                  {/* Phone */}
+                  <div className="p-6 rounded-2xl bg-card border border-border">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-foreground">Call us</h3>
+                        <p className="text-muted-foreground text-sm">
+                          Phone number coming soon
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Locations */}
+      <section className="section-padding bg-secondary/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
+                Our Locations
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                Find us worldwide
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {locations.map((location) => (
+                <a
+                  key={location.country}
+                  href={location.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-primary" />
+                    </div>
+                    <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    {location.country}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {location.address}
+                  </p>
+                  <p className="mt-4 text-sm text-primary font-medium group-hover:underline">
+                    View on Google Maps
+                  </p>
+                </a>
+              ))}
             </div>
           </div>
         </div>

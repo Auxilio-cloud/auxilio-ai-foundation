@@ -81,19 +81,6 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Feature card - floating style */}
-          <div 
-            className="mt-16 max-w-md p-6 bg-secondary/50 backdrop-blur-sm border border-border/50 rounded-lg animate-slide-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-muted-foreground uppercase tracking-widest text-sm">Discover our</span>
-              <span className="text-primary uppercase tracking-widest text-sm font-semibold">AI Platforms</span>
-            </div>
-            <p className="text-muted-foreground text-sm">
-              Experience how our intelligent orchestration systems streamline operations and drive growth.
-            </p>
-          </div>
         </div>
 
         {/* Scroll indicator */}

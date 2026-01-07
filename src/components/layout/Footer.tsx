@@ -4,7 +4,7 @@ import logoImage from "@/assets/logo_dark.png";
 const navigation = {
   main: [
     { name: "Platforms", href: "/platforms" },
-    { name: "Work", href: "/work" },
+    { name: "Portfolio", href: "/work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],
@@ -40,9 +40,21 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-neutral-200">
-          <p className="text-xs uppercase tracking-widest text-neutral-500">
-            © {new Date().getFullYear()} Auxilio. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="space-y-2">
+              <p className="text-sm text-neutral-600">
+                <a href="mailto:john@auxilio.cloud" className="hover:text-neutral-900 transition-colors">
+                  john@auxilio.cloud
+                </a>
+              </p>
+              <p className="text-sm text-neutral-600">
+                7911 Handy Court, Fort Collins, CO 80525, USA
+              </p>
+            </div>
+            <p className="text-xs uppercase tracking-widest text-neutral-500">
+              © {new Date().getFullYear()} Auxilio. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

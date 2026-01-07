@@ -8,58 +8,58 @@ import atlasImage from "@/assets/atlas.jpg";
 
 const platforms = [
   {
-    name: "Synthesis",
-    tagline: "Intelligence Coordination",
+    name: "Workflow Optimization",
+    tagline: "Automation & Efficiency",
     description:
-      "A platform for orchestrating AI capabilities across the enterprise. Synthesis connects models, data sources, and workflows into a unified intelligence layer that adapts and evolves with your organization.",
+      "Platform-based automation of business and personal workflows, automating repetitive manual tasks and providing new insights for operational enhancement.",
     capabilities: [
-      "Multi-model orchestration",
-      "Contextual intelligence routing",
-      "Continuous learning pipelines",
-      "Enterprise-grade governance",
+      "Process automation",
+      "Task orchestration",
+      "Operational insights",
+      "Efficiency analytics",
     ],
     visual: (
       <img 
         src={synthesisImage} 
-        alt="Synthesis - Intelligence Coordination visualization" 
+        alt="Workflow Optimization visualization" 
         className="w-full h-full object-cover rounded-3xl"
       />
     ),
   },
   {
-    name: "Meridian",
-    tagline: "Operational Fabric",
+    name: "Knowledge Integration",
+    tagline: "Unified Intelligence",
     description:
-      "The connective layer between systems and people. Meridian brings coherence to complex operational landscapes, enabling seamless coordination across teams, tools, and workflows.",
+      "Orchestration of personal and enterprise data, third-party knowledge, and human insight to provide a unified view of gathered knowledge.",
     capabilities: [
-      "Cross-system integration",
-      "Intelligent process automation",
-      "Real-time operational visibility",
-      "Adaptive workflow design",
+      "Data orchestration",
+      "Knowledge synthesis",
+      "Insight discovery",
+      "Unified access",
     ],
     visual: (
       <img 
         src={meridianImage} 
-        alt="Meridian - Operational Fabric visualization" 
+        alt="Knowledge Integration visualization" 
         className="w-full h-full object-cover rounded-3xl"
       />
     ),
   },
   {
-    name: "Atlas",
-    tagline: "Knowledge Architecture",
+    name: "Intelligent Architecture",
+    tagline: "AI-Centered Design",
     description:
-      "Structure for the unstructured. Atlas transforms organizational knowledge into navigable, actionable intelligence—making expertise accessible and insights discoverable.",
+      "Combines AI-enhanced workflows and agentic consolidation of knowledge and data into an AI-centered architecture that makes long and complex tasks easier, allowing you to focus on what you do best.",
     capabilities: [
-      "Semantic knowledge graphs",
-      "Intelligent content synthesis",
-      "Contextual discovery",
-      "Collaborative knowledge building",
+      "AI-enhanced workflows",
+      "Agentic processing",
+      "Complex task simplification",
+      "Adaptive intelligence",
     ],
     visual: (
       <img 
         src={atlasImage} 
-        alt="Atlas - Knowledge Architecture visualization" 
+        alt="Intelligent Architecture visualization" 
         className="w-full h-full object-cover rounded-3xl"
       />
     ),
@@ -74,13 +74,13 @@ const Platforms = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
-              Platforms
+              Our Platform
             </p>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground leading-tight">
               Infrastructure for intelligence
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Our platforms are designed as foundations—flexible, extensible, and built for the demands of an AI-native world.
+              Our platform is designed with security and privacy at its core—flexible, extensible, and built for the demands of an AI-native world.
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ const Platforms = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-              Interested in our platforms?
+              Interested in our platform?
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               We work with organizations ready to build on modern foundations.

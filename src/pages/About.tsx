@@ -11,9 +11,9 @@ const team = [
     image: null, // Placeholder for headshot
   },
   {
-    name: "Sarah Johnson",
-    role: "Co-Founder & CTO",
-    bio: "AI and machine learning expert with a passion for building intelligent systems. Former research scientist with multiple patents in distributed computing.",
+    name: "Naveed Gilani",
+    role: "Co-Founder & Head of Product",
+    bio: "Product leader with a strong background in enterprise systems, platform design, and services. Specializes in translating complex technical capabilities into clear, usable, and scalable products.",
     image: null, // Placeholder for headshot
   },
   {

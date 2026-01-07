@@ -16,7 +16,7 @@ const projects = [
     domain: "health.auxilio.cloud",
     url: "https://health.auxilio.cloud",
     industry: "Healthcare",
-    description: "Intelligent healthcare management system with AI-driven diagnostics and patient care optimization.",
+    description: "Intelligent personal healthcare management, with AI-driven aids to understanding aspects of personal health.",
     features: ["Patient Analytics", "AI Diagnostics", "Care Coordination"],
     gradient: "from-accent to-primary",
   },
@@ -25,7 +25,7 @@ const projects = [
     domain: "finance.auxilio.cloud",
     url: "https://finance.auxilio.cloud",
     industry: "Finance",
-    description: "Next-generation financial intelligence platform with automated reporting and predictive analytics.",
+    description: "Financial intelligence and management platform for tracking and analyzing personal financial positions, with enhanced AI-driven advice.",
     features: ["Financial Analytics", "Automated Reports", "Risk Assessment"],
     gradient: "from-primary via-accent to-primary",
   },
@@ -34,7 +34,7 @@ const projects = [
     domain: "legal.auxilio.cloud",
     url: "https://legal.auxilio.cloud",
     industry: "Legal",
-    description: "AI-powered legal document analysis and contract management for modern law practices.",
+    description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
   },
@@ -56,11 +56,11 @@ const Work = () => {
             Portfolio
           </p>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 animate-slide-up">
-            What We've <span className="gradient-text">Built</span>
+            What We've <span className="gradient-text">Deployed</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.2s" }}>
-            Real-world AI solutions powering businesses across industries. 
-            Each project represents our commitment to transforming operations through intelligent automation.
+            Real-world AI solutions that enhance business and personal productivity. 
+            Each deployment represents our commitment to transforming workflows through intelligent automation.
           </p>
         </div>
       </section>

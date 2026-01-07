@@ -14,21 +14,21 @@ const featuredProjects = [
     domain: "health.auxilio.cloud",
     url: "https://health.auxilio.cloud",
     industry: "Healthcare",
-    description: "Intelligent healthcare management with AI-driven diagnostics.",
+    description: "Intelligent personal healthcare management, with AI-driven aids to understanding aspects of personal health.",
   },
   {
     name: "Auxilio Finance",
     domain: "finance.auxilio.cloud",
     url: "https://finance.auxilio.cloud",
     industry: "Finance",
-    description: "Financial intelligence platform with predictive analytics.",
+    description: "Financial intelligence and management platform for tracking and analyzing personal financial positions, with enhanced AI-driven advice.",
   },
   {
     name: "Auxilio Legal",
     domain: "legal.auxilio.cloud",
     url: "https://legal.auxilio.cloud",
     industry: "Legal",
-    description: "AI-powered legal document analysis and case management.",
+    description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
   },
 ];
 

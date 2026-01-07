@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
+import { Mail, Send, Phone, MapPin, ExternalLink, Calendar } from "lucide-react";
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initInlineWidget: (options: { url: string; parentElement: HTMLElement }) => void;
+    };
+  }
+}
 
 const locations = [
   {
@@ -29,6 +37,25 @@ const Contact = () => {
     company: "",
     message: "",
   });
+
+  useEffect(() => {
+    // Load Calendly widget script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Load Calendly CSS
+    const link = document.createElement("link");
+    link.href = "https://assets.calendly.com/assets/external/widget.css";
+    link.rel = "stylesheet";
+    document.head.appendChild(link);
+
+    return () => {
+      document.body.removeChild(script);
+      document.head.removeChild(link);
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -156,16 +183,11 @@ const Contact = () => {
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Book a call
                   </h2>
-                  <div className="rounded-2xl overflow-hidden bg-card">
-                    <iframe
-                      src="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
-                      width="100%"
-                      height="650"
-                      frameBorder="0"
-                      title="Schedule a call with Auxilio"
-                      className="bg-card"
-                    />
-                  </div>
+                  <div 
+                    className="calendly-inline-widget rounded-2xl overflow-hidden" 
+                    data-url="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
+                    style={{ minWidth: '320px', height: '650px' }}
+                  />
                 </div>
 
                 {/* Contact Info Cards */}

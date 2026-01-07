@@ -7,7 +7,7 @@ import logoImage from "@/assets/logo_dark.png";
 
 const navigation = [
   { name: "Platforms", href: "/platforms" },
-  { name: "Work", href: "/work" },
+  { name: "Portfolio", href: "/work" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
@@ -45,7 +45,7 @@ export function Header() {
             to="/"
             className="hover:opacity-80 transition-opacity"
           >
-            <img src={logoImage} alt="Auxilio" className="h-20 w-auto" />
+            <img src={logoImage} alt="Auxilio" className="h-24 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -55,7 +55,7 @@ export function Header() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-xs font-semibold uppercase tracking-widest transition-colors",
+                  "text-sm font-semibold uppercase tracking-widest transition-colors",
                   location.pathname === item.href
                     ? "text-neutral-900"
                     : "text-neutral-600 hover:text-neutral-900"

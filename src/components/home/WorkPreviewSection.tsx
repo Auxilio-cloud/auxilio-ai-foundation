@@ -23,6 +23,13 @@ const featuredProjects = [
     industry: "Finance",
     description: "Financial intelligence platform with predictive analytics.",
   },
+  {
+    name: "Auxilio Legal",
+    domain: "legal.auxilio.cloud",
+    url: "https://legal.auxilio.cloud",
+    industry: "Legal",
+    description: "AI-powered legal document analysis and case management.",
+  },
 ];
 
 export function WorkPreviewSection() {
@@ -35,7 +42,7 @@ export function WorkPreviewSection() {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-4">
-            Our Work
+            Our Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Projects in <span className="gradient-text">Production</span>

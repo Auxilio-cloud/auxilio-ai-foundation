@@ -5,19 +5,19 @@ const capabilities = [
     icon: Layers,
     title: "Platform Thinking",
     description:
-      "We architect systems designed for evolution—modular foundations that scale with ambition and adapt to change.",
+      "We use a proven platform to quickly produce high-quality solutions with optimized agentic workflows that use AI to enhance and optimize work.",
   },
   {
     icon: Workflow,
-    title: "Intelligent Orchestration",
+    title: "Smart Workflows",
     description:
-      "Our platforms coordinate complex workflows, connecting disparate systems into coherent, intelligent experiences.",
+      "Our platforms simplify complex personal and business workflows by combining AI tools with captured knowledge of tasks and data.",
   },
   {
     icon: Sparkles,
     title: "AI-Native Design",
     description:
-      "We build with AI at the core, not as an afterthought. Every system is designed to leverage and enhance machine intelligence.",
+      "We build AI as the core of our platform to flexibly optimize workflows, letting you focus on what you do best.",
   },
 ];
 

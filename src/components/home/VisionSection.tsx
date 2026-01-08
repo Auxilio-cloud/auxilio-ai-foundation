@@ -7,10 +7,10 @@ export function VisionSection() {
             Our Vision
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground leading-tight">
-            AI solutions that amplify human capability
+            AI that helps people do their jobs better
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            We believe the best AI applications enhance what people do—not replace them. Our AI development services connect intelligent automation with human workflows, creating systems that deliver real value. Auxilio exists to build practical AI solutions for organisations ready to work smarter.
+            We build AI applications that handle tedious work so your team can focus on judgement and expertise. Not replacing people—giving them better tools.
           </p>
         </div>
       </div>

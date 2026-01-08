@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "What makes Auxilio different from other AI companies?",
     answer:
-      "We focus on practical, outcome-driven AI applications—not hype or experimental technology. Our internal platforms let us deliver production-ready solutions faster, and we work as genuine partners invested in your success, not just vendors completing a project.",
+      "We're a small team focused on building working software, not selling ideas. Our internal platforms help us move faster, and we stay involved through deployment—not just handoff.",
   },
 ];
 

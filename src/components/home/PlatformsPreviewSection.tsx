@@ -37,7 +37,7 @@ export function PlatformsPreviewSection() {
             Proven foundations, faster results
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            You don't buy our platforms—you benefit from them. These are the internal building blocks that let us deliver reliable, production-ready AI applications in weeks, not months.
+            You don't buy our platforms—you benefit from them. These are internal tools we've built to speed up development and reduce project risk.
           </p>
         </div>
 

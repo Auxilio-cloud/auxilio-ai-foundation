@@ -55,19 +55,23 @@ export function HeroSection() {
         <div className="max-w-5xl">
           {/* Main headline - bold uppercase */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] uppercase animate-slide-up">
-            Building the infrastructure for the{" "}
-            <span className="text-primary italic text-glow-green">AI-native</span>{" "}
-            era
+            Transforming{" "}
+            <span className="text-primary italic text-glow-green">Healthcare</span>{" "}
+            and{" "}
+            <span className="text-primary italic text-glow-green">Legal</span>{" "}
+            Workflows with AI
           </h1>
           
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            We design and orchestrate intelligent platforms that transform how organizations think, build, and operate.
+          {/* Sub-headline */}
+          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
+            We build intelligent applications and platforms that automate workflows, enhance compliance, and unlock new insights across healthcare, legal, and other industries.
           </p>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          {/* CTA buttons */}
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>
             <Button asChild size="lg" className="text-base px-8 uppercase font-semibold tracking-wide">
-              <Link to="/contact">
-                Get in Touch
+              <Link to="/platforms">
+                Discover Our AI Solutions
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -77,8 +81,15 @@ export function HeroSection() {
               size="lg" 
               className="text-base px-8 uppercase font-semibold tracking-wide border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <Link to="/platforms">Explore Platform</Link>
+              <Link to="/contact">Get in Touch</Link>
             </Button>
+          </div>
+
+          {/* Mission paragraph */}
+          <div className="mt-16 max-w-2xl animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <p className="text-base text-muted-foreground leading-relaxed border-l-2 border-primary/30 pl-6">
+              At Auxilio, we partner with forward-thinking organisations to design and deploy AI-powered applications tailored to their unique challenges. From automating complex document workflows to delivering real-time insights, our solutions drive efficiency, reduce risk, and create measurable value for your business.
+            </p>
           </div>
 
         </div>

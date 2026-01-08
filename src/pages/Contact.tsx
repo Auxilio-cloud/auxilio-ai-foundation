@@ -20,11 +20,13 @@ const locations = [
     country: "United States",
     address: "7911 Handy Court, Fort Collins, CO 80525, USA",
     mapsUrl: "https://maps.google.com/?q=7911+Handy+Court,+Fort+Collins,+CO+80525,+USA",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.5!2d-105.0!3d40.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7911%20Handy%20Court%2C%20Fort%20Collins!5e0!3m2!1sen!2sus!4v1234567890",
   },
   {
     country: "United Kingdom",
-    address: "Registered Office: MYNSHULL HOUSE 78 CHURCHGATE STOCKPORT CHESHIRE SK1 1YJ",
+    address: "MYNSHULL HOUSE, 78 CHURCHGATE, STOCKPORT, CHESHIRE SK1 1YJ",
     mapsUrl: "https://maps.google.com/?q=MYNSHULL+HOUSE+78+CHURCHGATE+STOCKPORT+CHESHIRE+SK1+1YJ",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.5!2d-2.1574!3d53.4084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb36e5e5e5e5e%3A0x0!2sChurchgate%2C%20Stockport!5e0!3m2!1sen!2suk!4v1234567890",
   },
 ];
 
@@ -246,29 +248,42 @@ const Contact = () => {
 
             <div className="grid md:grid-cols-2 gap-8">
               {locations.map((location) => (
-                <a
+                <div
                   key={location.country}
-                  href={location.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300"
+                  className="rounded-2xl bg-card border border-border overflow-hidden"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-primary" />
+                  <a
+                    href={location.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block p-8 hover:bg-secondary/30 transition-colors"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <MapPin className="w-6 h-6 text-primary" />
+                      </div>
+                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                     </div>
-                    <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      {location.country}
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      {location.address}
+                    </p>
+                  </a>
+                  <div className="h-48 w-full">
+                    <iframe
+                      src={location.embedUrl}
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title={`Map of ${location.country} office`}
+                    />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    {location.country}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {location.address}
-                  </p>
-                  <p className="mt-4 text-sm text-primary font-medium group-hover:underline">
-                    View on Google Maps
-                  </p>
-                </a>
+                </div>
               ))}
             </div>
           </div>

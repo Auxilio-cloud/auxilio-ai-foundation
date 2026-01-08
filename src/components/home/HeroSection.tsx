@@ -77,7 +77,7 @@ export function HeroSection() {
               size="lg" 
               className="text-base px-8 uppercase font-semibold tracking-wide border-primary text-primary hover:bg-primary hover:text-primary-foreground"
             >
-              <Link to="/platforms">Explore Platforms</Link>
+              <Link to="/platforms">Explore Platform</Link>
             </Button>
           </div>
 

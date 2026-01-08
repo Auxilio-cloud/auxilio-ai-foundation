@@ -179,8 +179,50 @@ const Contact = () => {
                 </form>
               </div>
 
-              {/* Booking & Info */}
-              <div className="space-y-6">
+              {/* Contact Info & Booking */}
+              <div className="space-y-8">
+                {/* Contact Info Cards */}
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground mb-6">
+                    Get in touch
+                  </h2>
+                  <div className="grid gap-4">
+                    {/* Email */}
+                    <div className="p-6 rounded-2xl bg-card border border-border">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Mail className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground">Email us</h3>
+                          <a
+                            href="mailto:info@auxilio.cloud"
+                            className="text-primary hover:underline underline-offset-4"
+                          >
+                            info@auxilio.cloud
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Phone */}
+                    <div className="p-6 rounded-2xl bg-card border border-border">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                          <Phone className="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-foreground">Call us</h3>
+                          <p className="text-muted-foreground text-sm">
+                            Phone number coming soon
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Book a call */}
                 <div>
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Book a call
@@ -190,42 +232,6 @@ const Contact = () => {
                     data-url="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
                     style={{ minWidth: '320px', height: '650px' }}
                   />
-                </div>
-
-                {/* Contact Info Cards */}
-                <div className="grid gap-4">
-                  {/* Email */}
-                  <div className="p-6 rounded-2xl bg-card border border-border">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Mail className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Email us</h3>
-                        <a
-                          href="mailto:info@auxilio.cloud"
-                          className="text-primary hover:underline underline-offset-4"
-                        >
-                          info@auxilio.cloud
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Phone */}
-                  <div className="p-6 rounded-2xl bg-card border border-border">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Phone className="w-6 h-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-foreground">Call us</h3>
-                        <p className="text-muted-foreground text-sm">
-                          Phone number coming soon
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

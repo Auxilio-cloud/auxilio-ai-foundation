@@ -11,7 +11,7 @@ const capabilities = [
     icon: Brain,
     title: "Make Better Decisions, Faster",
     description:
-      "Our solutions surface the right information at the right time. Whether it's flagging risks, summarising complex data, or recommending next steps, we help teams act with confidence.",
+      "Our tools surface relevant information when it's needed—flagging issues, summarising documents, or suggesting next steps based on your data.",
   },
   {
     icon: Wrench,

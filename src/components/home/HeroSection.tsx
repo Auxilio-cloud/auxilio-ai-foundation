@@ -62,7 +62,7 @@ export function HeroSection() {
           
           {/* Sub-headline */}
           <h2 className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed animate-slide-up font-normal" style={{ animationDelay: "0.1s" }}>
-            Auxilio partners with organisations to design, build, and deploy custom AI solutions—from intelligent automation to decision-support systems that deliver measurable results.
+            Auxilio partners with organisations to design, build, and deploy custom AI solutions—from workflow automation to decision-support tools tailored to how your team works.
           </h2>
 
           {/* CTA buttons */}

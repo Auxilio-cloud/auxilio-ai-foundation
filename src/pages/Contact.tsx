@@ -108,131 +108,115 @@ const Contact = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-              {/* Form */}
-              <div>
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
-                  Send us a message
-                </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-6">
+              {/* Form + Contact Info */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-2xl font-semibold text-foreground mb-6">
+                    Send us a message
+                  </h2>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name">Name</Label>
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Your name"
+                          required
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="email">Email</Label>
+                        <Input
+                          id="email"
+                          name="email"
+                          type="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          placeholder="you@company.com"
+                          required
+                        />
+                      </div>
+                    </div>
                     <div className="space-y-2">
-                      <Label htmlFor="name">Name</Label>
+                      <Label htmlFor="company">Company</Label>
                       <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
+                        id="company"
+                        name="company"
+                        value={formData.company}
                         onChange={handleChange}
-                        placeholder="Your name"
-                        required
+                        placeholder="Your company name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
+                      <Label htmlFor="message">Message</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
                         onChange={handleChange}
-                        placeholder="you@company.com"
+                        placeholder="Tell us about your project or what you're looking to achieve..."
+                        rows={5}
                         required
                       />
                     </div>
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full sm:w-auto"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? (
+                        "Sending..."
+                      ) : (
+                        <>
+                          Send Message
+                          <Send className="ml-2 h-4 w-4" />
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                </div>
+
+                {/* Contact Info Box */}
+                <div className="p-6 rounded-2xl bg-card border border-border">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Mail className="w-5 h-5 text-primary" />
+                      </div>
+                      <a
+                        href="mailto:info@auxilio.cloud"
+                        className="text-sm text-primary hover:underline underline-offset-4"
+                      >
+                        info@auxilio.cloud
+                      </a>
+                    </div>
+                    <div className="hidden sm:block w-px h-8 bg-border" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Phone className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="text-sm text-muted-foreground">
+                        Phone coming soon
+                      </span>
+                    </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="company">Company</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      placeholder="Your company name"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your project or what you're looking to achieve..."
-                      rows={5}
-                      required
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full sm:w-auto"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-4 w-4" />
-                      </>
-                    )}
-                  </Button>
-                </form>
+                </div>
               </div>
 
-              {/* Contact Info & Booking */}
-              <div className="space-y-8">
-                {/* Contact Info Cards */}
-                <div>
-                  <h2 className="text-2xl font-semibold text-foreground mb-6">
-                    Get in touch
-                  </h2>
-                  <div className="grid gap-4">
-                    {/* Email */}
-                    <div className="p-6 rounded-2xl bg-card border border-border">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Mail className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground">Email us</h3>
-                          <a
-                            href="mailto:info@auxilio.cloud"
-                            className="text-primary hover:underline underline-offset-4"
-                          >
-                            info@auxilio.cloud
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Phone */}
-                    <div className="p-6 rounded-2xl bg-card border border-border">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                          <Phone className="w-6 h-6 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground">Call us</h3>
-                          <p className="text-muted-foreground text-sm">
-                            Phone number coming soon
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Book a call */}
-                <div>
-                  <h2 className="text-2xl font-semibold text-foreground mb-6">
-                    Book a call
-                  </h2>
-                  <div 
-                    className="calendly-inline-widget rounded-2xl overflow-hidden" 
-                    data-url="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
-                    style={{ minWidth: '320px', height: '650px' }}
-                  />
-                </div>
+              {/* Calendly */}
+              <div>
+                <h2 className="text-2xl font-semibold text-foreground mb-6">
+                  Book a call
+                </h2>
+                <div 
+                  className="calendly-inline-widget rounded-2xl overflow-hidden" 
+                  data-url="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
+                  style={{ minWidth: '320px', height: '650px' }}
+                />
               </div>
             </div>
           </div>

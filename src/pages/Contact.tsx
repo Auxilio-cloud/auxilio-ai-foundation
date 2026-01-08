@@ -18,13 +18,13 @@ declare global {
 const locations = [
   {
     country: "United States",
-    address: "7911 Handy Court, Fort Collins, CO 80525, USA",
+    address: "7911 Handy Court\nFort Collins\nCO 80525\nUSA",
     mapsUrl: "https://maps.google.com/?q=7911+Handy+Court,+Fort+Collins,+CO+80525,+USA",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.5!2d-105.0!3d40.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s7911%20Handy%20Court%2C%20Fort%20Collins!5e0!3m2!1sen!2sus!4v1234567890",
   },
   {
     country: "United Kingdom",
-    address: "MYNSHULL HOUSE, 78 CHURCHGATE, STOCKPORT, CHESHIRE SK1 1YJ",
+    address: "Mynshull House\n78 Churchgate\nStockport\nCheshire\nSK1 1YJ, UK",
     mapsUrl: "https://maps.google.com/?q=MYNSHULL+HOUSE+78+CHURCHGATE+STOCKPORT+CHESHIRE+SK1+1YJ",
     embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2378.5!2d-2.1574!3d53.4084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bb36e5e5e5e5e%3A0x0!2sChurchgate%2C%20Stockport!5e0!3m2!1sen!2suk!4v1234567890",
   },
@@ -267,7 +267,7 @@ const Contact = () => {
                     <h3 className="text-xl font-semibold text-foreground mb-2">
                       {location.country}
                     </h3>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm whitespace-pre-line">
                       {location.address}
                     </p>
                   </a>

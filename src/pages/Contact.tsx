@@ -23,8 +23,8 @@ const locations = [
   },
   {
     country: "United Kingdom",
-    address: "London, United Kingdom",
-    mapsUrl: "https://maps.google.com/?q=London,+United+Kingdom",
+    address: "Registered Office: MYNSHULL HOUSE 78 CHURCHGATE STOCKPORT CHESHIRE SK1 1YJ",
+    mapsUrl: "https://maps.google.com/?q=MYNSHULL+HOUSE+78+CHURCHGATE+STOCKPORT+CHESHIRE+SK1+1YJ",
   },
 ];
 

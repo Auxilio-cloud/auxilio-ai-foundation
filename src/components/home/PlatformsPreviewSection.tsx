@@ -4,23 +4,23 @@ import { ArrowRight } from "lucide-react";
 const platforms = [
   {
     name: "Synthesis",
-    tagline: "Intelligence coordination",
+    tagline: "AI coordination",
     description:
-      "A platform for orchestrating AI capabilities across the enterprise—connecting models, data, and workflows into unified intelligence.",
+      "Connects multiple AI capabilities into cohesive applications. Synthesis lets us build solutions that combine reasoning, data analysis, and automation—delivered faster, with less risk.",
     gradient: "from-primary/10 to-primary/5",
   },
   {
     name: "Meridian",
-    tagline: "Operational fabric",
+    tagline: "System integration",
     description:
-      "The connective layer between systems and people. Meridian brings coherence to complex operational landscapes.",
+      "Bridges your existing tools and data sources. Meridian enables AI applications to work seamlessly within your current environment, without costly rewrites or disruptions.",
     gradient: "from-accent/10 to-accent/5",
   },
   {
     name: "Atlas",
-    tagline: "Knowledge architecture",
+    tagline: "Knowledge management",
     description:
-      "Structure for the unstructured. Atlas transforms organizational knowledge into navigable, actionable intelligence.",
+      "Turns unstructured information into usable intelligence. Atlas powers applications that can search, summarise, and reason over your documents and data.",
     gradient: "from-muted to-secondary/50",
   },
 ];
@@ -31,13 +31,13 @@ export function PlatformsPreviewSection() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
-            Our Platforms
+            How We Deliver
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-            Infrastructure for intelligence
+            Proven foundations, faster results
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Each platform is designed as a foundation—flexible, extensible, and ready for the future.
+            You don't buy our platforms—you benefit from them. These are the internal building blocks that let us deliver reliable, production-ready AI applications in weeks, not months.
           </p>
         </div>
 

@@ -17,10 +17,10 @@ export function CTASection() {
       <div className="container relative mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-            Ready to build something <span className="text-primary">serious</span>?
+            Ready to explore AI applications for your business?
           </h2>
           <p className="mt-6 text-lg text-neutral-300 leading-relaxed">
-            We partner with organizations ready to embrace the AI-native future. If you're thinking about what's next, we'd love to hear from you.
+            Whether you need AI consulting to shape your strategy or hands-on AI development services to build your next solution, we're here to help. Let's talk about what's possible.
           </p>
           <div className="mt-10">
             <Button

@@ -7,10 +7,10 @@ export function VisionSection() {
             Our Vision
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground leading-tight">
-            Technology should amplify human capability, not replace it
+            AI solutions that amplify human capability
           </h2>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-            We believe the next generation of platforms and solutions will be defined by their ability to enhance the productivity of users—connecting AI capabilities with human workflows and insight to create systems that are greater than the sum of their parts. Auxilio exists to build this future.
+            We believe the best AI applications enhance what people do—not replace them. Our AI development services connect intelligent automation with human workflows, creating systems that deliver real value. Auxilio exists to build practical AI solutions for organisations ready to work smarter.
           </p>
         </div>
       </div>

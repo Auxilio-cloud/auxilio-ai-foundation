@@ -199,9 +199,12 @@ const Contact = () => {
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <Phone className="w-5 h-5 text-primary" />
                       </div>
-                      <span className="text-sm text-muted-foreground">
-                        Phone coming soon
-                      </span>
+                      <a
+                        href="tel:+447585914460"
+                        className="text-sm text-primary hover:underline underline-offset-4"
+                      >
+                        +44 7585 914 460
+                      </a>
                     </div>
                   </div>
                 </div>

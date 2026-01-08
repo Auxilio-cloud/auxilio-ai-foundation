@@ -43,8 +43,8 @@ export function Footer() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="space-y-2">
               <p className="text-sm text-neutral-600">
-                <a href="mailto:john@auxilio.cloud" className="hover:text-neutral-900 transition-colors">
-                  john@auxilio.cloud
+                <a href="mailto:info@auxilio.cloud" className="hover:text-neutral-900 transition-colors">
+                  info@auxilio.cloud
                 </a>
               </p>
               <p className="text-sm text-neutral-600">

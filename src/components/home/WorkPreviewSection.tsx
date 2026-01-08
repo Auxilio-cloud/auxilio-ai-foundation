@@ -3,7 +3,7 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const featuredProjects = [
   {
-    name: "Promptly",
+    name: "Auxilio Promptly",
     domain: "promptly.digital",
     url: "https://promptly.digital",
     industry: "AI Tools",

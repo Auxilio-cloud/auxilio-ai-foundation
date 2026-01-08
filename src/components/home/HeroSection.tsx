@@ -53,19 +53,17 @@ export function HeroSection() {
 
       <div className="container relative mx-auto px-6 lg:px-8 py-24">
         <div className="max-w-5xl">
-          {/* Main headline - bold uppercase */}
+          {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] uppercase animate-slide-up">
-            Transforming{" "}
-            <span className="text-primary italic text-glow-green">Healthcare</span>{" "}
-            and{" "}
-            <span className="text-primary italic text-glow-green">Legal</span>{" "}
-            Workflows with AI
+            We Build{" "}
+            <span className="text-primary italic text-glow-green">AI Applications</span>{" "}
+            That Work
           </h1>
           
           {/* Sub-headline */}
-          <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed animate-slide-up" style={{ animationDelay: "0.1s" }}>
-            We build intelligent applications and platforms that automate workflows, enhance compliance, and unlock new insights across healthcare, legal, and other industries.
-          </p>
+          <h2 className="mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed animate-slide-up font-normal" style={{ animationDelay: "0.1s" }}>
+            Auxilio partners with organisations to design, build, and deploy custom AI solutions—from intelligent automation to decision-support systems that deliver measurable results.
+          </h2>
 
           {/* CTA buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: "0.2s" }}>

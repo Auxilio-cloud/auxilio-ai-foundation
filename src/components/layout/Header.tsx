@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import logoImage from "@/assets/logo_dark.png";
 
 const navigation = [
-  { name: "Platforms", href: "/platforms" },
+  { name: "Platform", href: "/platforms" },
   { name: "Portfolio", href: "/work" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },

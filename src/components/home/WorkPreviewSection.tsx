@@ -45,10 +45,13 @@ export function WorkPreviewSection() {
             Our Portfolio
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Projects in <span className="gradient-text">Production</span>
+            Examples of <span className="gradient-text">What We Build</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real AI solutions powering real businesses.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
+            These projects showcase patterns and capabilities we've developed across healthcare, finance, legal, and productivity domains.
+          </p>
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
+            Every business has unique challenges—we apply the same thoughtful, outcome-focused approach to new problem spaces.
           </p>
         </div>
 

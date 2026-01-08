@@ -86,7 +86,7 @@ export function HeroSection() {
           {/* Mission paragraph */}
           <div className="mt-16 max-w-2xl animate-slide-up" style={{ animationDelay: "0.3s" }}>
             <p className="text-base text-muted-foreground leading-relaxed border-l-2 border-primary/30 pl-6">
-              At Auxilio, we partner with forward-thinking organisations to design and deploy AI-powered applications tailored to their unique challenges. From automating complex document workflows to delivering real-time insights, our solutions drive efficiency, reduce risk, and create measurable value for your business.
+              Auxilio is an AI development company that builds custom applications and provides hands-on consulting to help businesses put AI to work. We work across industries—healthcare, legal, finance, and beyond—designing solutions that fit how teams actually operate. Whether you need a standalone AI product or support integrating intelligence into existing systems, we handle strategy, development, and delivery from start to finish.
             </p>
           </div>
 

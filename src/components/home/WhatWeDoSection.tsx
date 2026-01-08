@@ -1,23 +1,23 @@
-import { Layers, Workflow, Sparkles } from "lucide-react";
+import { Zap, Brain, Wrench } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Layers,
-    title: "Platform Thinking",
+    icon: Zap,
+    title: "Automate Repetitive Work",
     description:
-      "We use a proven platform to quickly produce high-quality solutions with optimized agentic workflows that use AI to enhance and optimize work.",
+      "We build AI applications that handle time-consuming tasks—data entry, document processing, routine decisions—so your team can focus on work that actually requires human judgement.",
   },
   {
-    icon: Workflow,
-    title: "Smart Workflows",
+    icon: Brain,
+    title: "Make Better Decisions, Faster",
     description:
-      "Our platforms simplify complex personal and business workflows by combining AI tools with captured knowledge of tasks and data.",
+      "Our solutions surface the right information at the right time. Whether it's flagging risks, summarising complex data, or recommending next steps, we help teams act with confidence.",
   },
   {
-    icon: Sparkles,
-    title: "AI-Native Design",
+    icon: Wrench,
+    title: "Fit Into How You Already Work",
     description:
-      "We build AI as the core of our platform to flexibly optimize workflows, letting you focus on what you do best.",
+      "We don't ask you to change everything. Our AI applications integrate with your existing tools and processes, adding intelligence where it matters most without disrupting what's working.",
   },
 ];
 
@@ -30,7 +30,7 @@ export function WhatWeDoSection() {
             What We Do
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-            Capability, not complexity
+            AI that solves real problems
           </h2>
         </div>
 

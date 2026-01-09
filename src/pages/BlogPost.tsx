@@ -1,6 +1,31 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { useEffect } from "react";
+
+// SEO metadata for each post
+const postSeo: Record<string, { title: string; description: string }> = {
+  "summarise-research-papers-faster": {
+    title: "AI Research Paper Summariser | Read Papers Faster",
+    description: "Learn how AI summarisation tools help you extract key findings from research papers in minutes. Practical tips for students and professionals.",
+  },
+  "automate-personal-todo-list": {
+    title: "AI Task Manager | Automate Your To-Do List",
+    description: "Discover how AI-powered task management prioritises your work, schedules tasks smartly, and helps you stay focused on what matters most.",
+  },
+  "ai-for-freelancers": {
+    title: "AI for Freelancers | Organise Documents & Emails",
+    description: "Save hours weekly with AI tools for document management and email organisation. A practical guide for freelancers and small businesses.",
+  },
+  "ai-meeting-notes": {
+    title: "AI Meeting Notes | Never Miss Action Items Again",
+    description: "How AI captures meeting highlights, extracts action items, and creates searchable archives automatically. Boost team productivity.",
+  },
+  "simplify-email-inbox": {
+    title: "AI Email Filters | Simplify Your Inbox Today",
+    description: "Tired of email overload? Learn how smart AI filters categorise, prioritise, and help you respond to emails more efficiently.",
+  },
+};
 
 const posts: Record<string, {
   title: string;
@@ -355,6 +380,17 @@ const posts: Record<string, {
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? posts[slug] : null;
+  const seo = slug ? postSeo[slug] : null;
+
+  useEffect(() => {
+    if (seo) {
+      document.title = seo.title;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute("content", seo.description);
+      }
+    }
+  }, [seo]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;

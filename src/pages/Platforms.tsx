@@ -1,10 +1,28 @@
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileText, ListChecks, StickyNote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import meridianImage from "@/assets/meridian.jpg";
 import synthesisImage from "@/assets/synthesis.jpg";
 import atlasImage from "@/assets/atlas.jpg";
+
+const individualTools = [
+  {
+    name: "AI Document Summariser",
+    description: "Instantly condense lengthy documents, articles, or reports into clear, actionable summaries—saving you hours of reading time.",
+    icon: FileText,
+  },
+  {
+    name: "Personal Task Organiser",
+    description: "An intelligent assistant that helps prioritise your to-do list, suggest optimal scheduling, and keep you focused on what matters most.",
+    icon: ListChecks,
+  },
+  {
+    name: "Automated Note Extractor",
+    description: "Transform meetings, lectures, and voice memos into structured notes with key takeaways, action items, and searchable archives.",
+    icon: StickyNote,
+  },
+];
 
 const platforms = [
   {
@@ -129,6 +147,42 @@ const Platforms = () => {
                 >
                   {platform.visual}
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* For Individuals & Small Teams */}
+      <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
+              For Individuals & Small Teams
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+              Simple AI tools for everyday productivity
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Not every challenge requires enterprise infrastructure. Auxilio offers lightweight, powerful AI tools designed for personal productivity and small businesses—no complex setup, just immediate value.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {individualTools.map((tool) => (
+              <div
+                key={tool.name}
+                className="group p-8 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <tool.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {tool.name}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {tool.description}
+                </p>
               </div>
             ))}
           </div>

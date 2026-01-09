@@ -39,7 +39,10 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-neutral-200">
+        {/* Gradient divider */}
+        <div className="mt-12 mb-8 h-px bg-gradient-to-r from-transparent via-neutral-300 to-transparent" />
+
+        <div className="pt-0">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div className="space-y-2">
               <p className="text-sm text-neutral-600">

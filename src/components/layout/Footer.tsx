@@ -5,6 +5,7 @@ const navigation = {
   main: [
     { name: "Platforms", href: "/platforms" },
     { name: "Portfolio", href: "/work" },
+    { name: "Insights", href: "/blog" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ],

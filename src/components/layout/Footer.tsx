@@ -3,7 +3,7 @@ import logoImage from "@/assets/logo_dark.png";
 
 const navigation = {
   main: [
-    { name: "Platforms", href: "/platforms" },
+    { name: "Platform", href: "/platforms" },
     { name: "For Individuals", href: "/platforms#individuals" },
     { name: "Portfolio", href: "/work" },
     { name: "Insights", href: "/blog" },

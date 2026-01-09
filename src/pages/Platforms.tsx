@@ -219,7 +219,7 @@ const Platforms = () => {
       </section>
 
       {/* For Individuals & Small Teams */}
-      <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
+      <section id="individuals" className="section-padding bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
@@ -250,6 +250,19 @@ const Platforms = () => {
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Upsell to Enterprise */}
+          <div className="mt-12 text-center">
+            <p className="text-muted-foreground">
+              Need more power for your organisation?{" "}
+              <Link 
+                to="/contact" 
+                className="text-primary font-medium hover:underline"
+              >
+                Explore our enterprise platform solutions
+              </Link>
+            </p>
           </div>
         </div>
       </section>

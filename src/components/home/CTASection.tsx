@@ -22,7 +22,7 @@ export function CTASection() {
           <p className="mt-6 text-lg text-neutral-300 leading-relaxed">
             Whether you need AI consulting to shape your strategy or hands-on AI development services to build your next solution, we're here to help. Let's talk about what's possible.
           </p>
-          <div className="mt-10">
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               asChild
               size="lg"
@@ -31,6 +31,16 @@ export function CTASection() {
               <Link to="/contact">
                 Start a Conversation
                 <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="text-base px-8 border-neutral-600 text-white hover:bg-white/10 font-semibold uppercase tracking-wide"
+            >
+              <Link to="/platforms#individuals">
+                Tools for Individuals
               </Link>
             </Button>
           </div>

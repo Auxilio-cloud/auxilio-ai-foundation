@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, FileText, ListChecks, StickyNote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 import meridianImage from "@/assets/meridian.jpg";
 import synthesisImage from "@/assets/synthesis.jpg";
 import atlasImage from "@/assets/atlas.jpg";
@@ -85,6 +86,14 @@ const platforms = [
 ];
 
 const Platforms = () => {
+  useEffect(() => {
+    document.title = "AI Tools for Individuals & Teams | Auxilio Platform";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "AI document summariser, task organiser & note extractor for personal productivity. Simple AI tools for individuals and small teams—no setup required.");
+    }
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}

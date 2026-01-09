@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { useEffect } from "react";
 
 const categories = [
   { name: "All", slug: "all" },
@@ -51,6 +52,14 @@ const posts = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    document.title = "AI for Personal Productivity | Auxilio Insights";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Practical AI guides for everyday productivity. Learn how to use AI tools for note-taking, task management, and document organisation—no tech skills required.");
+    }
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}

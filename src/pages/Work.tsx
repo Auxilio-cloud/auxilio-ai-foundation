@@ -1,10 +1,63 @@
 import { Layout } from "@/components/layout/Layout";
 import { ArrowUpRight } from "lucide-react";
+import { useEffect } from "react";
 
 import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
+
+// SoftwareApplication schema for each demo tool
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: [
+    {
+      "@type": "SoftwareApplication",
+      position: 1,
+      name: "Auxilio Promptly",
+      description: "AI-powered prompt engineering and workflow automation platform for teams and enterprises.",
+      applicationCategory: "ProductivityApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://promptly.digital",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 2,
+      name: "Auxilio Health",
+      description: "Intelligent personal healthcare management with AI-driven aids to understanding aspects of personal health.",
+      applicationCategory: "HealthApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://health.auxilio.cloud",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 3,
+      name: "Auxilio Finance",
+      description: "Financial intelligence and management platform for tracking and analyzing personal financial positions with AI-driven advice.",
+      applicationCategory: "FinanceApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://finance.auxilio.cloud",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 4,
+      name: "Auxilio Legal",
+      description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://legal.auxilio.cloud",
+    },
+  ],
+};
 
 const projects = [
   {
@@ -50,6 +103,20 @@ const projects = [
 ];
 
 const Work = () => {
+  useEffect(() => {
+    // Inject SoftwareApplication schema
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "software-application-schema";
+    script.textContent = JSON.stringify(softwareApplicationSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.getElementById("software-application-schema");
+      if (existingScript) existingScript.remove();
+    };
+  }, []);
+
   return (
     <Layout>
       {/* Hero Section */}

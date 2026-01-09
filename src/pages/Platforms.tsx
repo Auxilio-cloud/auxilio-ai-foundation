@@ -1,11 +1,55 @@
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, FileText, ListChecks, StickyNote } from "lucide-react";
+import { ArrowRight, FileText, ListChecks, StickyNote, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import meridianImage from "@/assets/meridian.jpg";
 import synthesisImage from "@/assets/synthesis.jpg";
 import atlasImage from "@/assets/atlas.jpg";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+// FAQ data for consumer tools
+const faqs = [
+  {
+    question: "Is the demo tool free?",
+    answer: "Yes! All our demo tools offer a free tier so you can explore their features before committing. You can use core functionality at no cost, with optional premium features available for power users.",
+  },
+  {
+    question: "Do I need technical skills to use these AI tools?",
+    answer: "Not at all. Our tools are designed for everyday users—no coding, no complex setup. Simply sign up, follow the guided onboarding, and start using AI to boost your productivity within minutes.",
+  },
+  {
+    question: "Can these tools integrate with my existing apps?",
+    answer: "Yes. Our tools are built to work alongside the software you already use. We offer integrations with popular platforms like Google Workspace, Microsoft 365, Slack, and more. API access is also available for custom workflows.",
+  },
+  {
+    question: "How secure is my data?",
+    answer: "Security is our priority. All data is encrypted in transit and at rest. We follow industry best practices and never share your data with third parties. You remain in full control of your information.",
+  },
+  {
+    question: "Can I use these tools for my small business?",
+    answer: "Absolutely. Our individual and small team tools are perfect for freelancers, solopreneurs, and small businesses. They scale with your needs and help you work more efficiently without enterprise complexity.",
+  },
+];
+
+// FAQPage schema for SEO
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
 
 const individualTools = [
   {
@@ -92,6 +136,18 @@ const Platforms = () => {
     if (metaDescription) {
       metaDescription.setAttribute("content", "AI document summariser, task organiser & note extractor for personal productivity. Simple AI tools for individuals and small teams—no setup required.");
     }
+
+    // Inject FAQPage schema
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "faq-schema";
+    script.textContent = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      const existingScript = document.getElementById("faq-schema");
+      if (existingScript) existingScript.remove();
+    };
   }, []);
 
   return (
@@ -194,6 +250,35 @@ const Platforms = () => {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
+                Common Questions
+              </p>
+              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-border">
+                  <AccordionTrigger className="text-left text-foreground hover:text-primary">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>

@@ -1,12 +1,18 @@
 import { Layout } from "@/components/layout/Layout";
 import { ArrowUpRight } from "lucide-react";
 
+import promptlyImg from "@/assets/portfolio/promptly.png";
+import healthImg from "@/assets/portfolio/health.png";
+import financeImg from "@/assets/portfolio/finance.png";
+import legalImg from "@/assets/portfolio/legal.png";
+
 const projects = [
   {
     name: "Auxilio Promptly",
     domain: "promptly.digital",
     url: "https://promptly.digital",
     industry: "AI Tools",
+    image: promptlyImg,
     description: "AI-powered prompt engineering and workflow automation platform for teams and enterprises.",
     features: ["Prompt Library", "Team Collaboration", "API Integration"],
     gradient: "from-primary to-accent",
@@ -16,6 +22,7 @@ const projects = [
     domain: "health.auxilio.cloud",
     url: "https://health.auxilio.cloud",
     industry: "Healthcare",
+    image: healthImg,
     description: "Intelligent personal healthcare management, with AI-driven aids to understanding aspects of personal health.",
     features: ["Patient Analytics", "AI Diagnostics", "Care Coordination"],
     gradient: "from-accent to-primary",
@@ -25,6 +32,7 @@ const projects = [
     domain: "finance.auxilio.cloud",
     url: "https://finance.auxilio.cloud",
     industry: "Finance",
+    image: financeImg,
     description: "Financial intelligence and management platform for tracking and analyzing personal financial positions, with enhanced AI-driven advice.",
     features: ["Financial Analytics", "Automated Reports", "Risk Assessment"],
     gradient: "from-primary via-accent to-primary",
@@ -34,6 +42,7 @@ const projects = [
     domain: "legal.auxilio.cloud",
     url: "https://legal.auxilio.cloud",
     industry: "Legal",
+    image: legalImg,
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
@@ -75,45 +84,54 @@ const Work = () => {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative bg-card border border-border rounded-2xl p-8 transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Gradient accent line */}
-                <div className={`absolute top-0 left-8 right-8 h-px bg-gradient-to-r ${project.gradient} opacity-50 group-hover:opacity-100 transition-opacity`} />
-                
-                {/* Industry tag */}
-                <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
-                  {project.industry}
-                </span>
-
-                {/* Project name and external link */}
-                <div className="flex items-start justify-between mb-4">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {project.name}
-                  </h2>
-                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                {/* Screenshot Image */}
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={`${project.name} screenshot`}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
-                {/* Domain */}
-                <p className="text-sm text-muted-foreground mb-4 font-mono">
-                  {project.domain}
-                </p>
+                {/* Content */}
+                <div className="p-8">
+                  {/* Industry tag */}
+                  <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
+                    {project.industry}
+                  </span>
 
-                {/* Description */}
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {project.description}
-                </p>
+                  {/* Project name and external link */}
+                  <div className="flex items-start justify-between mb-4">
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      {project.name}
+                    </h2>
+                    <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </div>
 
-                {/* Features */}
-                <div className="flex flex-wrap gap-2">
-                  {project.features.map((feature) => (
-                    <span
-                      key={feature}
-                      className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
-                    >
-                      {feature}
-                    </span>
-                  ))}
+                  {/* Domain */}
+                  <p className="text-sm text-muted-foreground mb-4 font-mono">
+                    {project.domain}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </a>
             ))}

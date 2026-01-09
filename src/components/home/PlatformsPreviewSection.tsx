@@ -69,6 +69,19 @@ export function PlatformsPreviewSection() {
             </Link>
           ))}
         </div>
+
+        {/* Link to Individual Tools */}
+        <div className="mt-12 text-center">
+          <p className="text-muted-foreground">
+            Looking for simple AI tools instead?{" "}
+            <Link 
+              to="/platforms#individuals" 
+              className="text-primary font-medium hover:underline"
+            >
+              See our solutions for individuals & small teams
+            </Link>
+          </p>
+        </div>
       </div>
     </section>
   );

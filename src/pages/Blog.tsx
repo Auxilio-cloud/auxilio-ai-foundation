@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { useEffect } from "react";
 
-const categories = [
-  { name: "All", slug: "all" },
-  { name: "AI for Everyday Use", slug: "ai-everyday" },
-];
 
 const posts = [
   {
@@ -79,25 +75,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-8 border-b border-border">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="flex gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category.slug}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category.slug === "ai-everyday"
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Posts Grid */}
       <section className="section-padding">

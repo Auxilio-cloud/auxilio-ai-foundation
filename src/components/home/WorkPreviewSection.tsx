@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 
+import promptlyImg from "@/assets/portfolio/promptly.png";
+import healthImg from "@/assets/portfolio/health.png";
+import financeImg from "@/assets/portfolio/finance.png";
+import legalImg from "@/assets/portfolio/legal.png";
+
 const featuredProjects = [
   {
     name: "Auxilio Promptly",
     domain: "promptly.digital",
     url: "https://promptly.digital",
     industry: "AI Tools",
+    image: promptlyImg,
     description: "AI-powered prompt engineering and workflow automation platform.",
   },
   {
@@ -14,6 +20,7 @@ const featuredProjects = [
     domain: "health.auxilio.cloud",
     url: "https://health.auxilio.cloud",
     industry: "Healthcare",
+    image: healthImg,
     description: "Intelligent personal healthcare management, with AI-driven aids to understanding aspects of personal health.",
   },
   {
@@ -21,6 +28,7 @@ const featuredProjects = [
     domain: "finance.auxilio.cloud",
     url: "https://finance.auxilio.cloud",
     industry: "Finance",
+    image: financeImg,
     description: "Financial intelligence and management platform for tracking and analyzing personal financial positions, with enhanced AI-driven advice.",
   },
   {
@@ -28,6 +36,7 @@ const featuredProjects = [
     domain: "legal.auxilio.cloud",
     url: "https://legal.auxilio.cloud",
     industry: "Legal",
+    image: legalImg,
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
   },
 ];
@@ -56,38 +65,50 @@ export function WorkPreviewSection() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {featuredProjects.map((project, index) => (
             <a
               key={project.name}
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+              className="group relative bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Industry tag */}
-              <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-3">
-                {project.industry}
-              </span>
-
-              {/* Project name */}
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {project.name}
-                </h3>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
+              {/* Screenshot Image */}
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={`${project.name} screenshot`}
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
 
-              {/* Domain */}
-              <p className="text-xs text-muted-foreground mb-3 font-mono">
-                {project.domain}
-              </p>
+              {/* Content */}
+              <div className="p-4">
+                {/* Industry tag */}
+                <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-2">
+                  {project.industry}
+                </span>
 
-              {/* Description */}
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {project.description}
-              </p>
+                {/* Project name */}
+                <div className="flex items-center justify-between mb-1">
+                  <h3 className="text-base font-bold text-foreground group-hover:text-primary transition-colors line-clamp-1">
+                    {project.name}
+                  </h3>
+                  <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all flex-shrink-0" />
+                </div>
+
+                {/* Domain */}
+                <p className="text-xs text-muted-foreground mb-2 font-mono">
+                  {project.domain}
+                </p>
+
+                {/* Description */}
+                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-2">
+                  {project.description}
+                </p>
+              </div>
             </a>
           ))}
         </div>

@@ -11,16 +11,19 @@ const individualTools = [
     name: "AI Document Summariser",
     description: "Instantly condense lengthy documents, articles, or reports into clear, actionable summaries—saving you hours of reading time.",
     icon: FileText,
+    demoLink: "/demo/summariser",
   },
   {
     name: "Personal Task Organiser",
     description: "An intelligent assistant that helps prioritise your to-do list, suggest optimal scheduling, and keep you focused on what matters most.",
     icon: ListChecks,
+    demoLink: null,
   },
   {
     name: "Automated Note Extractor",
     description: "Transform meetings, lectures, and voice memos into structured notes with key takeaways, action items, and searchable archives.",
     icon: StickyNote,
+    demoLink: null,
   },
 ];
 
@@ -180,9 +183,20 @@ const Platforms = () => {
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {tool.name}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-4">
                   {tool.description}
                 </p>
+                {tool.demoLink ? (
+                  <Link
+                    to={tool.demoLink}
+                    className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                  >
+                    Try free demo
+                    <ArrowRight className="ml-1 w-4 h-4" />
+                  </Link>
+                ) : (
+                  <span className="text-sm text-muted-foreground">Coming soon</span>
+                )}
               </div>
             ))}
           </div>

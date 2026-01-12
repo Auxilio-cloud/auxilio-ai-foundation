@@ -199,12 +199,20 @@ const Contact = () => {
                       <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         <Phone className="w-5 h-5 text-primary" />
                       </div>
-                      <a
-                        href="tel:+447585914460"
-                        className="text-sm text-primary hover:underline underline-offset-4"
-                      >
-                        +44 7585 914 460
-                      </a>
+                      <div className="flex flex-col gap-1">
+                        <a
+                          href="tel:+13033322159"
+                          className="text-sm text-primary hover:underline underline-offset-4"
+                        >
+                          +1 303-332-2159
+                        </a>
+                        <a
+                          href="tel:+447585914460"
+                          className="text-sm text-primary hover:underline underline-offset-4"
+                        >
+                          +44 7585 914 460
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

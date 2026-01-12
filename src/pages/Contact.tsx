@@ -204,7 +204,7 @@ const Contact = () => {
                           href="tel:+13033322159"
                           className="text-sm text-primary hover:underline underline-offset-4"
                         >
-                          +1 303-332-2159
+                          +1 303 332 2159
                         </a>
                         <a
                           href="tel:+447585914460"

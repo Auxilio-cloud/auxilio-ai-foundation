@@ -5,7 +5,7 @@ import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
-
+import logisticsImg from "@/assets/portfolio/logistics.png";
 const featuredProjects = [
   {
     name: "Auxilio Promptly",
@@ -38,6 +38,14 @@ const featuredProjects = [
     industry: "Legal",
     image: legalImg,
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
+  },
+  {
+    name: "Auxilio Logistics",
+    domain: "logistics.auxilio.cloud",
+    url: "https://logistics.auxilio.cloud",
+    industry: "Logistics",
+    image: logisticsImg,
+    description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
   },
 ];
 

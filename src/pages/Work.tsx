@@ -6,6 +6,7 @@ import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
+import logisticsImg from "@/assets/portfolio/logistics.png";
 
 // SoftwareApplication schema for each demo tool
 const softwareApplicationSchema = {
@@ -56,6 +57,17 @@ const softwareApplicationSchema = {
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
       url: "https://legal.auxilio.cloud",
     },
+    {
+      "@type": "SoftwareApplication",
+      position: 5,
+      name: "Auxilio Logistics",
+      description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://logistics.auxilio.cloud",
+    },
   ],
 };
 
@@ -99,6 +111,16 @@ const projects = [
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
+  },
+  {
+    name: "Auxilio Logistics",
+    domain: "logistics.auxilio.cloud",
+    url: "https://logistics.auxilio.cloud",
+    industry: "Logistics",
+    image: logisticsImg,
+    description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
+    features: ["Route Optimization", "Real-time Tracking", "Supply Chain Analytics"],
+    gradient: "from-primary to-accent",
   },
 ];
 

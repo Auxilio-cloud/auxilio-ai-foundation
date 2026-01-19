@@ -52,12 +52,13 @@ export function Footer() {
                   info@auxilio.cloud
                 </a>
               </p>
+              <p className="text-sm text-neutral-600">Phone: (coming soon)</p>
               <p className="text-sm text-neutral-600">
                 7911 Handy Court, Fort Collins, CO 80525, USA
               </p>
             </div>
             <p className="text-xs uppercase tracking-widest text-neutral-500">
-              © {new Date().getFullYear()} Auxilio. All rights reserved.
+              © {new Date().getFullYear()} AUXILIO TECHNOLOGIES LLC, ALL RIGHTS RESERVED.
             </p>
           </div>
         </div>

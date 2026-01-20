@@ -1,19 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Send, Phone, MapPin, ExternalLink, Calendar } from "lucide-react";
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (options: { url: string; parentElement: HTMLElement }) => void;
-    };
-  }
-}
+import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const locations = [
   {
@@ -40,39 +32,49 @@ const Contact = () => {
     message: "",
   });
 
-  useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Load Calendly CSS
-    const link = document.createElement("link");
-    link.href = "https://assets.calendly.com/assets/external/widget.css";
-    link.rel = "stylesheet";
-    document.head.appendChild(link);
-
-    return () => {
-      document.body.removeChild(script);
-      document.head.removeChild(link);
-    };
-  }, []);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("company", formData.company);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("_subject", "New contact form submission");
+      formDataToSend.append("_captcha", "false");
 
-    toast({
-      title: "Message sent",
-      description: "We'll get back to you as soon as possible.",
-    });
+      const response = await fetch(
+        "https://formsubmit.co/ajax/info@auxilio.cloud,naveed@auxilio.cloud,john@auxilio.cloud",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: formDataToSend,
+        }
+      );
 
-    setFormData({ name: "", email: "", company: "", message: "" });
-    setIsSubmitting(false);
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      toast({
+        title: "Message sent",
+        description: "We'll get back to you as soon as possible.",
+      });
+
+      setFormData({ name: "", email: "", company: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -107,7 +109,7 @@ const Contact = () => {
       <section className="section-padding-sm">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="grid gap-12 lg:gap-20">
               {/* Form + Contact Info */}
               <div className="space-y-8">
                 <div>
@@ -218,17 +220,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Calendly */}
-              <div>
-                <h2 className="text-2xl font-semibold text-foreground mb-6">
-                  Book a call
-                </h2>
-                <div 
-                  className="calendly-inline-widget rounded-2xl overflow-hidden" 
-                  data-url="https://calendly.com/naveed-auxilio?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=0d1424&text_color=e8edf5&primary_color=8bd33a"
-                  style={{ minWidth: '320px', height: '650px' }}
-                />
-              </div>
             </div>
           </div>
         </div>

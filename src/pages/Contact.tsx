@@ -35,7 +35,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/info@auxilio.cloud", {
+      const response = await fetch("https://formsubmit.co/ajax/naveed.gilani@gmail.com", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -88,7 +88,7 @@ const Contact = () => {
                   </h2>
                   <form
                     method="POST"
-                    action="https://formsubmit.co/ajax/info@auxilio.cloud"
+                    action="https://formsubmit.co/ajax/naveed.gilani@gmail.com"
                     onSubmit={handleSubmit}
                     className="space-y-6"
                   >

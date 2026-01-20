@@ -71,7 +71,20 @@ const softwareApplicationSchema = {
   ],
 };
 
-const projects = [
+const enterpriseProjects = [
+  {
+    name: "Auxilio Logistics",
+    domain: "logistics.auxilio.cloud",
+    url: "https://logistics.auxilio.cloud",
+    industry: "Enterprise Logistics",
+    image: logisticsImg,
+    description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
+    features: ["Route Optimization", "Real-time Tracking", "Supply Chain Analytics"],
+    gradient: "from-primary to-accent",
+  },
+];
+
+const productProjects = [
   {
     name: "Auxilio Promptly",
     domain: "promptly.digital",
@@ -111,16 +124,6 @@ const projects = [
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
-  },
-  {
-    name: "Auxilio Logistics",
-    domain: "logistics.auxilio.cloud",
-    url: "https://logistics.auxilio.cloud",
-    industry: "Logistics",
-    image: logisticsImg,
-    description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
-    features: ["Route Optimization", "Real-time Tracking", "Supply Chain Analytics"],
-    gradient: "from-primary to-accent",
   },
 ];
 
@@ -166,64 +169,152 @@ const Work = () => {
       {/* Projects Grid */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <a
-                key={project.name}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {/* Screenshot Image */}
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={`${project.name} screenshot`}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+          <div className="space-y-16">
+            <div>
+              <div className="mb-8">
+                <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">
+                  Enterprise
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  Enterprise Offerings
+                </h2>
+                <p className="text-muted-foreground max-w-2xl">
+                  Tailored AI platforms built for large-scale operations, compliance, and mission-critical workflows.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                {enterpriseProjects.map((project, index) => (
+                  <a
+                    key={project.name}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {/* Screenshot Image */}
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} screenshot`}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
 
-                {/* Content */}
-                <div className="p-8">
-                  {/* Industry tag */}
-                  <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
-                    {project.industry}
-                  </span>
-
-                  {/* Project name and external link */}
-                  <div className="flex items-start justify-between mb-4">
-                    <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-                      {project.name}
-                    </h2>
-                    <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
-                  </div>
-
-                  {/* Domain */}
-                  <p className="text-sm text-muted-foreground mb-4 font-mono">
-                    {project.domain}
-                  </p>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
-                      >
-                        {feature}
+                    {/* Content */}
+                    <div className="p-8">
+                      {/* Industry tag */}
+                      <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
+                        {project.industry}
                       </span>
-                    ))}
-                  </div>
-                </div>
-              </a>
-            ))}
+
+                      {/* Project name and external link */}
+                      <div className="flex items-start justify-between mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                          {project.name}
+                        </h2>
+                        <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                      </div>
+
+                      {/* Domain */}
+                      <p className="text-sm text-muted-foreground mb-4 font-mono">
+                        {project.domain}
+                      </p>
+
+                      {/* Description */}
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      {/* Features */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.features.map((feature) => (
+                          <span
+                            key={feature}
+                            className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-8">
+                <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-3">
+                  Product Demos
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  Live Product Experiences
+                </h2>
+                <p className="text-muted-foreground max-w-2xl">
+                  Explore our self-serve applications built for teams and individuals looking to deploy AI quickly.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                {productProjects.map((project, index) => (
+                  <a
+                    key={project.name}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {/* Screenshot Image */}
+                    <div className="aspect-video overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} screenshot`}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-8">
+                      {/* Industry tag */}
+                      <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
+                        {project.industry}
+                      </span>
+
+                      {/* Project name and external link */}
+                      <div className="flex items-start justify-between mb-4">
+                        <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                          {project.name}
+                        </h2>
+                        <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                      </div>
+
+                      {/* Domain */}
+                      <p className="text-sm text-muted-foreground mb-4 font-mono">
+                        {project.domain}
+                      </p>
+
+                      {/* Description */}
+                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                        {project.description}
+                      </p>
+
+                      {/* Features */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.features.map((feature) => (
+                          <span
+                            key={feature}
+                            className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

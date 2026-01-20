@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const locations = [
@@ -23,69 +21,6 @@ const locations = [
 ];
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const formDataToSend = new FormData();
-      formDataToSend.append("name", formData.name);
-      formDataToSend.append("email", formData.email);
-      formDataToSend.append("company", formData.company);
-      formDataToSend.append("message", formData.message);
-      formDataToSend.append("_subject", "New contact form submission");
-      formDataToSend.append("_captcha", "false");
-
-      const response = await fetch(
-        "https://formsubmit.co/ajax/info@auxilio.cloud,naveed@auxilio.cloud,john@auxilio.cloud",
-        {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-          },
-          body: formDataToSend,
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Form submission failed.");
-      }
-
-      toast({
-        title: "Message sent",
-        description: "We'll get back to you as soon as possible.",
-      });
-
-      setFormData({ name: "", email: "", company: "", message: "" });
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or email us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <Layout>
       {/* Hero */}
@@ -116,15 +51,34 @@ const Contact = () => {
                   <h2 className="text-2xl font-semibold text-foreground mb-6">
                     Send us a message
                   </h2>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form
+                    method="POST"
+                    action="https://formsubmit.co/naveed.gilani@gmail.com"
+                    className="space-y-6"
+                  >
+                    <input
+                      type="text"
+                      name="_honey"
+                      style={{ display: "none" }}
+                    />
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value="New contact form submission"
+                    />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value="https://auxilio.cloud/thank-you"
+                    />
+                    <input type="hidden" name="_template" value="table" />
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Name</Label>
                         <Input
                           id="name"
                           name="name"
-                          value={formData.name}
-                          onChange={handleChange}
                           placeholder="Your name"
                           required
                         />
@@ -135,8 +89,6 @@ const Contact = () => {
                           id="email"
                           name="email"
                           type="email"
-                          value={formData.email}
-                          onChange={handleChange}
                           placeholder="you@company.com"
                           required
                         />
@@ -147,8 +99,6 @@ const Contact = () => {
                       <Input
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleChange}
                         placeholder="Your company name"
                       />
                     </div>
@@ -157,27 +107,14 @@ const Contact = () => {
                       <Textarea
                         id="message"
                         name="message"
-                        value={formData.message}
-                        onChange={handleChange}
                         placeholder="Tell us about your project or what you're looking to achieve..."
                         rows={5}
                         required
                       />
                     </div>
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full sm:w-auto"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        "Sending..."
-                      ) : (
-                        <>
-                          Send Message
-                          <Send className="ml-2 h-4 w-4" />
-                        </>
-                      )}
+                    <Button type="submit" size="lg" className="w-full sm:w-auto">
+                      Send Message
+                      <Send className="ml-2 h-4 w-4" />
                     </Button>
                   </form>
                 </div>

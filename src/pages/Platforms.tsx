@@ -326,7 +326,7 @@ const Platforms = () => {
             <p className="text-muted-foreground">
               Need more power for your organisation?{" "}
               <Link 
-                to="/contact" 
+                to="/enterprise" 
                 className="text-primary font-medium hover:underline"
               >
                 Explore our enterprise platform solutions

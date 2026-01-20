@@ -53,18 +53,18 @@ const faqSchema = {
 
 const individualTools = [
   {
-    name: "AI Document Summariser",
-    description: "Instantly condense lengthy documents, articles, or reports into clear, actionable summaries—saving you hours of reading time.",
+    name: "Instant Knowledge Summaries",
+    description: "Get clear, actionable highlights from documents, articles, or reports—built into every Auxilio consumer experience.",
     icon: FileText,
   },
   {
-    name: "Personal Task Organiser",
-    description: "An intelligent assistant that helps prioritise your to-do list, suggest optimal scheduling, and keep you focused on what matters most.",
+    name: "Priority-Focused Planning",
+    description: "Surface what matters most with smart prioritisation, suggested schedules, and gentle nudges to stay on track.",
     icon: ListChecks,
   },
   {
-    name: "Automated Note Extractor",
-    description: "Transform meetings, lectures, and voice memos into structured notes with key takeaways, action items, and searchable archives.",
+    name: "Auto-Captured Notes",
+    description: "Turn meetings, lectures, and voice memos into structured takeaways, action items, and searchable archives.",
     icon: StickyNote,
   },
 ];
@@ -230,6 +230,9 @@ const Platforms = () => {
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Not every challenge requires enterprise infrastructure. Auxilio offers lightweight, powerful AI tools designed for personal productivity and small businesses—no complex setup, just immediate value.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              These are shared capabilities across the Auxilio consumer suite—available in every app you use.
             </p>
           </div>
 

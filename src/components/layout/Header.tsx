@@ -6,12 +6,11 @@ import { cn } from "@/lib/utils";
 import logoImage from "@/assets/logo_dark.png";
 
 const navigation = [
-  { name: "Platform", href: "/platforms" },
+  { name: "Platforms", href: "/platforms" },
   { name: "Enterprise", href: "/enterprise" },
   { name: "Portfolio", href: "/work" },
   { name: "Insights", href: "/blog" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -76,6 +75,9 @@ export function Header() {
             type="button"
             className="md:hidden p-2 text-neutral-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
@@ -87,7 +89,10 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-24 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in">
+          <div
+            id="mobile-navigation"
+            className="md:hidden absolute top-24 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in"
+          >
             <div className="px-6 py-6 space-y-4">
               {navigation.map((item) => (
                 <Link

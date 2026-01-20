@@ -3,8 +3,7 @@ import logoImage from "@/assets/logo_dark.png";
 
 const navigation = {
   main: [
-    { name: "Platform", href: "/platforms" },
-    { name: "For Individuals", href: "/platforms#individuals" },
+    { name: "Platforms", href: "/platforms" },
     { name: "Enterprise", href: "/enterprise" },
     { name: "Portfolio", href: "/work" },
     { name: "Insights", href: "/blog" },
@@ -47,15 +46,27 @@ export function Footer() {
 
         <div className="pt-0">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="space-y-2">
+            <div className="space-y-2" itemScope itemType="https://schema.org/Organization">
               <p className="text-sm text-neutral-600">
-                <a href="mailto:info@auxilio.cloud" className="hover:text-neutral-900 transition-colors">
+                <a
+                  href="mailto:info@auxilio.cloud"
+                  className="hover:text-neutral-900 transition-colors"
+                  itemProp="email"
+                >
                   info@auxilio.cloud
                 </a>
               </p>
-              <p className="text-sm text-neutral-600">Phone: (coming soon)</p>
-              <p className="text-sm text-neutral-600">
-                7911 Handy Court, Fort Collins, CO 80525, USA
+              <p
+                className="text-sm text-neutral-600"
+                itemProp="address"
+                itemScope
+                itemType="https://schema.org/PostalAddress"
+              >
+                <span itemProp="streetAddress">7911 Handy Court</span>,{" "}
+                <span itemProp="addressLocality">Fort Collins</span>,{" "}
+                <span itemProp="addressRegion">CO</span>{" "}
+                <span itemProp="postalCode">80525</span>,{" "}
+                <span itemProp="addressCountry">USA</span>
               </p>
             </div>
             <p className="text-xs uppercase tracking-widest text-neutral-500">

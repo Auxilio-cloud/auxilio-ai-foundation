@@ -7,26 +7,14 @@ const team = [
   {
     name: "John Smith",
     role: "Co-Founder & CEO",
-    bio: "Seasoned technology executive with 20+ years building enterprise platforms. Previously led engineering teams at Fortune 500 companies.",
-    image: null, // Placeholder for headshot
+    bio: "Bio copy forthcoming.",
+    image: null, // TODO: replace with imported headshot when provided.
   },
   {
     name: "Naveed Gilani",
     role: "Co-Founder & Head of Product",
-    bio: "Product leader with a strong background in enterprise systems, platform design, and services. Specializes in translating complex technical capabilities into clear, usable, and scalable products.",
-    image: null, // Placeholder for headshot
-  },
-  {
-    name: "Michael Chen",
-    role: "VP of Engineering",
-    bio: "Full-stack architect specializing in scalable cloud infrastructure. Brings expertise from leading startups and tech giants.",
-    image: null, // Placeholder for headshot
-  },
-  {
-    name: "Emily Davis",
-    role: "Head of Product",
-    bio: "Product strategist focused on human-centered AI design. Previously built products used by millions across healthcare and finance.",
-    image: null, // Placeholder for headshot
+    bio: "Bio copy forthcoming.",
+    image: null, // TODO: replace with imported headshot when provided.
   },
 ];
 
@@ -88,13 +76,21 @@ const About = () => {
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
               {team.map((member) => (
                 <div key={member.name} className="flex gap-6 p-6 bg-card rounded-2xl border border-border">
-                  {/* Headshot placeholder */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={`${member.name} headshot`}
+                        className="w-24 h-24 rounded-xl object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                        <span className="text-2xl font-bold text-primary">
+                          {member.name.split(" ").map((n) => n[0]).join("")}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   {/* Bio */}
                   <div>

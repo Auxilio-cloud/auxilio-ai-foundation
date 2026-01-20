@@ -40,7 +40,7 @@ export function Header() {
       )}
     >
       <nav className="container mx-auto px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
@@ -86,7 +86,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in">
+          <div className="md:hidden absolute top-24 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in">
             <div className="px-6 py-6 space-y-4">
               {navigation.map((item) => (
                 <Link

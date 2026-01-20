@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { toast } from "@/components/ui/sonner";
 import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
+import { useState, type FormEvent } from "react";
 
 const locations = [
   {
@@ -21,6 +23,39 @@ const locations = [
 ];
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    formData.set("_cc", "naveed@auxilio.cloud,john@auxilio.cloud");
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/info@auxilio.cloud", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed.");
+      }
+
+      toast.success("Thanks! Your message has been sent.");
+      form.reset();
+    } catch (error) {
+      toast.error("Something went wrong. Please try again in a moment.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <Layout>
       {/* Hero */}
@@ -53,7 +88,8 @@ const Contact = () => {
                   </h2>
                   <form
                     method="POST"
-                    action="https://formsubmit.co/naveed.gilani@gmail.com"
+                    action="https://formsubmit.co/ajax/info@auxilio.cloud"
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                   >
                     <input
@@ -112,8 +148,13 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" size="lg" className="w-full sm:w-auto">
-                      Send Message
+                    <Button
+                      type="submit"
+                      size="lg"
+                      className="w-full sm:w-auto"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
                       <Send className="ml-2 h-4 w-4" />
                     </Button>
                   </form>

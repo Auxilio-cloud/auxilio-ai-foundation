@@ -6,12 +6,11 @@ import { cn } from "@/lib/utils";
 import logoImage from "@/assets/logo_dark.png";
 
 const navigation = [
-  { name: "Platform", href: "/platforms" },
+  { name: "Platforms", href: "/platforms" },
   { name: "Enterprise", href: "/enterprise" },
   { name: "Portfolio", href: "/work" },
   { name: "Insights", href: "/blog" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {

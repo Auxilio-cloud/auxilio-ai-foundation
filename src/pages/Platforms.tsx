@@ -17,23 +17,23 @@ import {
 const faqs = [
   {
     question: "How much does it cost to get started?",
-    answer: "Getting started is completely free! Each of our tools has a generous free tier that lets you explore and use core features without paying a penny. If you love what you see, premium plans start at just a few pounds per month—but there's no pressure to upgrade.",
+    answer: "Getting started is completely free! Each personal productivity tool in our consumer app lineup has a generous free tier so you can explore core features without paying a penny. If you love what you see, premium plans start at just a few pounds per month—but there's no pressure to upgrade.",
   },
   {
     question: "I'm not very tech-savvy. Will I be able to use these tools?",
-    answer: "Absolutely—that's exactly who we built these for! There's no coding, no complicated setup, and no confusing menus. Just sign up, follow our friendly onboarding guide, and you'll be up and running in minutes. If you get stuck, plain-English help is always a click away.",
+    answer: "Absolutely—that's exactly who we built these consumer apps for! There's no coding, no complicated setup, and no confusing menus. Just sign up, follow our friendly onboarding guide, and you'll be up and running with these personal productivity tools in minutes. If you get stuck, plain-English help is always a click away.",
   },
   {
     question: "Is my data safe with Auxilio?",
-    answer: "Your privacy matters to us. All your data is encrypted and stored securely—we never sell or share it with anyone. You're always in control: you can export or delete your data anytime. We follow industry best practices so you can focus on being productive, not worried.",
+    answer: "Your privacy matters to us. All your data is encrypted and stored securely in our consumer productivity apps—we never sell or share it with anyone. You're always in control: you can export or delete your data anytime. We follow industry best practices so you can focus on your personal productivity, not worry.",
   },
   {
     question: "What if I need help or have questions?",
-    answer: "We've got you covered! Every plan includes access to our help centre with step-by-step guides and video tutorials. Free users get email support, and premium users enjoy priority responses. We're real people who genuinely want to help you succeed.",
+    answer: "We've got you covered! Every plan for our personal productivity tools includes access to our help centre with step-by-step guides and video tutorials. Free users get email support, and premium users enjoy priority responses. We're real people who genuinely want to help you succeed.",
   },
   {
     question: "Can I use these tools for my freelance business or side project?",
-    answer: "100%! Our tools are perfect for freelancers, side hustlers, and small teams. They're designed to grow with you—start simple, and add more features as your needs evolve. No enterprise contracts or complicated pricing, just straightforward tools that work.",
+    answer: "100%! Our consumer productivity apps are perfect for freelancers, side hustlers, and small teams. They're designed to grow with you—start simple, and add more personal productivity features as your needs evolve with straightforward pricing.",
   },
 ];
 

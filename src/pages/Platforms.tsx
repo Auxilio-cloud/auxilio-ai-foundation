@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { ArrowRight, FileText, ListChecks, StickyNote, ChevronDown } from "lucide-react";
+import { ArrowRight, FileText, ListChecks, StickyNote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -17,51 +17,23 @@ import {
 const faqs = [
   {
     question: "How much does it cost to get started?",
-    answer: "Getting started is completely free! Each of our tools has a generous free tier that lets you explore and use core features without paying a penny. If you love what you see, premium plans start at just a few pounds per month—but there's no pressure to upgrade.",
+    answer: "Getting started is completely free! Each personal productivity tool in our consumer app lineup has a generous free tier so you can explore core features without paying a penny. If you love what you see, premium plans start at just a few pounds per month—but there's no pressure to upgrade.",
   },
   {
     question: "I'm not very tech-savvy. Will I be able to use these tools?",
-    answer: "Absolutely—that's exactly who we built these for! There's no coding, no complicated setup, and no confusing menus. Just sign up, follow our friendly onboarding guide, and you'll be up and running in minutes. If you get stuck, plain-English help is always a click away.",
+    answer: "Absolutely—that's exactly who we built these consumer apps for! There's no coding, no complicated setup, and no confusing menus. Just sign up, follow our friendly onboarding guide, and you'll be up and running with these personal productivity tools in minutes. If you get stuck, plain-English help is always a click away.",
   },
   {
     question: "Is my data safe with Auxilio?",
-    answer: "Your privacy matters to us. All your data is encrypted and stored securely—we never sell or share it with anyone. You're always in control: you can export or delete your data anytime. We follow industry best practices so you can focus on being productive, not worried.",
+    answer: "Your privacy matters to us. All your data is encrypted and stored securely in our consumer productivity apps—we never sell or share it with anyone. You're always in control: you can export or delete your data anytime. We follow industry best practices so you can focus on your personal productivity, not worry.",
   },
   {
     question: "What if I need help or have questions?",
-    answer: "We've got you covered! Every plan includes access to our help centre with step-by-step guides and video tutorials. Free users get email support, and premium users enjoy priority responses. We're real people who genuinely want to help you succeed.",
+    answer: "We've got you covered! Every plan for our personal productivity tools includes access to our help centre with step-by-step guides and video tutorials. Free users get email support, and premium users enjoy priority responses. We're real people who genuinely want to help you succeed.",
   },
   {
     question: "Can I use these tools for my freelance business or side project?",
-    answer: "100%! Our tools are perfect for freelancers, side hustlers, and small teams. They're designed to grow with you—start simple, and add more features as your needs evolve. No enterprise contracts or complicated pricing, just straightforward tools that work.",
-  },
-];
-
-// Testimonials data
-const testimonials = [
-  {
-    name: "Sarah",
-    role: "Freelance Designer",
-    text: "The document summariser has cut my research time in half. I can now review client briefs in minutes instead of hours.",
-    rating: 5,
-  },
-  {
-    name: "James",
-    role: "Small Business Owner",
-    text: "Finally, AI tools that don't require a tech degree to use. Set up took five minutes and it just works.",
-    rating: 5,
-  },
-  {
-    name: "Priya",
-    role: "Graduate Student",
-    text: "The note extractor transformed how I study. It pulls out exactly what I need from lecture recordings.",
-    rating: 5,
-  },
-  {
-    name: "Tom",
-    role: "Marketing Consultant",
-    text: "I was sceptical about AI tools, but these are genuinely helpful. Simple, fast, and actually saves me time.",
-    rating: 4,
+    answer: "100%! Our consumer productivity apps are perfect for freelancers, side hustlers, and small teams. They're designed to grow with you—start simple, and add more personal productivity features as your needs evolve with straightforward pricing.",
   },
 ];
 
@@ -76,38 +48,6 @@ const faqSchema = {
       "@type": "Answer",
       text: faq.answer,
     },
-  })),
-};
-
-// Review schema for testimonials
-const reviewSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Auxilio AI Tools for Individuals",
-  description: "Simple AI tools for personal productivity and small teams",
-  brand: {
-    "@type": "Organization",
-    name: "Auxilio",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: testimonials.length.toString(),
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: testimonials.map((t) => ({
-    "@type": "Review",
-    author: {
-      "@type": "Person",
-      name: t.name,
-    },
-    reviewRating: {
-      "@type": "Rating",
-      ratingValue: t.rating.toString(),
-      bestRating: "5",
-    },
-    reviewBody: t.text,
   })),
 };
 
@@ -204,18 +144,9 @@ const Platforms = () => {
     faqScript.textContent = JSON.stringify(faqSchema);
     document.head.appendChild(faqScript);
 
-    // Inject Review schema
-    const reviewScript = document.createElement("script");
-    reviewScript.type = "application/ld+json";
-    reviewScript.id = "review-schema";
-    reviewScript.textContent = JSON.stringify(reviewSchema);
-    document.head.appendChild(reviewScript);
-
     return () => {
       const existingFaqScript = document.getElementById("faq-schema");
       if (existingFaqScript) existingFaqScript.remove();
-      const existingReviewScript = document.getElementById("review-schema");
-      if (existingReviewScript) existingReviewScript.remove();
     };
   }, []);
 
@@ -326,58 +257,12 @@ const Platforms = () => {
             <p className="text-muted-foreground">
               Need more power for your organisation?{" "}
               <Link 
-                to="/contact" 
+                to="/enterprise" 
                 className="text-primary font-medium hover:underline"
               >
                 Explore our enterprise platform solutions
               </Link>
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="section-padding bg-secondary/20">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
-              What People Say
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-              Trusted by individuals & small teams
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-2xl bg-card border border-border"
-              >
-                {/* Star rating */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className={`w-4 h-4 ${i < testimonial.rating ? "text-primary" : "text-muted"}`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-
-                <p className="text-foreground leading-relaxed mb-4">
-                  "{testimonial.text}"
-                </p>
-
-                <div className="text-sm">
-                  <span className="font-semibold text-foreground">{testimonial.name}</span>
-                  <span className="text-muted-foreground"> · {testimonial.role}</span>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -81,6 +81,14 @@ export function HeroSection() {
             >
               <Link to="/contact">Get in Touch</Link>
             </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-base px-8 uppercase font-semibold tracking-wide border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            >
+              <Link to="/enterprise">Explore Auxilio Logistics</Link>
+            </Button>
           </div>
 
           {/* Mission paragraph */}

@@ -20,7 +20,7 @@ export function Footer() {
           {/* Logo and tagline */}
           <div>
             <Link to="/" className="inline-block">
-              <img src={logoImage} alt="Auxilio" className="h-20 w-auto" />
+              <img src={logoImage} alt="Auxilio" className="h-14 w-auto sm:h-20" />
             </Link>
             <p className="mt-2 text-sm text-neutral-600 max-w-xs">
               Building the infrastructure for the AI-native era.
@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <nav className="flex gap-8">
+          <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8 gap-y-3">
             {navigation.main.map((item) => (
               <Link
                 key={item.name}
@@ -69,7 +69,7 @@ export function Footer() {
                 <span itemProp="addressCountry">USA</span>
               </p>
             </div>
-            <p className="text-xs uppercase tracking-widest text-neutral-500">
+            <p className="text-xs uppercase tracking-widest text-neutral-500 text-center md:text-right leading-relaxed">
               © {new Date().getFullYear()} AUXILIO TECHNOLOGIES LLC, ALL RIGHTS RESERVED.
             </p>
           </div>

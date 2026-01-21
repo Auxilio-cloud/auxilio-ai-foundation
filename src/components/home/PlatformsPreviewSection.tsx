@@ -3,24 +3,24 @@ import { ArrowRight } from "lucide-react";
 
 const platforms = [
   {
-    name: "Synthesis",
-    tagline: "AI coordination",
+    name: "AI Workflow Platform",
+    tagline: "Faster delivery",
     description:
-      "Connects multiple AI capabilities into cohesive applications. Synthesis lets us build solutions that combine reasoning, data analysis, and automation—delivered faster, with less risk.",
+      "Aligns data, people, and AI into repeatable workflows. Launch solutions in weeks and show measurable time and cost savings from day one.",
     gradient: "from-primary/10 to-primary/5",
   },
   {
-    name: "Meridian",
-    tagline: "System integration",
+    name: "Business Integration Platform",
+    tagline: "Connect your stack",
     description:
-      "Bridges your existing tools and data sources. Meridian enables AI applications to work seamlessly within your current environment, without costly rewrites or disruptions.",
+      "Connects your systems and data without disruption. Keep current tools and add automation that scales from small teams to enterprise.",
     gradient: "from-accent/10 to-accent/5",
   },
   {
-    name: "Atlas",
-    tagline: "Knowledge management",
+    name: "Insight & Knowledge Platform",
+    tagline: "Turn info into action",
     description:
-      "Turns unstructured information into usable intelligence. Atlas powers applications that can search, summarise, and reason over your documents and data.",
+      "Organizes documents and conversations into searchable answers. Give teams instant clarity and better decisions with less manual effort.",
     gradient: "from-muted to-secondary/50",
   },
 ];
@@ -37,7 +37,7 @@ export function PlatformsPreviewSection() {
             Proven foundations, faster results
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            You don't buy our platforms—you benefit from them. These are internal tools we've built to speed up development and reduce project risk.
+            You don't buy our platform—you benefit from it. These are internal capabilities built to speed up delivery and reduce project risk.
           </p>
         </div>
 

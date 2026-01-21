@@ -5,15 +5,15 @@ import { Button } from "@/components/ui/button";
 
 const team = [
   {
-    name: "John Smith",
+    name: "John Brinegar",
     role: "Co-Founder & CEO",
-    bio: "Bio copy forthcoming.",
+    bio: "John is a seasoned software and solutions leader with over 30 years of experience spanning AI, IoT, analytics, and enterprise systems. He is a co-founder of GPTWorks, where he leads generative AI services focused on fine-tuning and retrieval-augmented solutions using open-source large language models. Previously, he led IoT solution architecture for the industrial sector at Hitachi Vantara, delivering large-scale analytics and IIoT platforms. John has architected and launched complex solutions across manufacturing, telecommunications, healthcare, and industrial domains. He has led global teams through the full lifecycle of architecture, development, launch, and delivery of production-grade platforms. His expertise spans industrial analytics, network and systems management, cloud and hybrid architectures, and secure enterprise applications. He is passionate about applying AI and IoT in practical ways that improve efficiency, quality, and operational outcomes.",
     image: null, // TODO: replace with imported headshot when provided.
   },
   {
     name: "Naveed Gilani",
     role: "Co-Founder & Head of Product",
-    bio: "Bio copy forthcoming.",
+    bio: "Naveed is a strategic technology leader with over 25 years of experience building and scaling complex platforms across enterprise and startup environments. His work sits at the intersection of AI, product strategy, and execution—turning ambitious ideas into secure, market-ready systems. He has led global product and engineering teams, launched cloud and AI-driven platforms, and delivered large-scale digital transformation. More recently, he founded and built Promptly, an AI platform enabling multi-model interaction and real-time collaboration at scale. His current focus is applied AI, including generative AI and retrieval-augmented systems that solve real operational problems. He values clarity, outcomes, and building technology that people can trust and use. Auxilio reflects this philosophy: pragmatic, thoughtful, and built for impact.",
     image: null, // TODO: replace with imported headshot when provided.
   },
 ];

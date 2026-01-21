@@ -18,7 +18,7 @@ const team = [
   },
   {
     name: "Naveed Gilani",
-    role: "Co-Founder & Head of Product",
+    role: "Co-Founder & CTO",
     bio: "Naveed is a strategic technology leader with over 25 years of experience building and scaling complex platforms across enterprise and startup environments. His work sits at the intersection of AI, product strategy, and execution—turning ambitious ideas into secure, market-ready systems. He has led global product and engineering teams, launched cloud and AI-driven platforms, and delivered large-scale digital transformation. More recently, he founded and built Promptly, an AI platform enabling multi-model interaction and real-time collaboration at scale. His current focus is applied AI, including generative AI and retrieval-augmented systems that solve real operational problems. He values clarity, outcomes, and building technology that people can trust and use. Auxilio reflects this philosophy: pragmatic, thoughtful, and built for impact.",
     image: naveedHeadshotDataUri,
   },

@@ -37,7 +37,7 @@ export function PlatformsPreviewSection() {
             Proven foundations, faster results
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            You don't buy our platform—you benefit from it. These are internal capabilities built to speed up delivery and reduce project risk.
+            You don't buy our platform, you benefit from it. These are internal capabilities built to speed up delivery and reduce project risk.
           </p>
         </div>
 

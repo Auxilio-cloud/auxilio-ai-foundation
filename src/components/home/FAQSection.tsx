@@ -14,7 +14,7 @@ const faqs = [
   {
     question: "Who is Auxilio for?",
     answer:
-      "We work with organisations across industries—healthcare, legal, finance, and beyond—who want to apply AI to real business problems. Our clients range from mid-sized companies exploring their first AI project to enterprises scaling existing capabilities.",
+      "We work with organisations across industries healthcare, legal, finance, and beyond who want to apply AI to real business problems. Our clients range from mid-sized companies exploring their first AI project to enterprises scaling existing capabilities.",
   },
   {
     question: "How does Auxilio help organisations use AI?",
@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "What makes Auxilio different from other AI companies?",
     answer:
-      "We're a small team focused on building working software, not selling ideas. Our internal platforms help us move faster, and we stay involved through deployment—not just handoff.",
+      "We're a small team focused on building working software, not selling ideas. Our internal platforms help us move faster, and we stay involved through deployment not just handoff.",
   },
 ];
 

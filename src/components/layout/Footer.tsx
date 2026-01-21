@@ -69,7 +69,7 @@ export function Footer() {
                 <span itemProp="addressCountry">USA</span>
               </p>
             </div>
-            <p className="text-xs uppercase tracking-widest text-neutral-500">
+            <p className="text-xs uppercase tracking-widest text-neutral-500 text-center md:text-right leading-relaxed">
               © {new Date().getFullYear()} AUXILIO TECHNOLOGIES LLC, ALL RIGHTS RESERVED.
             </p>
           </div>

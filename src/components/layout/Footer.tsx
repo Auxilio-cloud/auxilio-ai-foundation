@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           {/* Navigation */}
-          <nav className="flex gap-8">
+          <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8 gap-y-3">
             {navigation.main.map((item) => (
               <Link
                 key={item.name}

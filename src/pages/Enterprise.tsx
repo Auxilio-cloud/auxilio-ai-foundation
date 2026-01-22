@@ -45,6 +45,21 @@ const outcomes = [
   "Surface risk signals earlier across suppliers and carriers.",
 ];
 
+const screenshots = [
+  {
+    src: "scr1.jpeg",
+    alt: "Auxilio logistics platform overview",
+  },
+  {
+    src: "scr2.jpeg",
+    alt: "Auxilio logistics analytics dashboards",
+  },
+  {
+    src: "scr3.jpeg",
+    alt: "Auxilio logistics workflow automation",
+  },
+];
+
 const Enterprise = () => {
   useEffect(() => {
     document.title = "Auxilio Logistics | Enterprise AI for Supply Chains";
@@ -93,14 +108,14 @@ const Enterprise = () => {
               </Button>
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {["/scr1.jpeg", "/scr2.jpeg", "/scr3.jpeg"].map((src) => (
+              {screenshots.map((screenshot) => (
                 <div
-                  key={src}
+                  key={screenshot.src}
                   className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
                 >
                   <img
-                    src={src}
-                    alt="Auxilio logistics platform preview"
+                    src={`${import.meta.env.BASE_URL}${screenshot.src}`}
+                    alt={screenshot.alt}
                     className="h-40 w-full object-cover sm:h-44 md:h-48 lg:h-52"
                     loading="lazy"
                   />

@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/accordion";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 // FAQ data for consumer tools
 const faqs = [
@@ -139,7 +140,14 @@ const Platforms = () => {
         canonical={buildCanonicalUrl("/platforms")}
         ogTitle="Auxilio Platforms | AI Tools for Individuals & Teams"
         ogDescription="Explore AI-powered productivity tools for summarisation, planning, and notes—built for individuals and small teams."
-        structuredData={faqSchema}
+        structuredData={[
+          ...baseStructuredData,
+          faqSchema,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Platform", path: "/platforms" },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">

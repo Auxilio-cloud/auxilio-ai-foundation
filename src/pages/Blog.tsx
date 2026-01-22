@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 
 const posts = [
@@ -57,6 +58,13 @@ const Blog = () => {
         canonical={buildCanonicalUrl("/blog")}
         ogTitle="Auxilio Insights | AI for Everyday Productivity"
         ogDescription="Practical guides on using AI to boost personal productivity."
+        structuredData={[
+          ...baseStructuredData,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/blog" },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">

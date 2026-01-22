@@ -116,7 +116,7 @@ const Enterprise = () => {
                   <img
                     src={`${import.meta.env.BASE_URL}${screenshot.src}`}
                     alt={screenshot.alt}
-                    className="h-40 w-full object-cover sm:h-44 md:h-48 lg:h-52"
+                    className="aspect-[4/3] w-full object-cover"
                     loading="lazy"
                   />
                 </div>

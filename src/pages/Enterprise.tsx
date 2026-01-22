@@ -83,7 +83,7 @@ const Enterprise = () => {
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
                 <a
-                  href="/datasheets/Flyer%20-%20Optimize%20Your%20Logistics%20Today.pdf"
+                  href="/Flyer%20-%20Optimize%20Your%20Logistics%20Today.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -205,7 +205,7 @@ const Enterprise = () => {
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
                 <a
-                  href="/datasheets/Flyer%20-%20Optimize%20Your%20Logistics%20Today.pdf"
+                  href="/Flyer%20-%20Optimize%20Your%20Logistics%20Today.pdf"
                   target="_blank"
                   rel="noreferrer"
                 >

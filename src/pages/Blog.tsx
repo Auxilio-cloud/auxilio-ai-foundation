@@ -1,7 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
-import { useEffect } from "react";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 
 const posts = [
@@ -48,16 +49,15 @@ const posts = [
 ];
 
 const Blog = () => {
-  useEffect(() => {
-    document.title = "AI for Personal Productivity | Auxilio Insights";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Practical AI guides for everyday productivity. Learn how to use AI tools for note-taking, task management, and document organisation—no tech skills required.");
-    }
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="AI for Personal Productivity | Auxilio Insights"
+        description="Practical AI guides for everyday productivity. Learn how to use AI tools for note-taking, task management, and document organisation—no tech skills required."
+        canonical={buildCanonicalUrl("/blog")}
+        ogTitle="Auxilio Insights | AI for Everyday Productivity"
+        ogDescription="Practical guides on using AI to boost personal productivity."
+      />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

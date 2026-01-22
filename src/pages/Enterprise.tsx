@@ -92,6 +92,21 @@ const Enterprise = () => {
                 </a>
               </Button>
             </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {["/scr1.jpeg", "/scr2.jpeg", "/scr3.jpeg"].map((src) => (
+                <div
+                  key={src}
+                  className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm"
+                >
+                  <img
+                    src={src}
+                    alt="Auxilio logistics platform preview"
+                    className="h-40 w-full object-cover sm:h-44 md:h-48 lg:h-52"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

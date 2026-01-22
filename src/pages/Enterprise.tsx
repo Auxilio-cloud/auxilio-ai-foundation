@@ -84,7 +84,7 @@ const Enterprise = () => {
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
                 <a href={logisticsFlyerPdf} target="_blank" rel="noreferrer">
-                  Download sheet
+                  Download datasheet
                   <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>
@@ -202,7 +202,7 @@ const Enterprise = () => {
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
                 <a href={logisticsFlyerPdf} target="_blank" rel="noreferrer">
-                  Download sheet
+                  Download datasheet
                   <Download className="ml-2 h-4 w-4" />
                 </a>
               </Button>

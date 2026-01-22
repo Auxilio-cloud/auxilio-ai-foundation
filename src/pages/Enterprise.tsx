@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import logisticsFlyerPdf from "@/assets/Flyer - Optimize Your Logistics Today.pdf";
 
 const capabilities = [
   {

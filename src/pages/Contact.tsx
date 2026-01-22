@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { toast } from "@/components/ui/sonner";
 import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 const locations = [
   {
@@ -58,6 +60,13 @@ const Contact = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Contact Auxilio | Start a Conversation"
+        description="Get in touch with Auxilio to discuss AI strategy, platform development, or enterprise solutions."
+        canonical={buildCanonicalUrl("/contact")}
+        ogTitle="Contact Auxilio"
+        ogDescription="Reach out to discuss AI strategy, platform development, or enterprise solutions."
+      />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

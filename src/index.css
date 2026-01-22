@@ -21,8 +21,8 @@
     --popover: 220 50% 10%;
     --popover-foreground: 210 40% 98%;
 
-    /* Lime green accent - vibrant and energetic */
-    --primary: 90 70% 50%;
+    /* Subdued teal-green accent aligned with logo */
+    --primary: 175 55% 45%;
     --primary-foreground: 220 50% 8%;
 
     --secondary: 220 45% 15%;
@@ -32,7 +32,7 @@
     --muted-foreground: 210 20% 65%;
 
     /* Cyan/teal accent for glow effects */
-    --accent: 185 80% 55%;
+    --accent: 182 65% 52%;
     --accent-foreground: 220 50% 8%;
 
     --destructive: 0 84% 60%;
@@ -40,23 +40,23 @@
 
     --border: 220 40% 20%;
     --input: 220 40% 20%;
-    --ring: 90 70% 50%;
+    --ring: 175 55% 45%;
 
     --radius: 0.5rem;
 
     /* Custom glow colors */
-    --glow-cyan: 185 80% 55%;
-    --glow-green: 90 70% 50%;
+    --glow-cyan: 182 65% 52%;
+    --glow-green: 175 55% 45%;
 
     /* Sidebar */
     --sidebar-background: 220 50% 10%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 90 70% 50%;
+    --sidebar-primary: 175 55% 45%;
     --sidebar-primary-foreground: 220 50% 8%;
     --sidebar-accent: 220 45% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 220 40% 20%;
-    --sidebar-ring: 90 70% 50%;
+    --sidebar-ring: 175 55% 45%;
   }
 
   .dark {
@@ -70,7 +70,7 @@
     --popover: 220 50% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 90 70% 50%;
+    --primary: 175 55% 45%;
     --primary-foreground: 220 50% 8%;
 
     --secondary: 220 45% 15%;
@@ -79,7 +79,7 @@
     --muted: 220 40% 18%;
     --muted-foreground: 210 20% 65%;
 
-    --accent: 185 80% 55%;
+    --accent: 182 65% 52%;
     --accent-foreground: 220 50% 8%;
 
     --destructive: 0 62% 45%;
@@ -87,16 +87,16 @@
 
     --border: 220 40% 20%;
     --input: 220 40% 20%;
-    --ring: 90 70% 50%;
+    --ring: 175 55% 45%;
 
     --sidebar-background: 220 50% 10%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 90 70% 50%;
+    --sidebar-primary: 175 55% 45%;
     --sidebar-primary-foreground: 220 50% 8%;
     --sidebar-accent: 220 45% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 220 40% 20%;
-    --sidebar-ring: 90 70% 50%;
+    --sidebar-ring: 175 55% 45%;
   }
 }
 
@@ -141,7 +141,7 @@
     transform: translateY(-2px);
   }
 
-  /* Gradient text utility - lime green */
+  /* Gradient text utility - teal accent */
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
@@ -157,14 +157,14 @@
 
   /* Glow effects */
   .glow-cyan {
-    box-shadow: 0 0 60px 20px hsl(185 80% 55% / 0.3);
+    box-shadow: 0 0 60px 20px hsl(182 65% 52% / 0.3);
   }
 
   .glow-green {
-    box-shadow: 0 0 40px 10px hsl(90 70% 50% / 0.3);
+    box-shadow: 0 0 40px 10px hsl(175 55% 45% / 0.3);
   }
 
   .text-glow-green {
-    text-shadow: 0 0 20px hsl(90 70% 50% / 0.5);
+    text-shadow: 0 0 20px hsl(175 55% 45% / 0.5);
   }
 }

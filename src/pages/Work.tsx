@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowUpRight } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
@@ -137,7 +138,14 @@ const Work = () => {
         canonical={buildCanonicalUrl("/work")}
         ogTitle="Auxilio Portfolio | Deployed AI Solutions"
         ogDescription="Real-world AI solutions that enhance business and personal productivity."
-        structuredData={softwareApplicationSchema}
+        structuredData={[
+          ...baseStructuredData,
+          softwareApplicationSchema,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Portfolio", path: "/work" },
+          ]),
+        ]}
       />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-background">

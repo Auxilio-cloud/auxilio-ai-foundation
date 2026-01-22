@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import logisticsFlyerPdf from "@/assets/Flyer - Optimize Your Logistics Today.pdf";
 
 const capabilities = [
   {
@@ -82,7 +83,7 @@ const Enterprise = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
-                <a href="/datasheets/auxilio-logistics-datasheet.pdf" download>
+                <a href={logisticsFlyerPdf} target="_blank" rel="noreferrer">
                   Download datasheet
                   <Download className="ml-2 h-4 w-4" />
                 </a>
@@ -200,7 +201,7 @@ const Enterprise = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base px-8">
-                <a href="/datasheets/auxilio-logistics-datasheet.pdf" download>
+                <a href={logisticsFlyerPdf} target="_blank" rel="noreferrer">
                   Download datasheet
                   <Download className="ml-2 h-4 w-4" />
                 </a>

@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { ArrowUpRight } from "lucide-react";
-import { useEffect } from "react";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
@@ -128,22 +129,16 @@ const productProjects = [
 ];
 
 const Work = () => {
-  useEffect(() => {
-    // Inject SoftwareApplication schema
-    const script = document.createElement("script");
-    script.type = "application/ld+json";
-    script.id = "software-application-schema";
-    script.textContent = JSON.stringify(softwareApplicationSchema);
-    document.head.appendChild(script);
-
-    return () => {
-      const existingScript = document.getElementById("software-application-schema");
-      if (existingScript) existingScript.remove();
-    };
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Auxilio Portfolio | Deployed AI Solutions"
+        description="Explore Auxilio’s deployed AI products and enterprise solutions, from intelligent logistics to productivity platforms."
+        canonical={buildCanonicalUrl("/work")}
+        ogTitle="Auxilio Portfolio | Deployed AI Solutions"
+        ogDescription="Real-world AI solutions that enhance business and personal productivity."
+        structuredData={softwareApplicationSchema}
+      />
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-background">
         {/* Background glow effects */}

@@ -8,8 +8,9 @@ import {
   ShieldCheck,
   Truck,
 } from "lucide-react";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 const capabilities = [
   {
@@ -61,19 +62,15 @@ const screenshots = [
 ];
 
 const Enterprise = () => {
-  useEffect(() => {
-    document.title = "Auxilio Logistics | Enterprise AI for Supply Chains";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Auxilio Logistics delivers enterprise AI for routing, visibility, and supply chain orchestration. Optimize networks, reduce costs, and boost service levels.",
-      );
-    }
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Auxilio Logistics | Enterprise AI for Supply Chains"
+        description="Auxilio Logistics delivers enterprise AI for routing, visibility, and supply chain orchestration. Optimize networks, reduce costs, and boost service levels."
+        canonical={buildCanonicalUrl("/enterprise")}
+        ogTitle="Auxilio Logistics | Enterprise AI for Supply Chains"
+        ogDescription="Enterprise AI for routing, visibility, and supply chain orchestration."
+      />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/40 to-background">
         <div className="container mx-auto px-6 lg:px-8">

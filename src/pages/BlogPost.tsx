@@ -1,7 +1,8 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
-import { useEffect } from "react";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
@@ -382,22 +383,25 @@ const BlogPost = () => {
   const post = slug ? posts[slug] : null;
   const seo = slug ? postSeo[slug] : null;
 
-  useEffect(() => {
-    if (seo) {
-      document.title = seo.title;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", seo.description);
-      }
-    }
-  }, [seo]);
-
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
 
+  const seoData = seo ?? {
+    title: post.title,
+    description: "Insights on applying AI to everyday productivity.",
+  };
+
   return (
     <Layout>
+      <Seo
+        title={seoData.title}
+        description={seoData.description}
+        canonical={buildCanonicalUrl(`/blog/${slug}`)}
+        ogTitle={seoData.title}
+        ogDescription={seoData.description}
+        ogType="article"
+      />
       {/* Header */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

@@ -2,7 +2,6 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowRight, FileText, ListChecks, StickyNote } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { useEffect } from "react";
 import meridianImage from "@/assets/meridian.jpg";
 import synthesisImage from "@/assets/synthesis.jpg";
 import atlasImage from "@/assets/atlas.jpg";
@@ -12,6 +11,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Seo } from "@/components/Seo";
+import { buildCanonicalUrl } from "@/lib/seo";
 
 // FAQ data for consumer tools
 const faqs = [
@@ -130,28 +131,16 @@ const platforms = [
 ];
 
 const Platforms = () => {
-  useEffect(() => {
-    document.title = "AI Tools for Individuals & Teams | Auxilio Platform";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "AI document summariser, task organiser & note extractor for personal productivity. Simple AI tools for individuals and small teams—no setup required.");
-    }
-
-    // Inject FAQPage schema
-    const faqScript = document.createElement("script");
-    faqScript.type = "application/ld+json";
-    faqScript.id = "faq-schema";
-    faqScript.textContent = JSON.stringify(faqSchema);
-    document.head.appendChild(faqScript);
-
-    return () => {
-      const existingFaqScript = document.getElementById("faq-schema");
-      if (existingFaqScript) existingFaqScript.remove();
-    };
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="AI Tools for Individuals & Teams | Auxilio Platform"
+        description="AI document summariser, task organiser & note extractor for personal productivity. Simple AI tools for individuals and small teams—no setup required."
+        canonical={buildCanonicalUrl("/platforms")}
+        ogTitle="Auxilio Platforms | AI Tools for Individuals & Teams"
+        ogDescription="Explore AI-powered productivity tools for summarisation, planning, and notes—built for individuals and small teams."
+        structuredData={faqSchema}
+      />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

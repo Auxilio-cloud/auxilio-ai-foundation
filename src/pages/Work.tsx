@@ -75,7 +75,7 @@ const enterpriseProjects = [
   {
     name: "Auxilio Logistics",
     domain: "logistics.auxilio.cloud",
-    url: "https://logistics.auxilio.cloud",
+    url: "/enterprise",
     industry: "Enterprise Logistics",
     image: logisticsImg,
     description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
@@ -187,8 +187,6 @@ const Work = () => {
                   <a
                     key={project.name}
                     href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >

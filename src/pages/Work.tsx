@@ -2,7 +2,11 @@ import { Layout } from "@/components/layout/Layout";
 import { ArrowUpRight } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
-import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
+import {
+  baseStructuredData,
+  buildBreadcrumbListSchema,
+  serviceSchemas,
+} from "@/lib/structuredData";
 
 import promptlyImg from "@/assets/portfolio/promptly.png";
 import healthImg from "@/assets/portfolio/health.png";
@@ -188,6 +192,7 @@ const Work = () => {
         ogDescription="Real-world AI solutions that enhance business and personal productivity."
         structuredData={[
           ...baseStructuredData,
+          ...serviceSchemas,
           softwareApplicationSchema,
           buildBreadcrumbListSchema([
             { name: "Home", path: "/" },

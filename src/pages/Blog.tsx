@@ -7,49 +7,49 @@ import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredD
 
 const posts = [
   {
-    slug: "operationalizing-llm-strategy",
-    title: "Operationalizing LLM Strategy for the Enterprise",
+    slug: "ai-strategy-roi-blueprint",
+    title: "AI Strategy & ROI Blueprint for Executive Teams",
     excerpt:
-      "A playbook for CTOs on model selection, governance, and cost controls required to move from pilot to production.",
-    category: "CTO Strategy",
+      "A structured roadmap that ties AI initiatives to value pools, KPIs, and funding gates with clear Q&A guidance.",
+    category: "AI Strategy",
     date: "January 8, 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "ai-infrastructure-readiness",
+    title: "AI Infrastructure Readiness: Platform & Ops Roadmap",
+    excerpt:
+      "Infrastructure requirements, reference architectures, and the Q&A template platform leaders can reuse.",
+    category: "Infrastructure",
+    date: "January 6, 2026",
     readTime: "7 min read",
   },
   {
-    slug: "ai-platform-foundations",
-    title: "Building AI Platform Foundations with Engineering Readiness",
+    slug: "data-readiness-scorecard",
+    title: "Data Readiness Scorecard for Enterprise AI",
     excerpt:
-      "How to align data, infrastructure, and platform teams to deliver reliable AI capabilities across the organization.",
-    category: "Platform Engineering",
-    date: "January 5, 2026",
+      "A practical scorecard for data quality, governance, and access needed before scaling AI use cases.",
+    category: "Data Readiness",
+    date: "January 4, 2026",
     readTime: "6 min read",
   },
   {
-    slug: "rag-observability-guide",
-    title: "RAG Observability: What Engineering Leaders Need",
+    slug: "rag-production-playbook",
+    title: "RAG Production Playbook: Retrieval, Grounding, Trust",
     excerpt:
-      "Key telemetry, evals, and guardrails to keep retrieval-augmented generation systems trustworthy at scale.",
-    category: "LLM Operations",
+      "Structured answers on architecture, evaluation, and observability for RAG systems at scale.",
+    category: "RAG",
     date: "January 2, 2026",
-    readTime: "6 min read",
+    readTime: "7 min read",
   },
   {
-    slug: "security-ai-systems",
-    title: "Security & Compliance for AI Systems",
+    slug: "ai-governance-operating-model",
+    title: "AI Governance Operating Model for Regulated Teams",
     excerpt:
-      "A checklist for CTOs to satisfy SOC 2, privacy, and data residency requirements while scaling AI usage.",
-    category: "Security & Risk",
+      "How to design decision rights, controls, and compliance workflows with clear Q&A templates.",
+    category: "Governance",
     date: "December 28, 2025",
-    readTime: "5 min read",
-  },
-  {
-    slug: "ai-roadmap-leadership",
-    title: "Leadership Brief: Aligning AI Roadmaps with Business Impact",
-    excerpt:
-      "Frameworks for prioritizing AI investments, sequencing initiatives, and communicating impact to executives.",
-    category: "Executive Brief",
-    date: "December 22, 2025",
-    readTime: "5 min read",
+    readTime: "6 min read",
   },
 ];
 

@@ -2,7 +2,8 @@ import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
-import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
+import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
@@ -300,6 +301,12 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const breadcrumbItems = [
+    { name: "Home", path: "/" },
+    { name: "Insights", path: "/blog" },
+    { name: post.title, path: `/blog/${slug}` },
+  ];
+
   return (
     <Layout>
       <Seo
@@ -307,23 +314,11 @@ const BlogPost = () => {
         description={description}
         canonical={canonical}
         ogTitle={seo?.title || post.title}
-        ogDescription={description}
-        ogType="article"
-        ogImage={defaultOgImage}
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: post.title,
-          description,
-          datePublished: post.datePublished,
-          author: blogAuthor,
-          image: defaultOgImage,
-          publisher: blogOrganization,
-          mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": canonical,
-          },
-        }}
+        ogDescription={seo?.description || post.title}
+        structuredData={[
+          ...baseStructuredData,
+          buildBreadcrumbListSchema(breadcrumbItems),
+        ]}
       />
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

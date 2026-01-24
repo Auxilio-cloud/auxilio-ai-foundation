@@ -42,6 +42,21 @@ export const websiteSchema = {
   inLanguage: "en",
 };
 
+const serviceArea = [
+  {
+    "@type": "Country",
+    name: "United States",
+  },
+  {
+    "@type": "Country",
+    name: "United Kingdom",
+  },
+  {
+    "@type": "Place",
+    name: "European Union",
+  },
+];
+
 export const serviceSchemas = [
   {
     "@context": "https://schema.org",
@@ -53,7 +68,7 @@ export const serviceSchemas = [
     provider: {
       "@id": organizationId,
     },
-    areaServed: "United States",
+    serviceArea,
   },
   {
     "@context": "https://schema.org",
@@ -65,7 +80,7 @@ export const serviceSchemas = [
     provider: {
       "@id": organizationId,
     },
-    areaServed: "United States",
+    serviceArea,
   },
   {
     "@context": "https://schema.org",
@@ -77,7 +92,7 @@ export const serviceSchemas = [
     provider: {
       "@id": organizationId,
     },
-    areaServed: "United States",
+    serviceArea,
   },
   {
     "@context": "https://schema.org",
@@ -89,11 +104,11 @@ export const serviceSchemas = [
     provider: {
       "@id": organizationId,
     },
-    areaServed: "United States",
+    serviceArea,
   },
 ];
 
-export const baseStructuredData = [...serviceSchemas];
+export const baseStructuredData = [organizationSchema, websiteSchema];
 
 type BreadcrumbItem = {
   name: string;

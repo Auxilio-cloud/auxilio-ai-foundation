@@ -13,7 +13,11 @@ import {
 } from "@/components/ui/accordion";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
-import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
+import {
+  baseStructuredData,
+  buildBreadcrumbListSchema,
+  serviceSchemas,
+} from "@/lib/structuredData";
 
 const faqs = [
   {
@@ -141,6 +145,7 @@ const Platforms = () => {
         ogDescription="AI infrastructure, integration, and orchestration for enterprise teams with governance and observability included."
         structuredData={[
           ...baseStructuredData,
+          ...serviceSchemas,
           faqSchema,
           buildBreadcrumbListSchema([
             { name: "Home", path: "/" },

@@ -33,7 +33,7 @@ const team = [
     links: [
       {
         label: "LinkedIn",
-        url: "https://www.linkedin.com/in/naveed-gilani/",
+        url: "https://www.linkedin.com/in/naveedgilani",
       },
     ],
   },

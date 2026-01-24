@@ -86,6 +86,27 @@ const enterpriseProjects = [
   },
 ];
 
+const enterpriseOutcomes = [
+  {
+    industry: "Logistics Networks",
+    metric: "10-15% transportation cost reduction",
+    kpi: "Cost per mile",
+    description: "Lane optimization and carrier rebalancing cut spend while preserving service levels.",
+  },
+  {
+    industry: "Supply Chain Operations",
+    metric: "18-25% faster dock-to-stock",
+    kpi: "Warehouse throughput",
+    description: "Automated scheduling and exception workflows increase throughput at peak volume.",
+  },
+  {
+    industry: "Carrier Management",
+    metric: "6-12 pts OTIF lift",
+    kpi: "On-time-in-full",
+    description: "Predictive ETAs and proactive alerts keep shipments on track.",
+  },
+];
+
 const productProjects = [
   {
     name: "Auxilio Promptly",
@@ -126,6 +147,33 @@ const productProjects = [
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
+  },
+];
+
+const productOutcomes = [
+  {
+    industry: "AI Enablement Teams",
+    metric: "45% faster prompt iteration",
+    kpi: "Time saved per workflow",
+    description: "Reusable libraries and approval flows reduce experimentation cycles.",
+  },
+  {
+    industry: "Healthcare Operations",
+    metric: "22% reduction in care coordination time",
+    kpi: "Case resolution time",
+    description: "AI-guided handoffs prioritize patient outreach and follow-ups.",
+  },
+  {
+    industry: "Finance & Planning",
+    metric: "30% faster monthly close prep",
+    kpi: "Close cycle time",
+    description: "Automated summaries and variance insights accelerate reporting.",
+  },
+  {
+    industry: "Legal & Compliance",
+    metric: "35% fewer contract review hours",
+    kpi: "Review effort",
+    description: "Clause intelligence surfaces risk and standard language faster.",
   },
 ];
 
@@ -242,6 +290,32 @@ const Work = () => {
                   </a>
                 ))}
               </div>
+              <div className="mt-10">
+                <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-4">
+                  Outcome Snapshot
+                </p>
+                <div className="grid gap-4 md:grid-cols-3">
+                  {enterpriseOutcomes.map((outcome) => (
+                    <div
+                      key={outcome.metric}
+                      className="rounded-2xl border border-border bg-card p-6"
+                    >
+                      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                        {outcome.industry}
+                      </p>
+                      <p className="text-2xl font-semibold text-foreground mb-2">
+                        {outcome.metric}
+                      </p>
+                      <p className="text-sm text-accent font-semibold mb-3">
+                        KPI: {outcome.kpi}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {outcome.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div>
@@ -314,6 +388,32 @@ const Work = () => {
                     </div>
                   </a>
                 ))}
+              </div>
+              <div className="mt-10">
+                <p className="text-xs uppercase tracking-[0.3em] text-accent font-semibold mb-4">
+                  Results Highlights
+                </p>
+                <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+                  {productOutcomes.map((outcome) => (
+                    <div
+                      key={outcome.metric}
+                      className="rounded-2xl border border-border bg-card p-6"
+                    >
+                      <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                        {outcome.industry}
+                      </p>
+                      <p className="text-2xl font-semibold text-foreground mb-2">
+                        {outcome.metric}
+                      </p>
+                      <p className="text-sm text-accent font-semibold mb-3">
+                        KPI: {outcome.kpi}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {outcome.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

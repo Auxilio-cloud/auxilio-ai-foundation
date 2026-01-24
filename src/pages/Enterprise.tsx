@@ -41,10 +41,30 @@ const capabilities = [
 ];
 
 const outcomes = [
-  "Improve on-time-in-full performance with predictive ETAs.",
-  "Reduce transportation costs through automated lane optimization.",
-  "Increase warehouse throughput with coordinated dock scheduling.",
-  "Surface risk signals earlier across suppliers and carriers.",
+  {
+    industry: "Multi-modal logistics",
+    metric: "8-14% reduction in transportation cost",
+    kpi: "Cost per shipment",
+    description: "AI lane optimization and carrier scorecards rebalance spend across the network.",
+  },
+  {
+    industry: "Fulfillment operations",
+    metric: "20-30% faster dock scheduling",
+    kpi: "Throughput per hour",
+    description: "Automated appointment windows keep cross-docks flowing during peaks.",
+  },
+  {
+    industry: "Customer service",
+    metric: "5-10 pts OTIF improvement",
+    kpi: "On-time-in-full",
+    description: "Predictive ETAs and exception workflows keep delivery promises intact.",
+  },
+  {
+    industry: "Planning teams",
+    metric: "35% fewer manual exceptions",
+    kpi: "Planner time saved",
+    description: "AI alerts and guided playbooks reduce reactive firefighting.",
+  },
 ];
 
 const screenshots = [
@@ -195,27 +215,40 @@ const Enterprise = () => {
       {/* Outcomes */}
       <section className="section-padding-sm">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
             <div className="rounded-3xl border border-border bg-gradient-to-br from-secondary/60 to-background p-8">
               <p className="text-sm font-medium text-primary uppercase tracking-wider mb-4">
                 Outcomes
               </p>
               <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground mb-4">
-                Quantifiable impact, quarter after quarter
+                Quantifiable impact for modern supply chains
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                From the control tower to the final mile, Auxilio Logistics helps teams ship
-                with confidence while driving cost discipline across the network.
+                Benchmarked KPIs for enterprise logistics teams, from transportation finance
+                to fulfillment performance, with results tracked against live network data.
               </p>
             </div>
-            <ul className="space-y-4 text-lg text-muted-foreground">
+            <div className="grid gap-4 sm:grid-cols-2">
               {outcomes.map((outcome) => (
-                <li key={outcome} className="flex items-start gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-primary" />
-                  <span>{outcome}</span>
-                </li>
+                <div
+                  key={outcome.metric}
+                  className="rounded-2xl border border-border bg-card p-6"
+                >
+                  <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                    {outcome.industry}
+                  </p>
+                  <p className="text-2xl font-semibold text-foreground mb-2">
+                    {outcome.metric}
+                  </p>
+                  <p className="text-sm text-accent font-semibold mb-3">
+                    KPI: {outcome.kpi}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {outcome.description}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>

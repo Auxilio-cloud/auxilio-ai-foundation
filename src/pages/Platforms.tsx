@@ -233,7 +233,7 @@ const Platforms = () => {
               Tools for Individuals & Small Teams
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-              Simple AI tools for everyday business productivity
+              Simple AI tools for everyday productivity
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
               Lightweight tools for individuals and small teams, powered by the same enterprise platform foundations.

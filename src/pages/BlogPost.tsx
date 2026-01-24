@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
-import { buildCanonicalUrl } from "@/lib/seo";
+import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
@@ -33,11 +33,30 @@ const postSeo: Record<string, { title: string; description: string }> = {
   },
 };
 
+const blogOrganization = {
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: "Auxilio",
+  url: siteUrl,
+  logo: {
+    "@type": "ImageObject",
+    url: defaultOgImage,
+  },
+};
+
+const blogAuthor = {
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  name: "Auxilio",
+  url: siteUrl,
+};
+
 const posts: Record<
   string,
   {
     title: string;
     date: string;
+    datePublished: string;
     readTime: string;
     content: React.ReactNode;
   }
@@ -45,6 +64,7 @@ const posts: Record<
   "ai-strategy-roi-blueprint": {
     title: "AI Strategy & ROI Blueprint for Executive Teams",
     date: "January 8, 2026",
+    datePublished: "2026-01-08",
     readTime: "8 min read",
     content: (
       <>
@@ -95,6 +115,7 @@ const posts: Record<
   "ai-infrastructure-readiness": {
     title: "AI Infrastructure Readiness: Platform & Ops Roadmap",
     date: "January 6, 2026",
+    datePublished: "2026-01-06",
     readTime: "7 min read",
     content: (
       <>
@@ -138,6 +159,7 @@ const posts: Record<
   "data-readiness-scorecard": {
     title: "Data Readiness Scorecard for Enterprise AI",
     date: "January 4, 2026",
+    datePublished: "2026-01-04",
     readTime: "6 min read",
     content: (
       <>
@@ -181,6 +203,7 @@ const posts: Record<
   "rag-production-playbook": {
     title: "RAG Production Playbook: Retrieval, Grounding, Trust",
     date: "January 2, 2026",
+    datePublished: "2026-01-02",
     readTime: "7 min read",
     content: (
       <>
@@ -223,6 +246,7 @@ const posts: Record<
   "ai-governance-operating-model": {
     title: "AI Governance Operating Model for Regulated Teams",
     date: "December 28, 2025",
+    datePublished: "2025-12-28",
     readTime: "6 min read",
     content: (
       <>
@@ -269,6 +293,8 @@ const BlogPost = () => {
   const { slug } = useParams();
   const post = slug ? posts[slug] : null;
   const seo = slug ? postSeo[slug] : null;
+  const description = seo?.description || post?.title || "";
+  const canonical = buildCanonicalUrl(`/blog/${slug}`);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -278,10 +304,26 @@ const BlogPost = () => {
     <Layout>
       <Seo
         title={seo?.title || post.title}
-        description={seo?.description || post.title}
-        canonical={buildCanonicalUrl(`/blog/${slug}`)}
+        description={description}
+        canonical={canonical}
         ogTitle={seo?.title || post.title}
-        ogDescription={seo?.description || post.title}
+        ogDescription={description}
+        ogType="article"
+        ogImage={defaultOgImage}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: post.title,
+          description,
+          datePublished: post.datePublished,
+          author: blogAuthor,
+          image: defaultOgImage,
+          publisher: blogOrganization,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": canonical,
+          },
+        }}
       />
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
         <div className="container mx-auto px-6 lg:px-8">

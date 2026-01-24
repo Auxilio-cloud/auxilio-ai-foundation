@@ -93,7 +93,7 @@ export const serviceSchemas = [
   },
 ];
 
-export const baseStructuredData = [organizationSchema, websiteSchema, ...serviceSchemas];
+export const baseStructuredData = [...serviceSchemas];
 
 type BreadcrumbItem = {
   name: string;

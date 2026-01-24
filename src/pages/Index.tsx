@@ -10,7 +10,11 @@ import { FAQSection } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
-import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
+import {
+  baseStructuredData,
+  buildBreadcrumbListSchema,
+  serviceSchemas,
+} from "@/lib/structuredData";
 
 const Index = () => {
   return (
@@ -23,6 +27,7 @@ const Index = () => {
         ogDescription="We design and orchestrate intelligent platforms that transform how organizations think, build, and operate."
         structuredData={[
           ...baseStructuredData,
+          ...serviceSchemas,
           buildBreadcrumbListSchema([{ name: "Home", path: "/" }]),
         ]}
       />

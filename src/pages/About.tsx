@@ -16,14 +16,26 @@ const team = [
   {
     name: "John Brinegar",
     role: "Co-Founder & CEO",
-    bio: "John is a seasoned software and solutions leader with over 30 years of experience spanning AI, IoT, analytics, and enterprise systems. He was a co-founder of GPTWorks, where he led generative AI services focused on fine-tuning and retrieval-augmented solutions using open-source large language models. Previously, he led IoT solution architecture for the industrial sector at Hitachi Vantara, delivering large-scale analytics and IIoT platforms. John has architected and launched complex solutions across manufacturing, telecommunications, healthcare, and industrial domains. He has led global teams through the full lifecycle of architecture, development, launch, and delivery of production-grade platforms. His expertise spans industrial analytics, network and systems management, cloud and hybrid architectures, and secure enterprise applications. He is passionate about applying AI and IoT in practical ways that improve efficiency, quality, and operational outcomes.",
+    bio: "John is a software and solutions leader with 30+ years of experience spanning AI, IoT, analytics, and enterprise systems. He co-founded GPTWorks and led generative AI services focused on fine-tuning and retrieval-augmented solutions with open-source LLMs. At Hitachi Vantara, he led IoT solution architecture for the industrial sector, delivering large-scale analytics and IIoT platforms. John has architected and launched production platforms across manufacturing, telecommunications, healthcare, and industrial operations, leading global teams through design, delivery, and scale. His domain expertise includes industrial analytics, network and systems management, cloud and hybrid architectures, and secure enterprise applications.",
     image: johnHeadshotDataUri,
+    links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/john-brinegar/",
+      },
+    ],
   },
   {
     name: "Naveed Gilani",
     role: "Co-Founder & CTO",
-    bio: "Naveed is a strategic technology leader with over 25 years of experience building and scaling complex platforms across enterprise and startup environments. His work sits at the intersection of AI, product strategy, and execution—turning ambitious ideas into secure, market-ready systems. He has led global product and engineering teams, launched cloud and AI-driven platforms, and delivered large-scale digital transformation. More recently, he founded and built Promptly, an AI platform enabling multi-model interaction and real-time collaboration at scale. His current focus is applied AI, including generative AI and retrieval-augmented systems that solve real operational problems. He values clarity, outcomes, and building technology that people can trust and use. Auxilio reflects this philosophy: pragmatic, thoughtful, and built for impact.",
+    bio: "Naveed is a strategic technology leader with 25+ years of experience building and scaling complex platforms across enterprise and startup environments. His work sits at the intersection of AI, product strategy, and execution—turning ambitious ideas into secure, market-ready systems. He has led global product and engineering teams, launched cloud and AI-driven platforms, and delivered large-scale digital transformation. He founded Promptly, an AI platform enabling multi-model interaction and real-time collaboration at scale. His current focus is applied AI, including generative AI and retrieval-augmented systems that solve operational problems with measurable outcomes.",
     image: naveedHeadshotDataUri,
+    links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/naveed-gilani/",
+      },
+    ],
   },
 ];
 
@@ -126,6 +138,21 @@ const About = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {member.bio}
                     </p>
+                    {member.links?.length ? (
+                      <div className="mt-4 flex flex-wrap gap-3">
+                        {member.links.map((link) => (
+                          <a
+                            key={`${member.name}-${link.label}`}
+                            href={link.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
                   </div>
                 </div>
               ))}

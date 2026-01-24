@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
-import { buildCanonicalUrl } from "@/lib/seo";
+import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 // SEO metadata for each post

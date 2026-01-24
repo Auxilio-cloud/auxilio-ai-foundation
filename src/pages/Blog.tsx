@@ -3,46 +3,51 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
-
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 const posts = [
   {
-    slug: "summarise-research-papers-faster",
-    title: "How AI Can Help You Summarise Research Papers Faster",
-    excerpt: "Discover practical ways to use AI tools to quickly extract key findings from academic papers and reports—no technical expertise required.",
-    category: "AI for Everyday Use",
+    slug: "operationalizing-llm-strategy",
+    title: "Operationalizing LLM Strategy for the Enterprise",
+    excerpt:
+      "A playbook for CTOs on model selection, governance, and cost controls required to move from pilot to production.",
+    category: "CTO Strategy",
     date: "January 8, 2026",
-    readTime: "5 min read",
+    readTime: "7 min read",
   },
   {
-    slug: "automate-personal-todo-list",
-    title: "Automate Your Personal To-Do List with AI",
-    excerpt: "Learn how AI assistants can help you prioritise tasks, set smart reminders, and actually get things done without feeling overwhelmed.",
-    category: "AI for Everyday Use",
+    slug: "ai-platform-foundations",
+    title: "Building AI Platform Foundations with Engineering Readiness",
+    excerpt:
+      "How to align data, infrastructure, and platform teams to deliver reliable AI capabilities across the organization.",
+    category: "Platform Engineering",
     date: "January 5, 2026",
-    readTime: "4 min read",
+    readTime: "6 min read",
   },
   {
-    slug: "ai-for-freelancers",
-    title: "AI for Freelancers: Organising Documents and Emails",
-    excerpt: "A practical guide to using AI tools for managing client documents, sorting emails, and keeping your freelance business running smoothly.",
-    category: "AI for Everyday Use",
+    slug: "rag-observability-guide",
+    title: "RAG Observability: What Engineering Leaders Need",
+    excerpt:
+      "Key telemetry, evals, and guardrails to keep retrieval-augmented generation systems trustworthy at scale.",
+    category: "LLM Operations",
     date: "January 2, 2026",
     readTime: "6 min read",
   },
   {
-    slug: "ai-meeting-notes",
-    title: "Never Miss Action Items: AI-Powered Meeting Notes",
-    excerpt: "How to use AI to automatically capture meeting highlights, extract action items, and keep everyone on the same page.",
-    category: "AI for Everyday Use",
+    slug: "security-ai-systems",
+    title: "Security & Compliance for AI Systems",
+    excerpt:
+      "A checklist for CTOs to satisfy SOC 2, privacy, and data residency requirements while scaling AI usage.",
+    category: "Security & Risk",
     date: "December 28, 2025",
-    readTime: "4 min read",
+    readTime: "5 min read",
   },
   {
-    slug: "simplify-email-inbox",
-    title: "Simplify Your Email Inbox with Smart AI Filters",
-    excerpt: "Tired of email overload? Learn how AI can help you categorise, prioritise, and respond to emails more efficiently.",
-    category: "AI for Everyday Use",
+    slug: "ai-roadmap-leadership",
+    title: "Leadership Brief: Aligning AI Roadmaps with Business Impact",
+    excerpt:
+      "Frameworks for prioritizing AI investments, sequencing initiatives, and communicating impact to executives.",
+    category: "Executive Brief",
     date: "December 22, 2025",
     readTime: "5 min read",
   },
@@ -52,11 +57,18 @@ const Blog = () => {
   return (
     <Layout>
       <Seo
-        title="AI for Personal Productivity | Auxilio Insights"
-        description="Practical AI guides for everyday productivity. Learn how to use AI tools for note-taking, task management, and document organisation—no tech skills required."
+        title="AI Strategy for CTOs | Auxilio Insights"
+        description="Executive AI guidance for CTOs and engineering leaders. Read about AI platform strategy, governance, and infrastructure that move enterprise pilots to production."
         canonical={buildCanonicalUrl("/blog")}
-        ogTitle="Auxilio Insights | AI for Everyday Productivity"
-        ogDescription="Practical guides on using AI to boost personal productivity."
+        ogTitle="Auxilio Insights | AI Strategy for CTOs"
+        ogDescription="Leadership insights on AI strategy, platform readiness, and governance."
+        structuredData={[
+          ...baseStructuredData,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/blog" },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
@@ -66,15 +78,15 @@ const Blog = () => {
               Insights
             </p>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground leading-tight">
-              AI for Everyday Use
+              AI Strategy for CTOs & Engineering Leaders
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Practical guides and insights on using AI to boost your personal productivity—written for real people, not tech experts.
+              Editorial guidance on AI platform strategy, architecture, and governance
+              for teams responsible for production-grade outcomes.
             </p>
           </div>
         </div>
       </section>
-
 
       {/* Posts Grid */}
       <section className="section-padding">
@@ -92,15 +104,15 @@ const Blog = () => {
                       {post.category}
                     </span>
                   </div>
-                  
+
                   <h2 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
                     {post.title}
                   </h2>
-                  
+
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {post.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between text-sm text-muted-foreground">
                     <div className="flex items-center gap-4">
                       <span className="flex items-center gap-1">

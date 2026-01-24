@@ -8,6 +8,7 @@ import { Mail, Send, Phone, MapPin, ExternalLink } from "lucide-react";
 import { useState, type FormEvent } from "react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 const locations = [
   {
@@ -66,6 +67,13 @@ const Contact = () => {
         canonical={buildCanonicalUrl("/contact")}
         ogTitle="Contact Auxilio"
         ogDescription="Reach out to discuss AI strategy, platform development, or enterprise solutions."
+        structuredData={[
+          ...baseStructuredData,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">

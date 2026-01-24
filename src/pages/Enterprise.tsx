@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
+import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 const capabilities = [
   {
@@ -70,6 +71,13 @@ const Enterprise = () => {
         canonical={buildCanonicalUrl("/enterprise")}
         ogTitle="Auxilio Logistics | Enterprise AI for Supply Chains"
         ogDescription="Enterprise AI for routing, visibility, and supply chain orchestration."
+        structuredData={[
+          ...baseStructuredData,
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Enterprise", path: "/enterprise" },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="section-padding bg-gradient-to-b from-secondary/40 to-background">

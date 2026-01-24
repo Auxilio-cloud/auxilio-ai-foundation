@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { GlobalStructuredData } from "@/components/GlobalStructuredData";
 import Index from "./pages/Index";
 import Platforms from "./pages/Platforms";
 import Work from "./pages/Work";
@@ -21,6 +22,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <HelmetProvider>
       <TooltipProvider>
+        <GlobalStructuredData />
         <Toaster />
         <Sonner />
         <BrowserRouter>

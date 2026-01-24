@@ -10,6 +10,7 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
 };
+const visibleNavigation = navigation.main.filter((item) => item.href !== "/enterprise");
 
 export function Footer() {
   return (
@@ -28,7 +29,7 @@ export function Footer() {
 
           {/* Navigation */}
           <nav className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8 gap-y-3">
-            {navigation.main.map((item) => (
+            {visibleNavigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}

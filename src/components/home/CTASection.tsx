@@ -33,16 +33,6 @@ export function CTASection() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="text-base px-8 border-neutral-600 text-white hover:bg-white/10 font-semibold uppercase tracking-wide"
-            >
-              <Link to="/platforms#individuals">
-                Tools for Individuals
-              </Link>
-            </Button>
           </div>
         </div>
       </div>

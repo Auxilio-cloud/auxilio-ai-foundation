@@ -11,6 +11,7 @@ const navigation = [
   { name: "Insights", href: "/blog" },
   { name: "About", href: "/about" },
 ];
+const visibleNavigation = navigation.filter((item) => item.href !== "/enterprise");
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-8">
-            {navigation.map((item) => (
+            {visibleNavigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -93,7 +94,7 @@ export function Header() {
             className="md:hidden absolute top-24 left-0 right-0 bg-white border-b border-neutral-200 shadow-lg animate-fade-in"
           >
             <div className="px-6 py-6 space-y-4">
-              {navigation.map((item) => (
+              {visibleNavigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}

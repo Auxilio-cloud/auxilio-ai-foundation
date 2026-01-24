@@ -15,27 +15,26 @@ import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
-// FAQ data for consumer tools
 const faqs = [
   {
-    question: "How much does it cost to get started?",
-    answer: "Getting started is completely free! Each personal productivity tool in our consumer app lineup has a generous free tier so you can explore core features without paying a penny. If you love what you see, premium plans start at just a few pounds per month—but there's no pressure to upgrade.",
+    question: "What deployment models do you support?",
+    answer: "Auxilio supports cloud, hybrid, and private deployment models to meet enterprise security and data residency requirements. We align with your infrastructure standards while keeping AI systems reliable and observable.",
   },
   {
-    question: "I'm not very tech-savvy. Will I be able to use these tools?",
-    answer: "Absolutely—that's exactly who we built these consumer apps for! There's no coding, no complicated setup, and no confusing menus. Just sign up, follow our friendly onboarding guide, and you'll be up and running with these personal productivity tools in minutes. If you get stuck, plain-English help is always a click away.",
+    question: "How does Auxilio handle governance and compliance?",
+    answer: "Governance is built into the platform with access controls, audit trails, and observability across workflows. We help teams meet compliance expectations with policy-driven safeguards and enterprise-grade monitoring.",
   },
   {
-    question: "Is my data safe with Auxilio?",
-    answer: "Your privacy matters to us. All your data is encrypted and stored securely in our consumer productivity apps—we never sell or share it with anyone. You're always in control: you can export or delete your data anytime. We follow industry best practices so you can focus on your personal productivity, not worry.",
+    question: "Can you integrate with our existing data and systems?",
+    answer: "Yes. We integrate with enterprise data sources, knowledge bases, and operational systems so your teams can orchestrate workflows across the tools you already rely on.",
   },
   {
-    question: "What if I need help or have questions?",
-    answer: "We've got you covered! Every plan for our personal productivity tools includes access to our help centre with step-by-step guides and video tutorials. Free users get email support, and premium users enjoy priority responses. We're real people who genuinely want to help you succeed.",
+    question: "What makes your AI infrastructure enterprise-ready?",
+    answer: "Our platform emphasizes reliability, security, and scale with governance controls, model orchestration, and observability baked in. That foundation lets enterprise teams deploy AI safely across mission-critical operations.",
   },
   {
-    question: "Can I use these tools for my freelance business or side project?",
-    answer: "100%! Our consumer productivity apps are perfect for freelancers, side hustlers, and small teams. They're designed to grow with you—start simple, and add more personal productivity features as your needs evolve with straightforward pricing.",
+    question: "How do we get started with an enterprise engagement?",
+    answer: "We begin with your business goals, map the workflows and integrations required, and deliver a scoped deployment plan that aligns with your security and operational standards.",
   },
 ];
 
@@ -71,17 +70,17 @@ const individualTools = [
   },
 ];
 
-const platforms = [
+const enterpriseCapabilities = [
   {
-    name: "Workflow Optimization",
-    tagline: "Automation & Efficiency",
+    name: "Workflow Orchestration",
+    tagline: "Automation & Orchestration",
     description:
-      "Platform-based automation of business and personal workflows, automating repetitive manual tasks and providing new insights for operational enhancement.",
+      "Enterprise-grade workflow orchestration that connects AI agents, humans, and systems to automate critical operations with measurable outcomes.",
     capabilities: [
-      "Process automation",
-      "Task orchestration",
-      "Operational insights",
-      "Efficiency analytics",
+      "AI workflow orchestration",
+      "Enterprise process automation",
+      "Operational reliability",
+      "Human-in-the-loop control",
     ],
     visual: (
       <img 
@@ -93,14 +92,14 @@ const platforms = [
   },
   {
     name: "Knowledge Integration",
-    tagline: "Unified Intelligence",
+    tagline: "Integration & Intelligence",
     description:
-      "Orchestration of personal and enterprise data, third-party knowledge, and human insight to provide a unified view of gathered knowledge.",
+      "Secure integration of enterprise data, third-party knowledge, and human insight to unify decision context across teams.",
     capabilities: [
-      "Data orchestration",
-      "Knowledge synthesis",
-      "Insight discovery",
-      "Unified access",
+      "Enterprise data integration",
+      "Knowledge orchestration",
+      "Semantic retrieval",
+      "Governed access",
     ],
     visual: (
       <img 
@@ -112,14 +111,14 @@ const platforms = [
   },
   {
     name: "Intelligent Architecture",
-    tagline: "AI-Centered Design",
+    tagline: "AI Infrastructure",
     description:
-      "Combines AI-enhanced workflows and agentic consolidation of knowledge and data into an AI-centered architecture that makes long and complex tasks easier, allowing you to focus on what you do best.",
+      "AI infrastructure built for scale, reliability, and compliance-ready operations—so teams can deploy intelligent systems with confidence.",
     capabilities: [
-      "AI-enhanced workflows",
-      "Agentic processing",
-      "Complex task simplification",
-      "Adaptive intelligence",
+      "Model orchestration",
+      "Secure deployment models",
+      "Compliance-ready foundations",
+      "Observability & monitoring",
     ],
     visual: (
       <img 
@@ -135,11 +134,11 @@ const Platforms = () => {
   return (
     <Layout>
       <Seo
-        title="AI Tools for Individuals & Teams | Auxilio Platform"
-        description="AI document summariser, task organiser & note extractor for personal productivity. Simple AI tools for individuals and small teams—no setup required."
+        title="Enterprise AI Platform for Infrastructure & Orchestration | Auxilio"
+        description="Auxilio is an enterprise AI platform delivering secure infrastructure, workflow orchestration, and data integration with governance and observability built in."
         canonical={buildCanonicalUrl("/platforms")}
-        ogTitle="Auxilio Platforms | AI Tools for Individuals & Teams"
-        ogDescription="Explore AI-powered productivity tools for summarisation, planning, and notes—built for individuals and small teams."
+        ogTitle="Auxilio Enterprise AI Platform"
+        ogDescription="AI infrastructure, integration, and orchestration for enterprise teams with governance and observability included."
         structuredData={[
           ...baseStructuredData,
           faqSchema,
@@ -157,20 +156,31 @@ const Platforms = () => {
               Our Platform
             </p>
             <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-foreground leading-tight">
-              Infrastructure for intelligence
+              Enterprise AI platform for infrastructure, integration, and orchestration
             </h1>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Our platform is designed with security and privacy at its core—flexible, extensible, and built for the demands of an AI-native world.
+              Auxilio delivers secure AI infrastructure that integrates data, orchestrates workflows, and governs intelligent systems across mission-critical operations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Platforms */}
+      {/* Enterprise Platform */}
       <section className="section-padding-sm">
         <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
+              Enterprise Platform
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+              Enterprise platform capabilities
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              Build secure, scalable AI foundations that integrate enterprise data, orchestrate critical workflows, and deliver governed intelligence across teams.
+            </p>
+          </div>
           <div className="space-y-24 lg:space-y-32">
-            {platforms.map((platform, index) => (
+            {enterpriseCapabilities.map((platform, index) => (
               <div
                 key={platform.name}
                 className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center ${
@@ -182,9 +192,9 @@ const Platforms = () => {
                   <p className="text-xs font-medium text-muted-foreground tracking-wider uppercase mb-2">
                     {platform.tagline}
                   </p>
-                  <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-6">
+                  <h3 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-6">
                     {platform.name}
-                  </h2>
+                  </h3>
                   <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                     {platform.description}
                   </p>
@@ -220,13 +230,13 @@ const Platforms = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
-              For Individuals & Small Teams
+              Tools for Individuals & Small Teams
             </p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-              Simple AI tools for everyday productivity
+              Simple AI tools for everyday business productivity
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              Not every challenge requires enterprise infrastructure. Auxilio offers lightweight, powerful AI tools designed for personal productivity and small businesses—no complex setup, just immediate value.
+              Lightweight tools for individuals and small teams, powered by the same enterprise platform foundations.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               These are shared capabilities across the Auxilio consumer suite—available in every app you use.
@@ -273,10 +283,10 @@ const Platforms = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-sm font-medium text-primary tracking-wider uppercase mb-4">
-                Common Questions
+                Enterprise FAQ
               </p>
               <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-                Frequently Asked Questions
+                Answers for enterprise platform teams
               </h2>
             </div>
 

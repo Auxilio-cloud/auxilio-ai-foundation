@@ -49,7 +49,7 @@ const posts = [
       "How to design decision rights, controls, and compliance workflows with clear Q&A templates.",
     category: "Governance",
     date: "December 28, 2025",
-    readTime: "6 min read",
+    readTime: "20-25 mins read",
   },
 ];
 

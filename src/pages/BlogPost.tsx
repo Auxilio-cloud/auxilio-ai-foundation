@@ -56,6 +56,7 @@ const postHeroImages: Record<string, string> = {
   "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
   "data-readiness-scorecard": "/score%20card%20header.jpeg",
+  "ai-governance-operating-model": "/gov%20model%20header.jpeg",
 };
 
 const posts: Record<
@@ -1059,7 +1060,7 @@ const posts: Record<
     title: "AI Governance Operating Model for Regulated Teams",
     date: "December 28, 2025",
     datePublished: "2025-12-28",
-    readTime: "6 min read",
+    readTime: "20-25 mins read",
     content: (
       <>
         <p className="lead">

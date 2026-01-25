@@ -71,7 +71,7 @@ const posts: Record<
     title: "Executive Guidance for Building Scalable Copy",
     date: "January 8, 2026",
     datePublished: "2026-01-08",
-    readTime: "14 min read",
+    readTime: "5 min read",
     content: (
       <>
         <p className="lead">
@@ -123,37 +123,39 @@ const posts: Record<
         </p>
 
         <h2>Platform vs Product: Clarifying Ownership</h2>
-        <table>
-          <thead>
-            <tr>
-              <th className="text-left">Area</th>
-              <th>Platform Teams</th>
-              <th>Product Teams</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="text-left">Core copy system</td>
-              <td>Own</td>
-              <td>Consume</td>
-            </tr>
-            <tr>
-              <td className="text-left">Templates &amp; standards</td>
-              <td>Define</td>
-              <td>Apply</td>
-            </tr>
-            <tr>
-              <td className="text-left">Reusable components</td>
-              <td>Maintain</td>
-              <td>Configure</td>
-            </tr>
-            <tr>
-              <td className="text-left">Local adaptations</td>
-              <td>Govern</td>
-              <td>Execute</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="text-white">
+            <thead>
+              <tr>
+                <th className="text-left">Area</th>
+                <th>Platform Teams</th>
+                <th>Product Teams</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="text-left">Core copy system</td>
+                <td>Own</td>
+                <td>Consume</td>
+              </tr>
+              <tr>
+                <td className="text-left">Templates &amp; standards</td>
+                <td>Define</td>
+                <td>Apply</td>
+              </tr>
+              <tr>
+                <td className="text-left">Reusable components</td>
+                <td>Maintain</td>
+                <td>Configure</td>
+              </tr>
+              <tr>
+                <td className="text-left">Local adaptations</td>
+                <td>Govern</td>
+                <td>Execute</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2>Final Thoughts</h2>
         <p>
@@ -286,60 +288,62 @@ const posts: Record<
         </blockquote>
 
         <h2>Platform &amp; Ops Roadmap (12–36 Months)</h2>
-        <table className="w-full text-left">
-          <thead>
-            <tr>
-              <th>Phase</th>
-              <th>Time Horizon</th>
-              <th>Primary Objective</th>
-              <th>Key Outcomes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="pl-4">
-                <strong>Baseline &amp; Containment</strong>
-              </td>
-              <td className="pl-4">0–6 months</td>
-              <td className="pl-4">Establish visibility and control</td>
-              <td className="pl-4">
-                <ul>
-                  <li>Inventory AI workloads and costs.</li>
-                  <li>Identify shadow infrastructure.</li>
-                  <li>Define guardrails and kill criteria.</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Foundation &amp; Enablement</strong>
-              </td>
-              <td>6–18 months</td>
-              <td>Build shared, reliable platforms</td>
-              <td>
-                <ul>
-                  <li>Consolidated infrastructure.</li>
-                  <li>Defined platform vs product roles.</li>
-                  <li>Priority use cases enabled.</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Scale, Optimize &amp; Govern</strong>
-              </td>
-              <td>18–36 months</td>
-              <td>Industrialize AI delivery</td>
-              <td>
-                <ul>
-                  <li>Cost and utilization optimization.</li>
-                  <li>Embedded governance.</li>
-                  <li>Portfolio-level oversight.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-white">
+            <thead>
+              <tr>
+                <th>Phase</th>
+                <th>Time Horizon</th>
+                <th>Primary Objective</th>
+                <th>Key Outcomes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="pl-4">
+                  <strong>Baseline &amp; Containment</strong>
+                </td>
+                <td className="pl-4">0–6 months</td>
+                <td className="pl-4">Establish visibility and control</td>
+                <td className="pl-4">
+                  <ul>
+                    <li>Inventory AI workloads and costs.</li>
+                    <li>Identify shadow infrastructure.</li>
+                    <li>Define guardrails and kill criteria.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Foundation &amp; Enablement</strong>
+                </td>
+                <td>6–18 months</td>
+                <td>Build shared, reliable platforms</td>
+                <td>
+                  <ul>
+                    <li>Consolidated infrastructure.</li>
+                    <li>Defined platform vs product roles.</li>
+                    <li>Priority use cases enabled.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Scale, Optimize &amp; Govern</strong>
+                </td>
+                <td>18–36 months</td>
+                <td>Industrialize AI delivery</td>
+                <td>
+                  <ul>
+                    <li>Cost and utilization optimization.</li>
+                    <li>Embedded governance.</li>
+                    <li>Portfolio-level oversight.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2>Common Failure Patterns</h2>
         <ul>

@@ -49,7 +49,7 @@ const outcomes = [
   },
   {
     industry: "Fulfillment operations",
-    metric: "18-25% faster dock scheduling",
+    metric: "18-25% faster dock-to-stock",
     kpi: "Throughput per hour",
     description: "Automated appointment windows keep cross-docks flowing during peaks.",
   },

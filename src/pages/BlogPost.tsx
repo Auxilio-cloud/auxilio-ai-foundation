@@ -54,6 +54,7 @@ const blogAuthor = {
 
 const postHeroImages: Record<string, string> = {
   "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
+  "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
 };
 
 const posts: Record<
@@ -529,7 +530,7 @@ const BlogPost = () => {
         ]}
       />
       <section
-        className={`section-padding relative ${
+        className={`section-padding relative overflow-hidden ${
           heroImage
             ? "bg-cover bg-center"
             : "bg-gradient-to-b from-secondary/50 to-background"
@@ -537,13 +538,13 @@ const BlogPost = () => {
         style={
           heroImage
             ? {
-                backgroundImage: `linear-gradient(180deg, rgba(6, 12, 24, 0.85), rgba(6, 12, 24, 0.65), rgba(6, 12, 24, 0.85)), url(${heroImage})`,
+                backgroundImage: `linear-gradient(180deg, rgba(5, 10, 22, 0.92) 0%, rgba(5, 10, 22, 0.7) 40%, rgba(5, 10, 22, 0.88) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.35), rgba(6, 12, 24, 0) 60%), url(${heroImage})`,
               }
             : undefined
         }
       >
         {heroImage ? (
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/65 to-background/45" />
         ) : null}
         <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">

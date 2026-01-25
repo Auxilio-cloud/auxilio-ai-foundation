@@ -55,6 +55,7 @@ const blogAuthor = {
 const postHeroImages: Record<string, string> = {
   "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
+  "data-readiness-scorecard": "/score%20card%20header.jpeg",
 };
 
 const posts: Record<

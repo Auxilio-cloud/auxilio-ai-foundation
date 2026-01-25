@@ -52,6 +52,10 @@ const blogAuthor = {
   url: siteUrl,
 };
 
+const postHeroImages: Record<string, string> = {
+  "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
+};
+
 const posts: Record<
   string,
   {
@@ -499,6 +503,7 @@ const BlogPost = () => {
   const seo = slug ? postSeo[slug] : null;
   const description = seo?.description || post?.title || "";
   const canonical = buildCanonicalUrl(`/blog/${slug}`);
+  const heroImage = slug ? postHeroImages[slug] : null;
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -523,8 +528,24 @@ const BlogPost = () => {
           buildBreadcrumbListSchema(breadcrumbItems),
         ]}
       />
-      <section className="section-padding bg-gradient-to-b from-secondary/50 to-background">
-        <div className="container mx-auto px-6 lg:px-8">
+      <section
+        className={`section-padding relative ${
+          heroImage
+            ? "bg-cover bg-center"
+            : "bg-gradient-to-b from-secondary/50 to-background"
+        }`}
+        style={
+          heroImage
+            ? {
+                backgroundImage: `linear-gradient(180deg, rgba(6, 12, 24, 0.85), rgba(6, 12, 24, 0.65), rgba(6, 12, 24, 0.85)), url(${heroImage})`,
+              }
+            : undefined
+        }
+      >
+        {heroImage ? (
+          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/60 to-background/40" />
+        ) : null}
+        <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <Link
               to="/blog"

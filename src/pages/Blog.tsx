@@ -13,7 +13,7 @@ const posts = [
       "Building scalable copy is no longer a creative-only challenge.",
     category: "Copy Strategy",
     date: "January 8, 2026",
-    readTime: "14 min read",
+    readTime: "14 mins read",
   },
   {
     slug: "ai-infrastructure-readiness",
@@ -22,7 +22,7 @@ const posts = [
       "Infrastructure requirements, reference architectures, and the Q&A template platform leaders can reuse.",
     category: "Infrastructure",
     date: "January 6, 2026",
-    readTime: "7 min read",
+    readTime: "7 mins read",
   },
   {
     slug: "data-readiness-scorecard",
@@ -40,7 +40,7 @@ const posts = [
       "A production-ready guide to tuning, evaluating, and scaling RAG with 2026-era trends.",
     category: "RAG",
     date: "January 2, 2026",
-    readTime: "20-25 min read",
+    readTime: "20-25 mins read",
   },
   {
     slug: "ai-governance-operating-model",

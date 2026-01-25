@@ -8,10 +8,10 @@ import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredD
 const posts = [
   {
     slug: "ai-strategy-roi-blueprint",
-    title: "AI Strategy & ROI Blueprint for Executive Teams",
+    title: "Executive Guidance for Building Scalable Copy",
     excerpt:
-      "A board-ready blueprint for AI strategy alignment, ROI discipline, governance, and a 90-day execution playbook.",
-    category: "AI Strategy",
+      "Building scalable copy is no longer a creative-only challenge.",
+    category: "Copy Strategy",
     date: "January 8, 2026",
     readTime: "14 min read",
   },

@@ -35,12 +35,12 @@ const posts = [
   },
   {
     slug: "rag-production-playbook",
-    title: "RAG Production Playbook: Retrieval, Grounding, Trust",
+    title: "Production-Ready RAG: A Playbook for Scaling and Emerging Trends in 2026",
     excerpt:
-      "Structured answers on architecture, evaluation, and observability for RAG systems at scale.",
+      "A production-ready guide to tuning, evaluating, and scaling RAG with 2026-era trends.",
     category: "RAG",
     date: "January 2, 2026",
-    readTime: "7 min read",
+    readTime: "20-25 min read",
   },
   {
     slug: "ai-governance-operating-model",

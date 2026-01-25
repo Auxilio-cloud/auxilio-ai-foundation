@@ -73,7 +73,7 @@ const posts: Record<
     title: "Executive Guidance for Building Scalable Copy",
     date: "January 8, 2026",
     datePublished: "2026-01-08",
-    readTime: "5 min read",
+    readTime: "5 mins read",
     content: (
       <>
         <p className="lead">
@@ -171,7 +171,7 @@ const posts: Record<
     title: "AI Infrastructure Readiness: Platform & Ops Roadmap",
     date: "January 6, 2026",
     datePublished: "2026-01-06",
-    readTime: "7 min read",
+    readTime: "7 mins read",
     content: (
       <>
         <p className="lead">
@@ -761,7 +761,7 @@ const posts: Record<
     title: "Production-Ready RAG: A Playbook for Scaling and Emerging Trends in 2026",
     date: "January 2, 2026",
     datePublished: "2026-01-02",
-    readTime: "20-25 min read",
+    readTime: "20-25 mins read",
     content: (
       <>
         <p className="lead">

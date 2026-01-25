@@ -93,7 +93,7 @@ const enterpriseProjects = [
 const enterpriseOutcomes = [
   {
     industry: "Logistics Networks",
-    metric: "10-15% transportation cost reduction",
+    metric: "8-14% transportation cost reduction",
     kpi: "Cost per mile",
     description: "Lane optimization and carrier rebalancing cut spend while preserving service levels.",
   },
@@ -105,7 +105,7 @@ const enterpriseOutcomes = [
   },
   {
     industry: "Carrier Management",
-    metric: "6-12 pts OTIF lift",
+    metric: "5-10 pts OTIF lift",
     kpi: "On-time-in-full",
     description: "Predictive ETAs and proactive alerts keep shipments on track.",
   },

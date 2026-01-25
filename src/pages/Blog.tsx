@@ -10,10 +10,10 @@ const posts = [
     slug: "ai-strategy-roi-blueprint",
     title: "AI Strategy & ROI Blueprint for Executive Teams",
     excerpt:
-      "A structured roadmap that ties AI initiatives to value pools, KPIs, and funding gates with clear Q&A guidance.",
+      "A board-ready blueprint for AI strategy alignment, ROI discipline, governance, and a 90-day execution playbook.",
     category: "AI Strategy",
     date: "January 8, 2026",
-    readTime: "8 min read",
+    readTime: "14 min read",
   },
   {
     slug: "ai-infrastructure-readiness",

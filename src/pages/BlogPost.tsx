@@ -373,7 +373,7 @@ const posts: Record<
     title: "Data Readiness Scorecard for Enterprise AI",
     date: "January 4, 2026",
     datePublished: "2026-01-04",
-    readTime: "6 min read",
+    readTime: "15-20 mins read",
     content: (
       <>
         <p className="lead">

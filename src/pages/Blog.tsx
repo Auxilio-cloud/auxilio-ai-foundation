@@ -31,7 +31,7 @@ const posts = [
       "A practical scorecard for data quality, governance, and access needed before scaling AI use cases.",
     category: "Data Readiness",
     date: "January 4, 2026",
-    readTime: "6 min read",
+    readTime: "15-20 mins read",
   },
   {
     slug: "rag-production-playbook",

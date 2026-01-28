@@ -593,6 +593,14 @@ const posts: Record<
             so this area must turn yellow or green first.)
           </li>
         </ul>
+        <div className="my-6">
+          <img
+            src="/scorecard.jpeg"
+            alt="Data readiness scorecard traffic light example"
+            className="mx-auto block w-full max-w-3xl rounded-xl border border-border/60"
+            loading="lazy"
+          />
+        </div>
         <p>
           It’s up to each organization to define exact score thresholds, but the idea is clear: reds are
           show-stoppers, yellows are proceed-with-care, and greens are all-clear. Often, an overall project

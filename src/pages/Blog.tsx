@@ -7,6 +7,15 @@ import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredD
 
 const posts = [
   {
+    slug: "after-saas-new-software-era",
+    title: "After SaaS: Why Enterprises Are Quietly Entering a New Software Era",
+    excerpt:
+      "A quiet shift is underway as enterprises move from standardized SaaS toward adaptive, AI-native systems.",
+    category: "Enterprise Strategy",
+    date: "January 10, 2026",
+    readTime: "6 mins read",
+  },
+  {
     slug: "ai-strategy-roi-blueprint",
     title: "Executive Guidance for Building Scalable Copy",
     excerpt:

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://auxilio.cloud/sitemap.xml
+Sitemap: https://www.auxilio.cloud/sitemap.xml

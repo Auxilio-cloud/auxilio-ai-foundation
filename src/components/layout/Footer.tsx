@@ -11,6 +11,17 @@ const navigation = {
   ],
 };
 const visibleNavigation = navigation.main.filter((item) => item.href !== "/enterprise");
+const socialLinks = [
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/company/auxilio-cloud/?viewAsMember=true",
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5 fill-current">
+        <path d="M19 3A2 2 0 0 1 21 5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14Zm-.5 15.5V13a3 3 0 0 0-3-3c-.97 0-1.71.41-2.12.88V10h-2v8h2v-4.5a1.5 1.5 0 0 1 3 0V18h2ZM8.5 9A1.5 1.5 0 1 0 7 7.5 1.5 1.5 0 0 0 8.5 9ZM9.5 18V10h-2v8h2Z" />
+      </svg>
+    ),
+  },
+];
 
 export function Footer() {
   return (
@@ -25,6 +36,20 @@ export function Footer() {
             <p className="mt-2 text-sm text-neutral-600 max-w-xs">
               Building the infrastructure for the AI-native era.
             </p>
+            <div className="mt-4 flex items-center gap-4">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-neutral-600 hover:text-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-900/30 rounded"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Navigation */}

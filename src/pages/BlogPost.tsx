@@ -63,6 +63,7 @@ const postHeroImages: Record<string, string> = {
   "building-scalable-copy": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
   "data-readiness-scorecard": "/score%20card%20header.jpeg",
+  "rag-production-playbook": "/rag%20blog%20header.jpeg",
   "ai-governance-operating-model": "/gov%20model%20header.jpeg",
 };
 

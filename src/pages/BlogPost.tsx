@@ -1702,7 +1702,11 @@ const BlogPost = () => {
         ogType="article"
         structuredData={[
           ...baseStructuredData,
-          buildBreadcrumbListSchema(breadcrumbItems),
+          buildBreadcrumbListSchema([
+            { name: "Home", path: "/" },
+            { name: "Insights", path: "/blog" },
+            { name: seo?.title || post.title, path: `/blog/${slug}` },
+          ]),
           buildBlogPostingSchema({
             title: seo?.title || post.title,
             description: seo?.description || post.title,

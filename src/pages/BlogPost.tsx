@@ -1,9 +1,10 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema, buildBlogPostingSchema } from "@/lib/structuredData";
+import { blogPosts } from "@/lib/blogData";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
@@ -58,7 +59,7 @@ const blogAuthor = {
 };
 
 const postHeroImages: Record<string, string> = {
-  "after-saas-new-software-era": "/Auxilio%20blog%20saas.jpep",
+  "after-saas-new-software-era": "/Auxilio%20blog%20saas.jpeg",
   "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
   "data-readiness-scorecard": "/score%20card%20header.jpeg",
@@ -1697,7 +1698,7 @@ const BlogPost = () => {
   ];
 
   return (
-    <Layout>
+    <Layout breadcrumbs={breadcrumbItems}>
       <Seo
         title={seo?.title || post.title}
         description={description}
@@ -1755,6 +1756,7 @@ const BlogPost = () => {
                 <Clock className="w-4 h-4" />
                 {post.readTime}
               </span>
+              <span>By Auxilio Team</span>
             </div>
           </div>
         </div>
@@ -1764,6 +1766,45 @@ const BlogPost = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="prose prose-lg max-w-3xl mx-auto prose-headings:font-semibold prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground">
             {post.content}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding border-t border-border">
+        <div className="container mx-auto px-6 lg:px-8">
+          <h2 className="text-2xl font-semibold text-foreground mb-8">Read Next</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {blogPosts
+              .filter((p) => p.slug !== slug)
+              .slice(0, 3)
+              .map((relatedPost) => (
+                <Link
+                  key={relatedPost.slug}
+                  to={`/blog/${relatedPost.slug}`}
+                  className="group block"
+                >
+                  <article className="h-full p-6 rounded-2xl border border-border bg-card hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4">
+                      <span className="px-2 py-1 rounded-full bg-primary/10 text-primary font-medium">
+                        {relatedPost.category}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                      {relatedPost.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                      {relatedPost.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        {relatedPost.date}
+                      </span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </article>
+                </Link>
+              ))}
           </div>
         </div>
       </section>

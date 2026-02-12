@@ -2,7 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
-import { buildCanonicalUrl } from "@/lib/seo";
+import { buildCanonicalUrl, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
 
 const posts = [
@@ -77,6 +77,27 @@ const Blog = () => {
             { name: "Home", path: "/" },
             { name: "Insights", path: "/blog" },
           ]),
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Auxilio Insights",
+            description: "AI strategy articles for CTOs and engineering leaders.",
+            url: buildCanonicalUrl("/blog"),
+            publisher: {
+              "@type": "Organization",
+              "@id": `${siteUrl}/#organization`,
+              name: "Auxilio",
+            },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: posts.map((post, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: buildCanonicalUrl(`/blog/${post.slug}`),
+                name: post.title,
+              })),
+            },
+          },
         ]}
       />
       {/* Hero */}

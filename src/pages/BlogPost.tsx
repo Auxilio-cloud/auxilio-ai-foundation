@@ -3,7 +3,7 @@ import { Link, useParams, Navigate } from "react-router-dom";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
-import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
+import { baseStructuredData, buildBreadcrumbListSchema, buildBlogPostingSchema } from "@/lib/structuredData";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
@@ -1704,9 +1704,17 @@ const BlogPost = () => {
         canonical={canonical}
         ogTitle={seo?.title || post.title}
         ogDescription={seo?.description || post.title}
+        ogType="article"
         structuredData={[
           ...baseStructuredData,
           buildBreadcrumbListSchema(breadcrumbItems),
+          buildBlogPostingSchema({
+            title: seo?.title || post.title,
+            description: seo?.description || post.title,
+            slug: slug!,
+            datePublished: post.datePublished,
+            image: postHeroImages[slug!],
+          }),
         ]}
       />
       <section

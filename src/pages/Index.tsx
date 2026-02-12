@@ -13,8 +13,10 @@ import { buildCanonicalUrl } from "@/lib/seo";
 import {
   baseStructuredData,
   buildBreadcrumbListSchema,
+  buildFAQPageSchema,
   serviceSchemas,
 } from "@/lib/structuredData";
+import { faqs } from "@/lib/faqData";
 
 const Index = () => {
   return (
@@ -29,6 +31,7 @@ const Index = () => {
           ...baseStructuredData,
           ...serviceSchemas,
           buildBreadcrumbListSchema([{ name: "Home", path: "/" }]),
+          buildFAQPageSchema(faqs),
         ]}
       />
       <HeroSection />

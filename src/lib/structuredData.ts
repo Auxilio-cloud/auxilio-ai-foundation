@@ -119,6 +119,71 @@ type BreadcrumbItem = {
   path: string;
 };
 
+type BlogPostingInput = {
+  title: string;
+  description: string;
+  slug: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+};
+
+export const buildBlogPostingSchema = ({
+  title,
+  description,
+  slug,
+  datePublished,
+  dateModified,
+  image,
+}: BlogPostingInput) => ({
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description,
+  url: buildCanonicalUrl(`/blog/${slug}`),
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": buildCanonicalUrl(`/blog/${slug}`),
+  },
+  datePublished,
+  dateModified: dateModified ?? datePublished,
+  author: {
+    "@type": "Organization",
+    "@id": organizationId,
+    name: "Auxilio",
+    url: siteUrl,
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": organizationId,
+    name: "Auxilio",
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/logo_dark.png`,
+    },
+  },
+  ...(image ? { image: { "@type": "ImageObject", url: `${siteUrl}${image}` } } : {}),
+  inLanguage: "en",
+});
+
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+export const buildFAQPageSchema = (faqs: FAQItem[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+});
+
 export const buildBreadcrumbListSchema = (items: BreadcrumbItem[]) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",

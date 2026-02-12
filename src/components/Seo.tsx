@@ -48,6 +48,8 @@ export const Seo = ({
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Auxilio" />
       <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:site" content="@auxilio_cloud" />
+      <meta name="twitter:creator" content="@auxilio_cloud" />
       <meta name="twitter:title" content={ogTitle ?? title} />
       <meta name="twitter:description" content={ogDescription ?? description} />
       <meta name="twitter:image" content={ogImage} />

@@ -1691,14 +1691,8 @@ const BlogPost = () => {
     return <Navigate to="/blog" replace />;
   }
 
-  const breadcrumbItems = [
-    { name: "Home", path: "/" },
-    { name: "Insights", path: "/blog" },
-    { name: post.title, path: `/blog/${slug}` },
-  ];
-
   return (
-    <Layout breadcrumbs={breadcrumbItems}>
+    <Layout>
       <Seo
         title={seo?.title || post.title}
         description={description}

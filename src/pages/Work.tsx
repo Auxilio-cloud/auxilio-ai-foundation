@@ -183,7 +183,7 @@ const productOutcomes = [
 
 const Work = () => {
   return (
-    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "Portfolio", path: "/work" }]}>
+    <Layout>
       <Seo
         title="Auxilio Portfolio | Deployed AI Solutions"
         description="Explore Auxilio’s deployed AI products and enterprise solutions, from intelligent logistics to productivity platforms."

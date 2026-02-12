@@ -136,7 +136,7 @@ const enterpriseCapabilities = [
 
 const Platforms = () => {
   return (
-    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "Platform", path: "/platforms" }]}>
+    <Layout>
       <Seo
         title="Enterprise AI Platform for Infrastructure & Orchestration | Auxilio"
         description="Auxilio is an enterprise AI platform delivering secure infrastructure, workflow orchestration, and data integration with governance and observability built in."

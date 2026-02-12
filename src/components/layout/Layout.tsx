@@ -1,27 +1,12 @@
 import { ReactNode } from "react";
-import { Link } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import {
-  Breadcrumb,
-  BreadcrumbList,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-
-type BreadcrumbEntry = {
-  name: string;
-  path: string;
-};
 
 interface LayoutProps {
   children: ReactNode;
-  breadcrumbs?: BreadcrumbEntry[];
 }
 
-export function Layout({ children, breadcrumbs }: LayoutProps) {
+export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <a
@@ -32,31 +17,6 @@ export function Layout({ children, breadcrumbs }: LayoutProps) {
       </a>
       <Header />
       <main id="main-content" className="flex-1 pt-20">
-        {breadcrumbs && breadcrumbs.length > 0 && (
-          <div className="container mx-auto px-6 lg:px-8 pt-4">
-            <Breadcrumb>
-              <BreadcrumbList>
-                {breadcrumbs.map((crumb, index) => {
-                  const isLast = index === breadcrumbs.length - 1;
-                  return (
-                    <BreadcrumbItem key={crumb.path}>
-                      {isLast ? (
-                        <BreadcrumbPage>{crumb.name}</BreadcrumbPage>
-                      ) : (
-                        <>
-                          <BreadcrumbLink asChild>
-                            <Link to={crumb.path}>{crumb.name}</Link>
-                          </BreadcrumbLink>
-                          <BreadcrumbSeparator />
-                        </>
-                      )}
-                    </BreadcrumbItem>
-                  );
-                })}
-              </BreadcrumbList>
-            </Breadcrumb>
-          </div>
-        )}
         {children}
       </main>
       <Footer />

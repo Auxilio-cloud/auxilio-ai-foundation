@@ -8,7 +8,7 @@ import { blogPosts as posts } from "@/lib/blogData";
 
 const Blog = () => {
   return (
-    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "Insights", path: "/blog" }]}>
+    <Layout>
       <Seo
         title="AI Strategy for CTOs | Auxilio Insights"
         description="Executive AI guidance for CTOs and engineering leaders. Read about AI platform strategy, governance, and infrastructure that move enterprise pilots to production."

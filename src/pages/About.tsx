@@ -35,7 +35,7 @@ const team = [
 
 const About = () => {
   return (
-    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]}>
+    <Layout>
       <Seo
         title="About Auxilio | AI-Native Platform Builders"
         description="Meet the team building AI-native platforms that orchestrate intelligence for modern organizations."

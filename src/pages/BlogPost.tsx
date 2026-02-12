@@ -13,7 +13,7 @@ const postSeo: Record<string, { title: string; description: string }> = {
     description:
       "A quiet shift as enterprises move from standardized SaaS toward adaptive, AI-native systems.",
   },
-  "ai-strategy-roi-blueprint": {
+  "building-scalable-copy": {
     title: "Executive Guidance for Building Scalable Copy",
     description:
       "Building scalable copy is no longer a creative-only challenge.",
@@ -60,7 +60,7 @@ const blogAuthor = {
 
 const postHeroImages: Record<string, string> = {
   "after-saas-new-software-era": "/Auxilio%20blog%20saas.jpeg",
-  "ai-strategy-roi-blueprint": "/exe%20blog%20header.jpeg",
+  "building-scalable-copy": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",
   "data-readiness-scorecard": "/score%20card%20header.jpeg",
   "ai-governance-operating-model": "/gov%20model%20header.jpeg",
@@ -208,7 +208,7 @@ const posts: Record<
       </>
     ),
   },
-  "ai-strategy-roi-blueprint": {
+  "building-scalable-copy": {
     title: "Executive Guidance for Building Scalable Copy",
     date: "January 8, 2026",
     datePublished: "2026-01-08",

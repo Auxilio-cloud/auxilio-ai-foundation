@@ -9,7 +9,7 @@ export const blogPosts = [
     readTime: "6 mins read",
   },
   {
-    slug: "ai-strategy-roi-blueprint",
+    slug: "building-scalable-copy",
     title: "Executive Guidance for Building Scalable Copy",
     excerpt:
       "Building scalable copy is no longer a creative-only challenge.",

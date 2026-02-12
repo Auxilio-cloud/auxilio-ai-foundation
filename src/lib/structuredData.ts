@@ -11,7 +11,11 @@ export const organizationSchema = {
   legalName: "Auxilio Technologies LLC",
   url: siteUrl,
   logo: `${siteUrl}/logo_dark.png`,
-  sameAs: [siteUrl],
+  sameAs: [
+    siteUrl,
+    "https://www.linkedin.com/company/auxilio-cloud/",
+    "https://x.com/auxilio_cloud",
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",

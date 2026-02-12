@@ -84,7 +84,7 @@ const screenshots = [
 
 const Enterprise = () => {
   return (
-    <Layout>
+    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "Enterprise", path: "/enterprise" }]}>
       <Seo
         title="Auxilio Logistics | Enterprise AI for Supply Chains"
         description="Auxilio Logistics delivers enterprise AI for routing, visibility, and supply chain orchestration. Optimize networks, reduce costs, and boost service levels."

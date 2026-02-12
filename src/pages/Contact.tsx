@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <Layout>
+    <Layout breadcrumbs={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]}>
       <Seo
         title="Contact Auxilio | Start a Conversation"
         description="Get in touch with Auxilio to discuss AI strategy, platform development, or enterprise solutions."

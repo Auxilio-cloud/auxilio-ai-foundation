@@ -87,9 +87,10 @@ const enterpriseCapabilities = [
       "Human-in-the-loop control",
     ],
     visual: (
-      <img 
-        src={synthesisImage} 
-        alt="Workflow Optimization visualization" 
+      <img
+        src={synthesisImage}
+        alt="Workflow Optimization visualization"
+        loading="lazy"
         className="w-full h-full object-cover rounded-3xl"
       />
     ),
@@ -106,9 +107,10 @@ const enterpriseCapabilities = [
       "Governed access",
     ],
     visual: (
-      <img 
-        src={meridianImage} 
-        alt="Knowledge Integration visualization" 
+      <img
+        src={meridianImage}
+        alt="Knowledge Integration visualization"
+        loading="lazy"
         className="w-full h-full object-cover rounded-3xl"
       />
     ),
@@ -125,9 +127,10 @@ const enterpriseCapabilities = [
       "Observability & monitoring",
     ],
     visual: (
-      <img 
-        src={atlasImage} 
-        alt="Intelligent Architecture visualization" 
+      <img
+        src={atlasImage}
+        alt="Intelligent Architecture visualization"
+        loading="lazy"
         className="w-full h-full object-cover rounded-3xl"
       />
     ),

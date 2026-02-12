@@ -1,6 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema, buildBlogPostingSchema } from "@/lib/structuredData";
@@ -1736,14 +1736,7 @@ const BlogPost = () => {
         ) : null}
         <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Insights
-            </Link>
-            <h1 className="mt-6 text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-4">

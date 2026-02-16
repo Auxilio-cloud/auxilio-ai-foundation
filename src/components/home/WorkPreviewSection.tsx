@@ -55,6 +55,7 @@ const featuredProjects = [
     name: "Auxilio Web",
     domain: "auxilio.cloud/web-services",
     url: AUXILIO_WEB_PATH,
+    openInNewTab: true,
     industry: "Web Services",
     image: auxilioWebImg,
     description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",
@@ -90,7 +91,9 @@ export function WorkPreviewSection() {
             <a
               key={project.name}
               href={project.url}
-              {...(project.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              {...(project.url.startsWith("http") || project.openInNewTab
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
               className="group relative bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

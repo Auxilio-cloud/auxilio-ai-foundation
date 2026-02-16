@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/web",
+      "destination": "https://auxilio-web-site.vercel.app/"
+    },
+    {
       "source": "/:path*",
       "destination": "/index.html"
     }

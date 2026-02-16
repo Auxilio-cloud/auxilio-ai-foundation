@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <rect width="1200" height="675" fill="#0A0A0A"/>
+  <rect x="40" y="40" width="1120" height="595" rx="16" fill="#161616" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <text x="600" y="310" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#FFFFFF">Auxilio Web</text>
+  <text x="600" y="370" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#A0A0A0">Professional Web Design for Small Businesses</text>
+  <rect x="460" y="410" width="280" height="44" rx="22" fill="#00E86C"/>
+  <text x="600" y="438" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#0A0A0A">From £499 — Screenshot coming soon</text>
+</svg>

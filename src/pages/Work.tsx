@@ -13,6 +13,7 @@ import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
+import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
 
 // SoftwareApplication schema for each demo tool
 const softwareApplicationSchema = {
@@ -73,6 +74,15 @@ const softwareApplicationSchema = {
       author: { "@type": "Organization", name: "Auxilio" },
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
       url: "https://logistics.auxilio.cloud",
+    },
+    {
+      "@type": "ProfessionalService",
+      position: 6,
+      name: "Auxilio Web",
+      description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans.",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "499", priceCurrency: "GBP", description: "Fixed-price website builds from £499" },
+      url: "https://auxilio.cloud/web",
     },
   ],
 };
@@ -151,6 +161,16 @@ const productProjects = [
     description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
     features: ["Document Analysis", "Contract Review", "Compliance Tracking"],
     gradient: "from-accent via-primary to-accent",
+  },
+  {
+    name: "Auxilio Web",
+    domain: "auxilio.cloud/web",
+    url: "/web",
+    industry: "Web Services",
+    image: auxilioWebImg,
+    description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",
+    features: ["Small Business", "Fixed-Price Builds", "Monthly Care Plans"],
+    gradient: "from-orange-500 to-amber-500",
   },
 ];
 
@@ -340,8 +360,7 @@ const Work = () => {
                   <a
                     key={project.name}
                     href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(project.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >

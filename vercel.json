@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/web",
-      "destination": "https://auxilio-web-site.vercel.app/"
+      "destination": "/web-services/"
     },
     {
       "source": "/:path*",

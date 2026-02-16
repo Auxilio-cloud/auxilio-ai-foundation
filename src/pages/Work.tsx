@@ -15,6 +15,9 @@ import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
 
+const AUXILIO_WEB_PATH = "/web-services/";
+const AUXILIO_WEB_URL = buildCanonicalUrl(AUXILIO_WEB_PATH);
+
 // SoftwareApplication schema for each demo tool
 const softwareApplicationSchema = {
   "@context": "https://schema.org",
@@ -82,7 +85,7 @@ const softwareApplicationSchema = {
       description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans.",
       author: { "@type": "Organization", name: "Auxilio" },
       offers: { "@type": "Offer", price: "499", priceCurrency: "GBP", description: "Fixed-price website builds from £499" },
-      url: "https://auxilio.cloud/web",
+      url: AUXILIO_WEB_URL,
     },
   ],
 };
@@ -164,8 +167,8 @@ const productProjects = [
   },
   {
     name: "Auxilio Web",
-    domain: "auxilio.cloud/web",
-    url: "/web",
+    domain: "auxilio.cloud/web-services",
+    url: AUXILIO_WEB_PATH,
     industry: "Web Services",
     image: auxilioWebImg,
     description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",

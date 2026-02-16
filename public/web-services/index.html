@@ -1,0 +1,1606 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Websites for Small Businesses | Auxilio Web</title>
+    <meta name="description" content="Get a professional, lead-generating website for your small business — delivered in 5-7 days for a fraction of agency prices. Powered by AI, backed by experts.">
+    <meta property="og:title" content="Professional Websites for Small Businesses | Auxilio Web">
+    <meta property="og:description" content="A professional website that brings in customers. Delivered in 5-7 days. From £499.">
+    <meta property="og:url" content="https://web.auxilio.cloud">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://web.auxilio.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Websites for Small Businesses | Auxilio Web">
+    <meta name="twitter:description" content="A professional website that brings in customers. Delivered in 5-7 days. From £499.">
+    <meta name="twitter:image" content="https://web.auxilio.cloud/og-image.png">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://web.auxilio.cloud">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger + Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+    <!-- Structured Data: ProfessionalService -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"ProfessionalService","name":"Auxilio Web","description":"Professional web design for small businesses, powered by AI","url":"https://web.auxilio.cloud","priceRange":"£499-£799","areaServed":[{"@type":"Country","name":"United Kingdom"},{"@type":"Country","name":"United States"}],"parentOrganization":{"@type":"Organization","name":"Auxilio","url":"https://auxilio.cloud"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Web Design Packages","itemListElement":[{"@type":"Offer","name":"Starter","price":"499","priceCurrency":"GBP","description":"3-5 page custom website, mobile-optimised, technical SEO setup, delivered in 5-7 business days"},{"@type":"Offer","name":"Growth","price":"799","priceCurrency":"GBP","description":"5-10 page conversion-optimised website, full technical SEO, booking widget setup, analytics"}]}}
+    </script>
+    <!-- Structured Data: FAQ (AEO) -->
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What do I need to get started with Auxilio Web?","acceptedAnswer":{"@type":"Answer","text":"Just your business details, logo if you have one, and any content or photos. We guide you through everything in a free 15-minute call. No technical knowledge needed."}},{"@type":"Question","name":"What does technical SEO setup mean?","acceptedAnswer":{"@type":"Answer","text":"We handle the foundations that help Google find and index your site — page titles, meta descriptions, fast loading speeds, mobile-friendly design, and structured data markup. Ongoing SEO services like keyword strategy or content marketing are available as an add-on."}},{"@type":"Question","name":"What is included in Monthly Care content updates?","acceptedAnswer":{"@type":"Answer","text":"Each month you can request up to 2 content changes — things like updating a phone number, swapping a photo, or tweaking text on a page. Need something bigger like a new page or redesign? We quote that separately."}},{"@type":"Question","name":"Can you migrate my existing website?","acceptedAnswer":{"@type":"Answer","text":"Yes. We handle full migration including content, images, and domain transfer with zero downtime. Most migrations complete in under a week."}},{"@type":"Question","name":"Do I need the Monthly Care plan?","acceptedAnswer":{"@type":"Answer","text":"Optional but recommended. At £49/month it covers managed hosting, SSL, security patches, up to 2 content updates per month, and priority support so you can focus on your business. Cancel anytime."}},{"@type":"Question","name":"How is Auxilio Web so affordable?","acceptedAnswer":{"@type":"Answer","text":"AI-assisted workflows let us work 5x faster than traditional agencies. We pass those savings directly to you — professional websites from £499 with no markup or hidden fees."}}]}
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            /* SPINX-inspired dark cinematic palette */
+            --bg: #0A0A0A;
+            --bg-elevated: #111111;
+            --bg-card: #161616;
+            --bg-card-hover: #1C1C1C;
+            --text: #FFFFFF;
+            --text-secondary: #A0A0A0;
+            --text-muted: #707070;
+            --accent: #00E86C;
+            --accent-dim: rgba(0, 232, 108, 0.12);
+            --accent-glow: rgba(0, 232, 108, 0.25);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-hover: rgba(255, 255, 255, 0.06);
+            --radius: 16px;
+            --radius-lg: 24px;
+        }
+
+        html { scroll-behavior: auto; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Subtle grain texture */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+        h1, h2, h3, h4 { color: var(--text); line-height: 1.08; }
+        h1 { font-size: clamp(3.2rem, 7vw, 5.8rem); font-weight: 800; letter-spacing: -0.045em; }
+        h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); font-weight: 700; letter-spacing: -0.035em; }
+        h3 { font-size: 1.25rem; font-weight: 600; }
+
+        section { padding: 100px 0; position: relative; }
+
+        /* ===== PRELOADER ===== */
+        .preloader {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .preloader-logo {
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -0.03em;
+            overflow: hidden;
+        }
+        .preloader-logo span { color: var(--accent); }
+        .preloader-logo .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        .preloader-bar {
+            width: 120px;
+            height: 2px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .preloader-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        /* ===== SCROLL PROGRESS ===== */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent);
+            z-index: 9997;
+        }
+
+        /* ===== Buttons ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            border-radius: 100px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: -0.01em;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px var(--accent-glow);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border-hover);
+        }
+        .btn-outline:hover {
+            border-color: var(--text);
+            transform: translateY(-2px);
+            background: var(--glass-hover);
+        }
+        .btn-white {
+            background: #fff;
+            color: #000;
+        }
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(255,255,255,0.15);
+        }
+
+        .magnetic { display: inline-block; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        nav.scrolled {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+        }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text);
+            letter-spacing: -0.03em;
+        }
+        .nav-logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links .magnetic { display: flex; align-items: center; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            letter-spacing: -0.01em;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            padding: 10px 24px !important;
+            font-size: 0.85rem !important;
+            border-radius: 100px !important;
+            background: var(--accent) !important;
+            color: #000 !important;
+        }
+        .nav-cta:hover { box-shadow: 0 8px 24px var(--accent-glow); }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex; flex-direction: column;
+                position: absolute; top: 100%; left: 0; right: 0;
+                background: rgba(10,10,10,0.98);
+                backdrop-filter: blur(20px);
+                padding: 24px; gap: 16px;
+                border-bottom: 1px solid var(--border);
+            }
+            .mobile-toggle { display: block; }
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+        }
+        .hero-pin-wrapper { position: relative; }
+
+        /* Ambient glow — green accent */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.07;
+            pointer-events: none;
+        }
+        .hero-blob-1 { width: 700px; height: 700px; background: var(--accent); top: -250px; right: -200px; }
+        .hero-blob-2 { width: 500px; height: 500px; background: var(--accent); bottom: -150px; left: -200px; }
+        .hero-blob-3 { width: 350px; height: 350px; background: #00B4D8; top: 40%; left: 55%; opacity: 0.04; }
+
+        .hero-content { position: relative; z-index: 1; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            background: var(--glass);
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            opacity: 0;
+        }
+        .hero-badge .dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+        .hero h1 { margin-bottom: 28px; overflow: hidden; }
+        .hero h1 .line { display: block; overflow: hidden; }
+        .hero h1 .line-inner { display: block; transform: translateY(110%); }
+
+        /* Accent underline — green */
+        .accent-underline { position: relative; display: inline-block; }
+        .accent-underline svg {
+            position: absolute;
+            bottom: -6px;
+            left: -4px;
+            width: calc(100% + 8px);
+            height: 18px;
+            overflow: visible;
+        }
+        .accent-underline svg path {
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+        }
+
+        .hero .subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 0 auto 48px;
+            line-height: 1.75;
+            opacity: 0;
+            font-weight: 400;
+        }
+        .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; opacity: 0; }
+        .hero-note { margin-top: 20px; font-size: 0.8rem; color: var(--text-muted); opacity: 0; }
+
+        /* Stats row */
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            margin-top: 64px;
+            flex-wrap: wrap;
+        }
+        .stat-item { text-align: center; opacity: 0; }
+        .stat-value {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--accent);
+        }
+        .stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 6px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        /* ===== SHOWCASE ===== */
+        .showcase { padding: 80px 0 0; overflow: visible; }
+        .showcase-header { text-align: center; margin-bottom: 64px; }
+        .showcase-header p { color: var(--text-secondary); font-size: 1.05rem; max-width: 520px; margin: 16px auto 0; }
+
+        .accent-circle { position: relative; display: inline-block; }
+        .accent-circle svg {
+            position: absolute;
+            top: -10px; left: -14px;
+            width: calc(100% + 28px);
+            height: calc(100% + 20px);
+            overflow: visible;
+        }
+
+        .showcase-pin { position: relative; /* height set by JS */ }
+        .showcase-track-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        .showcase-track {
+            display: flex;
+            gap: 24px;
+            padding: 0 10vw;
+            will-change: transform;
+        }
+
+        .showcase-card {
+            flex: 0 0 360px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+            will-change: transform;
+        }
+        .showcase-card:hover {
+            box-shadow: 0 24px 80px rgba(0, 232, 108, 0.06);
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .card-preview { height: 290px; position: relative; overflow: hidden; }
+        .card-info { padding: 20px 24px; }
+        .card-info h3 { font-size: 1.1rem; margin-bottom: 4px; color: var(--text); }
+        .card-info .card-type { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; }
+        .card-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Mini website previews — kept from V4, unchanged */
+        .preview-dentist {
+            background: linear-gradient(145deg, #E8F4FD, #F0F7FF);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-dentist .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .preview-dentist .mini-logo { font-weight: 800; font-size: 0.9rem; color: #0077CC; }
+        .preview-dentist .mini-nav-links { display: flex; gap: 12px; }
+        .preview-dentist .mini-nav-links span { font-size: 0.55rem; color: #6B9EC0; font-weight: 500; }
+        .preview-dentist .mini-hero { flex: 1; display: flex; align-items: center; gap: 16px; }
+        .preview-dentist .mini-hero-text h4 { font-size: 1rem; color: #1a3a4a; line-height: 1.2; margin-bottom: 6px; }
+        .preview-dentist .mini-hero-text p { font-size: 0.55rem; color: #6B9EC0; line-height: 1.5; }
+        .preview-dentist .mini-btn { display: inline-block; padding: 5px 12px; border-radius: 6px; background: #0077CC; color: #fff; font-size: 0.55rem; font-weight: 600; margin-top: 8px; }
+        .preview-dentist .mini-img { width: 100px; height: 100px; border-radius: 16px; background: linear-gradient(135deg, #B3DCF2, #78B8E0); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        .preview-dentist .mini-features { display: flex; gap: 8px; margin-top: auto; }
+        .preview-dentist .mini-feature { flex: 1; background: #fff; border-radius: 8px; padding: 8px; text-align: center; font-size: 0.5rem; color: #0077CC; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+
+        .preview-restaurant {
+            background: linear-gradient(145deg, #1A1210, #2A1F1A);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-restaurant .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .preview-restaurant .mini-logo { font-weight: 800; font-size: 0.9rem; color: #E8C170; letter-spacing: 0.05em; }
+        .preview-restaurant .mini-nav-links { display: flex; gap: 12px; }
+        .preview-restaurant .mini-nav-links span { font-size: 0.55rem; color: #8A7660; font-weight: 500; }
+        .preview-restaurant .mini-hero { flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .preview-restaurant .mini-hero .logo-icon { font-size: 2rem; margin-bottom: 8px; }
+        .preview-restaurant .mini-hero h4 { font-size: 1.1rem; color: #E8C170; letter-spacing: 0.08em; line-height: 1.2; text-transform: uppercase; margin-bottom: 6px; }
+        .preview-restaurant .mini-hero p { font-size: 0.55rem; color: #8A7660; line-height: 1.5; }
+        .preview-restaurant .mini-btn { display: inline-block; padding: 5px 14px; border-radius: 4px; border: 1px solid #E8C170; color: #E8C170; font-size: 0.55rem; font-weight: 600; margin-top: 10px; letter-spacing: 0.05em; }
+        .preview-restaurant .mini-cards { display: flex; gap: 6px; margin-top: auto; }
+        .preview-restaurant .mini-card-item { flex: 1; background: rgba(232,193,112,0.08); border: 1px solid rgba(232,193,112,0.15); border-radius: 8px; padding: 8px; text-align: center; }
+        .preview-restaurant .mini-card-item span { display: block; font-size: 1rem; margin-bottom: 2px; }
+        .preview-restaurant .mini-card-item p { font-size: 0.45rem; color: #8A7660; }
+
+        .preview-salon {
+            background: linear-gradient(145deg, #FFF0F5, #FFE4EF);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-salon .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .preview-salon .mini-logo { font-weight: 800; font-size: 0.9rem; color: #C04070; }
+        .preview-salon .mini-hero { flex: 1; display: flex; align-items: center; gap: 14px; }
+        .preview-salon .mini-hero-text h4 { font-size: 0.95rem; color: #8A2050; line-height: 1.2; margin-bottom: 4px; }
+        .preview-salon .mini-hero-text p { font-size: 0.55rem; color: #B06080; line-height: 1.5; }
+        .preview-salon .mini-btn { display: inline-block; padding: 5px 12px; border-radius: 20px; background: linear-gradient(135deg, #C04070, #E06090); color: #fff; font-size: 0.55rem; font-weight: 600; margin-top: 8px; }
+        .preview-salon .mini-img { width: 90px; height: 90px; border-radius: 50%; background: linear-gradient(135deg, #FFB6D0, #FF8AB0); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+        .preview-salon .mini-services { display: flex; gap: 6px; margin-top: auto; }
+        .preview-salon .mini-svc { flex: 1; background: #fff; border-radius: 10px; padding: 8px; text-align: center; box-shadow: 0 2px 8px rgba(192,64,112,0.06); }
+        .preview-salon .mini-svc span { display: block; font-size: 0.8rem; margin-bottom: 2px; }
+        .preview-salon .mini-svc p { font-size: 0.45rem; color: #B06080; font-weight: 600; }
+
+        .preview-trades {
+            background: linear-gradient(145deg, #0A1628, #102040);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-trades .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .preview-trades .mini-logo { font-weight: 800; font-size: 0.85rem; color: #4DA6FF; }
+        .preview-trades .mini-nav-links { display: flex; gap: 10px; }
+        .preview-trades .mini-nav-links span { font-size: 0.55rem; color: #4A6580; font-weight: 500; }
+        .preview-trades .mini-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .preview-trades .mini-hero h4 { font-size: 1.1rem; color: #fff; line-height: 1.2; margin-bottom: 6px; }
+        .preview-trades .mini-hero h4 em { color: #4DA6FF; font-style: normal; }
+        .preview-trades .mini-hero p { font-size: 0.55rem; color: #6A8AAA; line-height: 1.5; }
+        .preview-trades .mini-btn { display: inline-block; padding: 6px 14px; border-radius: 8px; background: #FF6B35; color: #fff; font-size: 0.6rem; font-weight: 700; margin-top: 10px; width: fit-content; }
+        .preview-trades .mini-trust { display: flex; gap: 8px; margin-top: auto; }
+        .preview-trades .mini-trust-item { display: flex; align-items: center; gap: 4px; font-size: 0.5rem; color: #4DA6FF; font-weight: 600; }
+
+        .preview-professional {
+            background: linear-gradient(145deg, #F2F7F2, #E8F0E8);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-professional .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .preview-professional .mini-logo { font-weight: 800; font-size: 0.85rem; color: #1A5A30; }
+        .preview-professional .mini-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .preview-professional .mini-hero h4 { font-size: 0.95rem; color: #1A3A20; line-height: 1.2; margin-bottom: 6px; }
+        .preview-professional .mini-hero p { font-size: 0.55rem; color: #4A7A50; line-height: 1.5; }
+        .preview-professional .mini-btn { display: inline-block; padding: 5px 14px; border-radius: 8px; background: #1A5A30; color: #fff; font-size: 0.55rem; font-weight: 600; margin-top: 8px; width: fit-content; }
+        .preview-professional .mini-stats { display: flex; gap: 8px; margin-top: auto; }
+        .preview-professional .mini-stat { flex: 1; background: #fff; border-radius: 10px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+        .preview-professional .mini-stat .num { font-size: 1rem; font-weight: 800; color: #1A5A30; }
+        .preview-professional .mini-stat p { font-size: 0.4rem; color: #4A7A50; margin-top: 2px; }
+
+        .preview-fitness {
+            background: linear-gradient(145deg, #0F0F0F, #1A1A1A);
+            padding: 20px; display: flex; flex-direction: column;
+        }
+        .preview-fitness .mini-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .preview-fitness .mini-logo { font-weight: 900; font-size: 0.9rem; color: #FF3B3B; text-transform: uppercase; letter-spacing: 0.1em; }
+        .preview-fitness .mini-hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .preview-fitness .mini-hero h4 { font-size: 1.2rem; color: #fff; line-height: 1.1; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.02em; }
+        .preview-fitness .mini-hero h4 em { color: #FF3B3B; font-style: normal; }
+        .preview-fitness .mini-hero p { font-size: 0.55rem; color: #666; line-height: 1.5; }
+        .preview-fitness .mini-btn { display: inline-block; padding: 6px 16px; border-radius: 4px; background: #FF3B3B; color: #fff; font-size: 0.6rem; font-weight: 700; margin-top: 10px; width: fit-content; text-transform: uppercase; letter-spacing: 0.05em; }
+        .preview-fitness .mini-pricing { display: flex; gap: 6px; margin-top: auto; }
+        .preview-fitness .mini-price-card { flex: 1; border: 1px solid #333; border-radius: 8px; padding: 8px; text-align: center; }
+        .preview-fitness .mini-price-card .tier { font-size: 0.5rem; color: #888; font-weight: 600; text-transform: uppercase; }
+        .preview-fitness .mini-price-card .price { font-size: 0.85rem; color: #fff; font-weight: 800; margin: 2px 0; }
+        .preview-fitness .mini-price-card.hot { border-color: #FF3B3B; background: rgba(255,59,59,0.05); }
+        .preview-fitness .mini-price-card.hot .price { color: #FF3B3B; }
+
+        /* ===== CLIP-PATH REVEAL SECTIONS ===== */
+        .reveal-section {
+            clip-path: inset(6% 3% 6% 3% round 24px);
+            transition: clip-path 0.01s;
+        }
+
+        /* ===== SECTION DIVIDER ===== */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Marquee removed */
+
+        /* ===== BENTO GRID ===== */
+        .bento { padding: 80px 0 100px; }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 900px) { .bento-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .bento-grid { grid-template-columns: 1fr; } }
+        .bento-card {
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            will-change: transform;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .bento-card.span-2 { grid-column: span 2; }
+        @media (max-width: 600px) { .bento-card.span-2 { grid-column: span 1; } }
+
+        /* Dark cinematic bento variants */
+        .bento-accent {
+            background: var(--accent);
+            color: #000;
+        }
+        .bento-accent h3, .bento-accent p { color: #000; }
+        .bento-accent p { opacity: 0.7; }
+
+        .bento-elevated {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+        }
+
+        .bento-glass {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .bento-card .bento-icon {
+            width: 48px; height: 48px; margin-bottom: 20px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        .bento-accent .bento-icon {
+            background: rgba(0,0,0,0.12);
+            border-color: rgba(0,0,0,0.15);
+        }
+        .bento-icon svg { width: 24px; height: 24px; }
+        .bento-card h3 { margin-bottom: 10px; font-size: 1.3rem; letter-spacing: -0.02em; }
+        .bento-card p { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,0.75); }
+        .bento-accent p { color: rgba(0,0,0,0.8); }
+        .bento-card .bento-metric {
+            font-size: 2.8rem; font-weight: 800;
+            margin-top: 20px; line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .how-section { background: var(--bg-elevated); }
+        .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 48px; }
+        @media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; gap: 36px; } }
+        .how-step { text-align: center; }
+        .how-number {
+            width: 60px; height: 60px; border-radius: 16px;
+            background: var(--bg-card); border: 1px solid var(--border);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; font-weight: 800; margin-bottom: 20px;
+            color: var(--accent); letter-spacing: -0.02em;
+        }
+        .how-step h3 { margin-bottom: 8px; }
+        .how-step p { font-size: 0.9rem; color: var(--text-secondary); max-width: 300px; margin: 0 auto; }
+
+        /* ===== COMPARISON — Card Grid ===== */
+        .comp-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+        @media (max-width: 900px) { .comp-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 520px) { .comp-grid { grid-template-columns: 1fr; } }
+
+        .comp-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .comp-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.25);
+        }
+        .comp-card.comp-us {
+            border-color: var(--accent);
+            background: linear-gradient(165deg, rgba(0,232,108,0.06), var(--bg-card) 60%);
+        }
+        .comp-card-badge {
+            position: absolute;
+            top: -12px;
+            left: 24px;
+            background: var(--accent);
+            color: #000;
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+        .comp-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .comp-card-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .comp-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+        .comp-row:last-child { border-bottom: none; }
+        .comp-label { color: var(--text-secondary); font-weight: 500; }
+        .comp-val { font-weight: 600; text-align: right; }
+        .comp-val.good { color: var(--accent); }
+        .comp-val.bad { color: #FF4D6A; }
+        .comp-val.mid { color: #FFB84D; }
+        .comp-val.strong { color: var(--text); font-weight: 700; }
+
+        /* ===== PRICING ===== */
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+        @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
+        .pricing-card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
+            padding: 40px; text-align: center; position: relative; will-change: transform;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .pricing-card.featured { border-color: var(--accent); box-shadow: 0 8px 40px var(--accent-glow); transform: scale(1.03); }
+        .pricing-badge {
+            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+            background: var(--accent); color: #000; padding: 6px 20px; border-radius: 100px;
+            font-size: 0.75rem; font-weight: 700;
+        }
+        .pricing-card h3 { margin-bottom: 4px; }
+        .pricing-card .desc { font-size: 0.85rem; color: var(--text-muted); }
+        .pricing-price {
+            font-size: 3rem; font-weight: 800; color: var(--text); margin: 24px 0;
+            letter-spacing: -0.04em;
+        }
+        .pricing-price span { font-size: 0.85rem; font-weight: 400; color: var(--text-muted); }
+        .pricing-features { list-style: none; text-align: left; margin: 24px 0; }
+        .pricing-features li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-secondary); display: flex; align-items: center; gap: 10px; }
+        .pricing-features li::before { content: "\2713"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
+        .pricing-card .btn { width: 100%; justify-content: center; margin-top: 8px; }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+        @media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+        .testimonial-card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 32px; will-change: transform;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+        .stars { color: var(--accent); font-size: 1rem; margin-bottom: 16px; letter-spacing: 2px; }
+        .testimonial-card blockquote { font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px; font-style: italic; color: var(--text-secondary); }
+        .testimonial-author { font-weight: 700; color: var(--text); font-size: 0.9rem; }
+        .testimonial-role { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* ===== FAQ ===== */
+        .faq-list { max-width: 700px; margin: 48px auto 0; }
+        .faq-item { border: 1px solid var(--border); border-radius: 16px; margin-bottom: 12px; background: var(--bg-card); overflow: hidden; }
+        .faq-q { padding: 20px 24px; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: color 0.2s; }
+        .faq-q:hover { color: var(--accent); }
+        .faq-q .icon { width: 28px; height: 28px; border-radius: 50%; background: var(--bg-elevated); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--text-muted); transition: all 0.3s; flex-shrink: 0; }
+        .faq-q.active .icon { background: var(--accent); color: #000; transform: rotate(45deg); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; padding: 0 24px; }
+        .faq-a.active { max-height: 300px; padding: 0 24px 20px; }
+
+        /* ===== EMAIL CAPTURE ===== */
+        .email-section { background: var(--bg-elevated); }
+        .email-section input[type="email"] {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-family: inherit;
+        }
+        .email-section input[type="email"]::placeholder { color: var(--text-muted); }
+        .email-section input[type="email"]:focus { border-color: var(--accent); outline: none; }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section { padding: 100px 0; }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; gap: 60px; }
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px 20px;
+            border-radius: var(--radius);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: var(--text-muted);
+        }
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 140px;
+        }
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 36px;
+        }
+        .contact-info-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .contact-info-icon {
+            width: 44px; height: 44px; min-width: 44px;
+            border-radius: 12px;
+            background: var(--accent-dim);
+            border: 1px solid rgba(0,232,108,0.15);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .contact-info-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .contact-info-text h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .contact-info-text p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2px;
+            font-size: 0.95rem;
+        }
+        .contact-info-text a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        .contact-info-text a:hover {
+            color: var(--accent);
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 8px;
+        }
+        @media (max-width: 520px) { .locations-grid { grid-template-columns: 1fr; } }
+        .location-item h4 {
+            color: var(--text);
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .location-item p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ===== FOOTER ===== */
+        footer { padding: 48px 0 32px; border-top: 1px solid var(--border); }
+        footer .container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+        @media (max-width: 640px) { footer .container { grid-template-columns: 1fr; } }
+        footer h4 { color: var(--text); margin-bottom: 12px; font-size: 0.9rem; }
+        footer .nav-logo { display: inline-block; margin-bottom: 16px; }
+        footer p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.7; margin-bottom: 20px; }
+        footer a { color: var(--text-secondary); text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.85rem; transition: color 0.2s; }
+        footer a:hover { color: var(--text); }
+        footer a.email { color: var(--accent); }
+        footer a.email:hover { color: var(--text); }
+        .footer-links { display: flex; gap: 24px; flex-wrap: wrap; margin-bottom: 24px; }
+        .footer-links a { display: inline; margin: 0; }
+        .footer-divider { height: 1px; background: var(--border); margin: 24px 0; }
+        .footer-bottom { text-align: left; font-size: 0.8rem; color: var(--text-muted); padding-top: 24px; }
+
+        /* ===== SCROLL HINT ===== */
+        .scroll-hint {
+            text-align: center;
+            padding: 0 0 12px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeHint 2s ease-in-out infinite alternate;
+        }
+        @keyframes fadeHint { 0% { opacity: 0.3; } 100% { opacity: 0.7; } }
+        .scroll-hint span {
+            display: inline-block;
+            margin-left: 6px;
+            animation: bounceRight 1.5s ease-in-out infinite;
+        }
+        @keyframes bounceRight {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(6px); }
+        }
+
+        /* ===== PERFORMANCE: GPU layers ===== */
+        .preloader, .scroll-progress, .showcase-track, .hero-blob {
+            will-change: transform;
+        }
+    </style>
+</head>
+<body>
+
+<!-- No-JS fallback -->
+<noscript>
+<style>
+    .preloader { display: none !important; }
+    .reveal-section { clip-path: none !important; }
+    .hero h1 .line-inner { transform: none !important; }
+    .hero .subtitle, .hero-ctas, .hero-note, .hero-badge, .stat-item { opacity: 1 !important; }
+</style>
+</noscript>
+
+<!-- Preloader removed — was causing black screen -->
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav id="nav">
+    <div class="container">
+        <a href="#" class="nav-logo">auxilio <span>web</span></a>
+        <div class="nav-links" id="navLinks">
+            <a href="#showcase">Work</a>
+            <a href="#how">Process</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#faq">FAQ</a>
+            <div class="magnetic"><a href="#contact" class="btn nav-cta">Book a Call</a></div>
+        </div>
+        <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+    </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="container hero-content">
+        <div class="hero-badge"><span class="dot"></span> Trusted by small businesses worldwide</div>
+        <h1>
+            <span class="line"><span class="line-inner">Websites that</span></span>
+            <span class="line"><span class="line-inner">
+                <span class="accent-underline">actually work
+                    <svg viewBox="0 0 200 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 9C30 3 80 1 198 9" stroke="#00E86C" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+                        <path d="M4 12C50 5 110 4 196 11" stroke="#00E86C" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+                    </svg>
+                </span>
+            </span></span>
+        </h1>
+        <p class="subtitle">Professional, conversion-optimised websites for small businesses. Delivered in days, not months. From &pound;499.</p>
+        <div class="hero-ctas">
+            <div class="magnetic"><a href="#contact" class="btn btn-primary">Book My Free Consultation &rarr;</a></div>
+            <div class="magnetic"><a href="#showcase" class="btn btn-outline">See Examples</a></div>
+        </div>
+        <p class="hero-note">No commitment. 15 minutes. We'll show you what's possible.</p>
+
+        <div class="stats-row">
+            <div class="stat-item">
+                <div class="stat-value">5-7</div>
+                <div class="stat-label">Days to launch</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">80%</div>
+                <div class="stat-label">Less than agencies</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Yours. No lock-in.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWCASE -->
+<section class="showcase" id="showcase">
+    <div class="container-wide">
+        <div class="showcase-header">
+            <h2>Every business deserves a
+                <span class="accent-circle">great
+                    <svg viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="40" cy="25" rx="38" ry="22" stroke="#00E86C" stroke-width="2.5" stroke-linecap="round" opacity="0.4" stroke-dasharray="4 6"/>
+                    </svg>
+                </span>
+                 website</h2>
+            <p>Here's what yours could look like. Every site is custom-built for your industry.</p>
+        </div>
+    </div>
+
+    <div class="showcase-pin">
+        <div class="scroll-hint">Scroll to explore <span>&rarr;</span></div>
+        <div class="showcase-track-wrapper">
+            <div class="showcase-track" id="showcaseTrack">
+                <!-- Card 1: Dentist -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-dentist">
+                        <div class="mini-nav"><div class="mini-logo">Bright Smile Dental</div><div class="mini-nav-links"><span>Services</span><span>Team</span><span>Book Now</span></div></div>
+                        <div class="mini-hero"><div class="mini-hero-text"><h4>Your smile starts here</h4><p>Family dentistry with a personal touch. Gentle care, modern tech, honest prices.</p><div class="mini-btn">Book Appointment</div></div><div class="mini-img">&#129463;</div></div>
+                        <div class="mini-features"><div class="mini-feature">NHS &amp; Private</div><div class="mini-feature">Same Day</div><div class="mini-feature">Free Consult</div></div>
+                    </div>
+                    <div class="card-info"><h3>Dental Practice</h3><p class="card-type">Healthcare &bull; Local SEO &bull; Booking</p><span class="card-tag" style="background:var(--accent-dim);color:var(--accent);">Starter &pound;499</span></div>
+                </div>
+                <!-- Card 2: Restaurant -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-restaurant">
+                        <div class="mini-nav"><div class="mini-logo">SAFFRON &amp; THYME</div><div class="mini-nav-links"><span>Menu</span><span>Reserve</span><span>About</span></div></div>
+                        <div class="mini-hero"><div class="logo-icon">&#127860;</div><h4>Modern British Dining</h4><p>Seasonal ingredients. Bold flavours. Your neighbourhood's best-kept secret.</p><div class="mini-btn">RESERVE A TABLE</div></div>
+                        <div class="mini-cards"><div class="mini-card-item"><span>&#127869;</span><p>Lunch Menu</p></div><div class="mini-card-item"><span>&#127863;</span><p>Wine List</p></div><div class="mini-card-item"><span>&#127880;</span><p>Private Events</p></div></div>
+                    </div>
+                    <div class="card-info"><h3>Restaurant &amp; Bar</h3><p class="card-type">Hospitality &bull; Menu &bull; Reservations</p><span class="card-tag" style="background:#2A1F1A;color:#E8C170;">Growth &pound;799</span></div>
+                </div>
+                <!-- Card 3: Salon -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-salon">
+                        <div class="mini-nav"><div class="mini-logo">Blush &amp; Bloom</div></div>
+                        <div class="mini-hero"><div class="mini-hero-text"><h4>Look good. Feel amazing.</h4><p>Hair, nails, beauty. Your favourite local salon since 2019.</p><div class="mini-btn">Book Now</div></div><div class="mini-img">&#128133;</div></div>
+                        <div class="mini-services"><div class="mini-svc"><span>&#128135;&#8205;&#9792;&#65039;</span><p>Hair</p></div><div class="mini-svc"><span>&#128133;</span><p>Nails</p></div><div class="mini-svc"><span>&#10024;</span><p>Beauty</p></div></div>
+                    </div>
+                    <div class="card-info"><h3>Beauty Salon</h3><p class="card-type">Beauty &bull; Online Booking &bull; Instagram-Ready</p><span class="card-tag" style="background:rgba(192,64,112,0.1);color:#FF6B9D;">Growth &pound;799</span></div>
+                </div>
+                <!-- Card 4: Plumber -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-trades">
+                        <div class="mini-nav"><div class="mini-logo">&#128295; FlowFix Plumbing</div><div class="mini-nav-links"><span>Services</span><span>Areas</span><span>Emergency</span></div></div>
+                        <div class="mini-hero"><h4>Plumbing sorted. <em>Fast.</em></h4><p>24/7 emergency callouts. Gas Safe registered. Serving your local area.</p><div class="mini-btn">&#128222; Call Now — Free Quote</div></div>
+                        <div class="mini-trust"><div class="mini-trust-item">&#9733; 4.9/5 Google</div><div class="mini-trust-item">&#9989; Gas Safe</div><div class="mini-trust-item">&#9201; 1hr Response</div></div>
+                    </div>
+                    <div class="card-info"><h3>Trades &amp; Services</h3><p class="card-type">Emergency CTA &bull; Trust Signals &bull; Areas</p><span class="card-tag" style="background:rgba(77,166,255,0.1);color:#4DA6FF;">Starter &pound;499</span></div>
+                </div>
+                <!-- Card 5: Accountant -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-professional">
+                        <div class="mini-nav"><div class="mini-logo">Pennine Accounts</div></div>
+                        <div class="mini-hero"><h4>Accounting that makes sense</h4><p>Tax returns, bookkeeping, and business advice for small businesses.</p><div class="mini-btn">Get a Free Quote</div></div>
+                        <div class="mini-stats"><div class="mini-stat"><div class="num">500+</div><p>Clients served</p></div><div class="mini-stat"><div class="num">12yr</div><p>Experience</p></div><div class="mini-stat"><div class="num">4.8</div><p>Google rating</p></div></div>
+                    </div>
+                    <div class="card-info"><h3>Professional Services</h3><p class="card-type">Accounting &bull; Lead Forms &bull; Credibility</p><span class="card-tag" style="background:rgba(0,232,108,0.08);color:var(--accent);">Starter &pound;499</span></div>
+                </div>
+                <!-- Card 6: Gym -->
+                <div class="showcase-card">
+                    <div class="card-preview preview-fitness">
+                        <div class="mini-nav"><div class="mini-logo">IRONWORKS</div></div>
+                        <div class="mini-hero"><h4>Train <em>harder.</em><br>Get results.</h4><p>Strength. Conditioning. Community. Your city's top independent gym.</p><div class="mini-btn">JOIN TODAY</div></div>
+                        <div class="mini-pricing"><div class="mini-price-card"><div class="tier">Basic</div><div class="price">&pound;25</div></div><div class="mini-price-card hot"><div class="tier">Pro</div><div class="price">&pound;40</div></div><div class="mini-price-card"><div class="tier">Elite</div><div class="price">&pound;60</div></div></div>
+                    </div>
+                    <div class="card-info"><h3>Gym &amp; Fitness</h3><p class="card-type">Memberships &bull; Class Schedule &bull; Bold Brand</p><span class="card-tag" style="background:rgba(255,59,59,0.1);color:#FF4D6A;">Growth &pound;799</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marquee removed -->
+
+<!-- BENTO FEATURES -->
+<section class="bento reveal-section" id="features">
+    <div class="container">
+        <h2 style="text-align:center;margin-bottom:56px;">Why businesses
+            <span class="accent-underline">switch to us
+                <svg viewBox="0 0 200 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 9C30 3 80 1 198 9" stroke="#00E86C" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+            </span>
+        </h2>
+        <div class="bento-grid">
+            <div class="bento-card bento-accent span-2">
+                <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <h3>Live in 5-7 days</h3>
+                <p>Agencies take 4-8 weeks. We use AI-assisted workflows to build your site in days. Same quality, fraction of the time.</p>
+                <div class="bento-metric">5x faster</div>
+            </div>
+            <div class="bento-card bento-elevated">
+                <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="12 4 16 8"/><polyline points="12 4 8 8"/></svg></div>
+                <h3>Built to convert</h3>
+                <p>Every section follows proven conversion frameworks. Not just pretty — designed to turn visitors into customers.</p>
+            </div>
+            <div class="bento-card bento-glass">
+                <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+                <h3>SEO-ready from day one</h3>
+                <p>We set up the technical foundations &mdash; meta tags, fast loading, mobile-first, structured data &mdash; so Google can find and index your site properly.</p>
+            </div>
+            <div class="bento-card bento-elevated">
+                <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+                <h3>Perfect on every device</h3>
+                <p>60%+ of visitors are on their phone. Your site looks flawless on mobile, tablet, and desktop.</p>
+            </div>
+            <div class="bento-card bento-glass">
+                <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/></svg></div>
+                <h3>You own it. No lock-in.</h3>
+                <p>Your site, your code, your content. Want to leave? Take it with you. No hostage situations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section reveal-section" id="how">
+    <div class="container" style="text-align:center;">
+        <h2>Three steps. That's it.</h2>
+        <p style="color:var(--text-secondary);font-size:1.1rem;margin-top:12px;">No technical knowledge needed. We handle everything.</p>
+        <div class="how-grid">
+            <div class="how-step"><div class="how-number">01</div><h3>Book a free call</h3><p>We review your current site, understand your business, and map out what you need. 15 minutes, no pressure.</p></div>
+            <div class="how-step"><div class="how-number">02</div><h3>We build it</h3><p>AI-assisted design and development. You review and request changes. Done in 5-7 business days.</p></div>
+            <div class="how-step"><div class="how-number">03</div><h3>Launch &amp; grow</h3><p>Your site goes live. Leads come in. Optional monthly care keeps everything running smoothly.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+    <div class="container">
+        <h2 style="text-align:center;">How we compare</h2>
+        <p style="text-align:center;color:var(--text-secondary);margin-top:12px;font-size:1.05rem;">Same result. Fraction of the cost and time.</p>
+        <div class="comp-grid">
+            <!-- Auxilio Web — highlighted -->
+            <div class="comp-card comp-us">
+                <div class="comp-card-badge">Recommended</div>
+                <div class="comp-card-title">Auxilio Web</div>
+                <div class="comp-card-subtitle">AI-powered, expert-backed</div>
+                <div class="comp-row"><span class="comp-label">Price</span><span class="comp-val strong">&pound;499-&pound;799</span></div>
+                <div class="comp-row"><span class="comp-label">Delivery</span><span class="comp-val strong">5-7 days</span></div>
+                <div class="comp-row"><span class="comp-label">Conversion</span><span class="comp-val good">&#10003; Built-in</span></div>
+                <div class="comp-row"><span class="comp-label">SEO</span><span class="comp-val good">&#10003; Technical setup</span></div>
+                <div class="comp-row"><span class="comp-label">Support</span><span class="comp-val good">&#10003; &pound;49/mo</span></div>
+                <div class="comp-row"><span class="comp-label">You own it</span><span class="comp-val good">&#10003; Always</span></div>
+            </div>
+            <!-- UK Agency -->
+            <div class="comp-card">
+                <div class="comp-card-title">UK Agency</div>
+                <div class="comp-card-subtitle">Traditional route</div>
+                <div class="comp-row"><span class="comp-label">Price</span><span class="comp-val bad">&pound;1,500-6,000+</span></div>
+                <div class="comp-row"><span class="comp-label">Delivery</span><span class="comp-val bad">4-8 weeks</span></div>
+                <div class="comp-row"><span class="comp-label">Conversion</span><span class="comp-val mid">~ Sometimes</span></div>
+                <div class="comp-row"><span class="comp-label">SEO</span><span class="comp-val mid">~ Basic</span></div>
+                <div class="comp-row"><span class="comp-label">Support</span><span class="comp-val bad">&pound;100-500/mo</span></div>
+                <div class="comp-row"><span class="comp-label">You own it</span><span class="comp-val mid">~ Usually</span></div>
+            </div>
+            <!-- DIY Builder -->
+            <div class="comp-card">
+                <div class="comp-card-title">DIY Builder</div>
+                <div class="comp-card-subtitle">Wix, Squarespace, etc.</div>
+                <div class="comp-row"><span class="comp-label">Price</span><span class="comp-val mid">&pound;9-50/mo + time</span></div>
+                <div class="comp-row"><span class="comp-label">Delivery</span><span class="comp-val bad">20-40+ hrs (you)</span></div>
+                <div class="comp-row"><span class="comp-label">Conversion</span><span class="comp-val bad">&#10007; No</span></div>
+                <div class="comp-row"><span class="comp-label">SEO</span><span class="comp-val bad">&#10007; DIY</span></div>
+                <div class="comp-row"><span class="comp-label">Support</span><span class="comp-val bad">&#10007; You're alone</span></div>
+                <div class="comp-row"><span class="comp-label">You own it</span><span class="comp-val bad">&#10007; Locked in</span></div>
+            </div>
+            <!-- Freelancer -->
+            <div class="comp-card">
+                <div class="comp-card-title">Freelancer</div>
+                <div class="comp-card-subtitle">Hit or miss</div>
+                <div class="comp-row"><span class="comp-label">Price</span><span class="comp-val mid">&pound;500-1,500</span></div>
+                <div class="comp-row"><span class="comp-label">Delivery</span><span class="comp-val mid">2-4 weeks</span></div>
+                <div class="comp-row"><span class="comp-label">Conversion</span><span class="comp-val bad">&#10007; Rarely</span></div>
+                <div class="comp-row"><span class="comp-label">SEO</span><span class="comp-val mid">~ Varies</span></div>
+                <div class="comp-row"><span class="comp-label">Support</span><span class="comp-val bad">&#10007; Often vanish</span></div>
+                <div class="comp-row"><span class="comp-label">You own it</span><span class="comp-val good">&#10003; Usually</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="reveal-section">
+    <div class="container">
+        <h2 style="text-align:center;">Simple, honest pricing</h2>
+        <p style="text-align:center;color:var(--text-muted);margin-top:8px;">No hidden fees. No surprise invoices. No lock-in.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card"><h3>Starter</h3><p class="desc">Professional online presence</p><div class="pricing-price">&pound;499 <span>one-off</span></div><ul class="pricing-features"><li>3-5 page custom website</li><li>Mobile-optimised design</li><li>Technical SEO setup</li><li>Contact form</li><li>1 round of revisions</li><li>Delivered in 5-7 business days</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Get Started</a></div></div>
+            <div class="pricing-card featured"><div class="pricing-badge">Most Popular</div><h3>Growth</h3><p class="desc">Built to generate leads</p><div class="pricing-price">&pound;799 <span>one-off</span></div><ul class="pricing-features"><li>5-10 page custom website</li><li>Conversion-optimised design</li><li>Full technical SEO + schema</li><li>Blog setup</li><li>Booking widget setup (e.g. Calendly)</li><li>2 rounds of revisions</li><li>Analytics dashboard</li></ul><div class="magnetic"><a href="#contact" class="btn btn-primary">Get Started &rarr;</a></div></div>
+            <div class="pricing-card"><h3>Monthly Care</h3><p class="desc">Keep it running. Cancel anytime.</p><div class="pricing-price">&pound;49 <span>/month</span></div><ul class="pricing-features"><li>Managed hosting + SSL</li><li>Up to 2 content updates/mo</li><li>Uptime monitoring</li><li>Security patches</li><li>Priority support</li><li>Monthly performance snapshot</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Add to Any Plan</a></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+    <div class="container">
+        <h2 style="text-align:center;">What clients say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"I was paying &pound;150/month to an agency that took two weeks to change a phone number. New site in five days for less than my old annual bill."</blockquote><div class="testimonial-author">Sarah T.</div><div class="testimonial-role">Dental Practice Owner</div></div>
+            <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"My old Wix site looked amateur. More enquiries in the first month than the previous six months combined."</blockquote><div class="testimonial-author">James K.</div><div class="testimonial-role">Plumbing &amp; Heating Business</div></div>
+            <div class="testimonial-card"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Didn't think I could get a professional website for under &pound;500. Fast, affordable, and it actually generates leads."</blockquote><div class="testimonial-author">Amina R.</div><div class="testimonial-role">Accountancy Practice</div></div>
+        </div>
+        <p style="text-align:center;margin-top:20px;font-size:0.75rem;color:var(--text-muted);opacity:0.6;">* Expected outcomes based on industry benchmarks. Real testimonials coming as we launch.</p>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg-elevated);">
+    <div class="container">
+        <h2 style="text-align:center;">Frequently asked questions</h2>
+        <div class="faq-list">
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What do I need to get started?</span><span class="icon">+</span></div><div class="faq-a">Just your business details, logo (if you have one), and any content or photos. We guide you through everything in a free 15-minute call. No technical knowledge needed.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What does "technical SEO setup" mean?</span><span class="icon">+</span></div><div class="faq-a">We handle the foundations that help Google find and index your site &mdash; page titles, meta descriptions, fast loading speeds, mobile-friendly design, and structured data markup. This is the technical groundwork. Ongoing SEO services like keyword strategy, content marketing, or link building are separate and available as an add-on if you need them.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What's included in Monthly Care content updates?</span><span class="icon">+</span></div><div class="faq-a">Each month you can request up to 2 content changes &mdash; things like updating a phone number, swapping a photo, tweaking text on a page, or adding a seasonal offer. Quick, practical updates to keep your site current. Need something bigger like a new page or a redesign? We'll quote that separately so there are no surprises.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can I update the site myself?</span><span class="icon">+</span></div><div class="faq-a">Your site is built for speed and performance, not as a drag-and-drop builder. Most clients prefer to send us changes and we take care of it (included in Monthly Care). If self-editing is important to you, let us know on the call and we can discuss options.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What does "booking widget setup" include?</span><span class="icon">+</span></div><div class="faq-a">We connect a booking tool like Calendly or Cal.com to your site so visitors can book appointments directly. You manage your availability through the booking tool itself &mdash; we handle the website integration. The booking tools themselves have generous free plans.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Can you migrate my existing website?</span><span class="icon">+</span></div><div class="faq-a">Yes. We handle the full migration &mdash; content, images, domain transfer. Zero downtime. Most migrations complete in under a week.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>Do I need the Monthly Care plan?</span><span class="icon">+</span></div><div class="faq-a">Optional but recommended. Websites need regular security patches, hosting management, and the odd content tweak. The care plan covers all of that so you can focus on running your business. Cancel anytime &mdash; no contract.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>What if I want to leave?</span><span class="icon">+</span></div><div class="faq-a">You own your site &mdash; the code, the content, everything. Want to take it to another host? No problem, we'll hand over the files. Monthly Care cancels anytime with no penalty.</div></div>
+            <div class="faq-item"><div class="faq-q" onclick="toggleFaq(this)"><span>How is this so affordable?</span><span class="icon">+</span></div><div class="faq-a">AI-assisted workflows let us work 5x faster than traditional agencies. We pass those savings directly to you &mdash; no markup, no fluff.</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- EMAIL CAPTURE -->
+<section class="email-section" style="padding:60px 0;">
+    <div class="container" style="text-align:center;max-width:600px;">
+        <p style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);font-weight:600;margin-bottom:12px;">Free resource</p>
+        <h2 style="font-size:1.6rem;margin-bottom:8px;">5 things your website must have to get leads</h2>
+        <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:24px;">Quick checklist. No fluff. We'll email it straight to you.</p>
+        <form id="leadForm" class="lead-form" onsubmit="handleLeadForm(event)" style="display:flex;gap:10px;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center;">
+            <input type="email" name="email" placeholder="Your email address" required style="flex:1;min-width:240px;padding:14px 20px;border-radius:100px;border:1px solid var(--border);font-size:0.95rem;font-family:inherit;outline:none;transition:border-color 0.3s;background:var(--bg-card);color:var(--text);" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+            <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Send Me the Guide</button>
+        </form>
+        <p style="font-size:0.7rem;color:var(--text-muted);margin-top:10px;">No spam. Unsubscribe anytime. We respect your privacy.</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2 style="text-align:center;margin-bottom:20px;">Contact</h2>
+        <p style="text-align:center;color:var(--text-secondary);margin-bottom:64px;font-size:1.05rem;">Let's start a conversation</p>
+
+        <div class="contact-container">
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <input type="text" placeholder="Company name">
+                <textarea placeholder="Tell us about your project"></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                    <div class="contact-info-text">
+                        <h3>Email</h3>
+                        <a href="mailto:info@auxilio.cloud">info@auxilio.cloud</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                    <div class="contact-info-text">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+13033322159">+1 303 332 2159</a> (US)</p>
+                        <p><a href="tel:+447585914460">+44 7585 914 460</a> (UK)</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <div class="contact-info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                    <div class="contact-info-text">
+                        <h3>Our Locations</h3>
+                        <div class="locations-grid">
+                            <div class="location-item">
+                                <h4>United States</h4>
+                                <p>7911 Handy Court<br>Fort Collins, CO 80525</p>
+                            </div>
+                            <div class="location-item">
+                                <h4>United Kingdom</h4>
+                                <p>Mynshull House, 78 Churchgate<br>Stockport, Cheshire SK1 1YJ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div>
+            <a href="#" class="nav-logo">auxilio <span>web</span></a>
+            <p>Building the infrastructure for the AI-native era.</p>
+        </div>
+        <div>
+            <h4>Links</h4>
+            <div class="footer-links">
+                <a href="#showcase">Platform</a>
+                <a href="#showcase">Portfolio</a>
+                <a href="#faq">Insights</a>
+                <a href="#how">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-divider"></div>
+            <p style="margin-bottom:8px;"><a href="mailto:info@auxilio.cloud" class="email">info@auxilio.cloud</a></p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:4px;">7911 Handy Court, Fort Collins, CO 80525, USA</p>
+            <p style="font-size:0.85rem;color:var(--text-secondary);">Mynshull House, 78 Churchgate, Stockport, Cheshire SK1 1YJ, UK</p>
+        </div>
+    </div>
+    <div class="footer-bottom" style="text-align:center;border-top:1px solid var(--border);padding-top:24px;margin-top:24px;">&copy; 2026 AUXILIO TECHNOLOGIES LLC, ALL RIGHTS RESERVED.</div>
+</footer>
+
+<script>
+// ===== ANALYTICS PLACEHOLDER =====
+// TODO: Replace G-XXXXXXXXXX with your GA4 Measurement ID
+// Then uncomment and add before closing head tag:
+// googletagmanager.com/gtag/js?id=G-XXXXXXXXXX
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments);}
+// gtag('js', new Date());
+// gtag('config', 'G-XXXXXXXXXX');
+
+// Track CTA clicks
+function trackEvent(action, category, label) {
+    if (typeof gtag === 'function') {
+        gtag('event', action, { event_category: category, event_label: label });
+    }
+}
+
+document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn');
+    if (btn) {
+        const label = btn.textContent.trim().substring(0, 50);
+        trackEvent('cta_click', 'engagement', label);
+    }
+});
+
+// Lead form handler
+function handleLeadForm(e) {
+    e.preventDefault();
+    const email = e.target.querySelector('input[name="email"]').value;
+    trackEvent('lead_capture', 'conversion', 'email_guide');
+    e.target.innerHTML = '<p style="color:var(--accent);font-weight:600;font-size:1rem;padding:14px 0;">Sent! Check your inbox.</p>';
+}
+
+// Contact form handler
+document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    trackEvent('contact_submit', 'conversion', 'contact_form');
+    form.innerHTML = '<p style="color:var(--accent);font-weight:600;font-size:1rem;padding:14px 0;">Message sent! We will be in touch soon.</p>';
+});
+
+// ===== FORCE SCROLL TO TOP ON LOAD =====
+window.history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
+// ===== LENIS SMOOTH SCROLL =====
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+});
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+gsap.ticker.lagSmoothing(0);
+
+// ===== INIT ANIMATIONS (no preloader — renders immediately) =====
+try {
+    initAnimations();
+} catch(e) {
+    console.warn('Animation init failed:', e);
+}
+
+// ===== MAGNETIC BUTTONS =====
+document.querySelectorAll('.magnetic').forEach(mag => {
+    const btn = mag.querySelector('.btn');
+    mag.addEventListener('mousemove', (e) => {
+        const rect = mag.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: 'power2.out' });
+    });
+    mag.addEventListener('mouseleave', () => {
+        gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: 'elastic.out(1, 0.3)' });
+    });
+});
+
+// ===== SCROLL PROGRESS =====
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('scrollProgress').style.width = progress + '%';
+});
+
+// ===== NAV SCROLL =====
+window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// ===== FAQ =====
+function toggleFaq(el) {
+    el.classList.toggle('active');
+    el.nextElementSibling.classList.toggle('active');
+}
+
+// ===== MAIN GSAP ANIMATIONS =====
+function initAnimations() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero entrance
+    const heroTl = gsap.timeline({ delay: 0.2 });
+    heroTl
+        .to('.hero-badge', { opacity: 1, duration: 0.6, ease: 'power2.out' })
+        .to('.hero h1 .line-inner', { y: 0, duration: 0.9, stagger: 0.12, ease: 'power4.out' }, 0.1)
+        .to('.accent-underline svg path', { strokeDashoffset: 0, duration: 0.8, ease: 'power2.out' }, 0.8)
+        .to('.hero .subtitle', { opacity: 1, y: 0, duration: 0.7, ease: 'power2.out' }, 0.6)
+        .to('.hero-ctas', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 0.8)
+        .to('.hero-note', { opacity: 1, duration: 0.5 }, 1)
+        .to('.stat-item', { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power2.out' }, 1);
+
+    // Hero parallax blobs
+    gsap.to('.hero-blob-1', { y: -150, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 }});
+    gsap.to('.hero-blob-2', { y: -80, x: 50, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 }});
+
+    // Hero scale-down on scroll
+    gsap.to('.hero-content', {
+        scale: 0.92,
+        opacity: 0.3,
+        filter: 'blur(6px)',
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'center center',
+            end: 'bottom top',
+            scrub: 1,
+        }
+    });
+
+    // Clip-path reveals
+    document.querySelectorAll('.reveal-section').forEach(section => {
+        gsap.to(section, {
+            clipPath: 'inset(0% 0% 0% 0% round 0px)',
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 90%',
+                end: 'top 40%',
+                scrub: 1,
+            }
+        });
+    });
+
+    // Counter animation
+    document.querySelectorAll('.stat-value').forEach(el => {
+        const text = el.textContent;
+        const num = parseFloat(text);
+        if (!isNaN(num)) {
+            const suffix = text.replace(/[\d.]/g, '');
+            const obj = { val: 0 };
+            gsap.to(obj, {
+                val: num,
+                duration: 2,
+                ease: 'power2.out',
+                scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+                onUpdate: () => {
+                    el.textContent = (num % 1 === 0 ? Math.round(obj.val) : obj.val.toFixed(0)) + suffix;
+                }
+            });
+        }
+    });
+
+    // Showcase horizontal scroll — CSS sticky approach (no GSAP pin = no gap)
+    const track = document.getElementById('showcaseTrack');
+    let cards = [];
+    if (track) {
+        cards = track.querySelectorAll('.showcase-card');
+        const totalWidth = (cards.length * (360 + 24)) - 24 + (window.innerWidth * 0.2);
+        const scrollDistance = totalWidth - window.innerWidth;
+        const pin = document.querySelector('.showcase-pin');
+
+        // Set container height = viewport + scroll distance (sticky needs this)
+        if (pin) pin.style.height = (window.innerHeight + scrollDistance) + 'px';
+
+        gsap.to(track, {
+            x: -scrollDistance,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.showcase-pin',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1,
+                invalidateOnRefresh: true,
+                onRefresh: (self) => {
+                    // Recalculate on resize
+                    const tw = (cards.length * (360 + 24)) - 24 + (window.innerWidth * 0.2);
+                    const sd = tw - window.innerWidth;
+                    if (pin) pin.style.height = (window.innerHeight + sd) + 'px';
+                }
+            }
+        });
+    }
+
+    // 3D tilt on showcase cards
+    cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            gsap.to(card, {
+                rotateY: x * 10,
+                rotateX: -y * 10,
+                transformPerspective: 800,
+                duration: 0.4,
+                ease: 'power2.out'
+            });
+        });
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'elastic.out(1, 0.5)' });
+        });
+    });
+
+    // Bento grid stagger
+    gsap.from('.bento-card', {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.bento-grid', start: 'top 80%' }
+    });
+
+    // How steps stagger
+    gsap.from('.how-step', {
+        y: 50,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.15,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.how-grid', start: 'top 80%' }
+    });
+
+    // Comparison cards stagger
+    gsap.from('.comp-card', {
+        y: 50,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.comp-grid', start: 'top 80%' }
+    });
+
+    // Pricing stagger
+    gsap.from('.pricing-card', {
+        y: 60,
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.pricing-grid', start: 'top 80%' }
+    });
+
+    // Testimonials
+    gsap.from('.testimonial-card', {
+        y: 50,
+        opacity: 0,
+        duration: 0.7,
+        stagger: 0.12,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.testimonial-grid', start: 'top 80%' }
+    });
+
+    // FAQ
+    gsap.from('.faq-item', {
+        y: 30,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.08,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.faq-list', start: 'top 85%' }
+    });
+
+    // Scroll hint fade
+    gsap.to('.scroll-hint', {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.showcase-pin',
+            start: 'top 80%',
+            end: 'top 40%',
+            scrub: true,
+        }
+    });
+
+    // Contact section reveal
+    gsap.from('.contact-container', {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: '.contact-section', start: 'top 80%' }
+    });
+
+    // Section heading reveals
+    document.querySelectorAll('section h2').forEach(h2 => {
+        gsap.from(h2, {
+            y: 40,
+            opacity: 0,
+            duration: 0.7,
+            ease: 'power3.out',
+            scrollTrigger: { trigger: h2, start: 'top 85%' }
+        });
+    });
+}
+</script>
+
+</body>
+</html>

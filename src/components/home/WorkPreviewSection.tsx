@@ -8,6 +8,8 @@ import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
 
+const AUXILIO_WEB_PATH = "/web-services/";
+
 const featuredProjects = [
   {
     name: "Auxilio Promptly",
@@ -51,8 +53,8 @@ const featuredProjects = [
   },
   {
     name: "Auxilio Web",
-    domain: "auxilio.cloud/web",
-    url: "/web",
+    domain: "auxilio.cloud/web-services",
+    url: AUXILIO_WEB_PATH,
     industry: "Web Services",
     image: auxilioWebImg,
     description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",

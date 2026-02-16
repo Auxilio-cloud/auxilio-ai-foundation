@@ -6,6 +6,8 @@ import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
+import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
+
 const featuredProjects = [
   {
     name: "Auxilio Promptly",
@@ -47,6 +49,14 @@ const featuredProjects = [
     image: logisticsImg,
     description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
   },
+  {
+    name: "Auxilio Web",
+    domain: "auxilio.cloud/web",
+    url: "/web",
+    industry: "Web Services",
+    image: auxilioWebImg,
+    description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",
+  },
 ];
 
 export function WorkPreviewSection() {
@@ -73,13 +83,12 @@ export function WorkPreviewSection() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {featuredProjects.map((project, index) => (
             <a
               key={project.name}
               href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(project.url.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="group relative bg-card border border-border rounded-xl overflow-hidden transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

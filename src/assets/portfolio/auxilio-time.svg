@@ -1,0 +1,38 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07122B"/>
+      <stop offset="1" stop-color="#0C1E3F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="250" y1="160" x2="950" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F2A52"/>
+      <stop offset="1" stop-color="#0B1D3D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="1030" cy="90" r="210" fill="#22C55E" fill-opacity="0.12"/>
+  <circle cx="140" cy="700" r="240" fill="#3B82F6" fill-opacity="0.10"/>
+
+  <rect x="250" y="160" width="700" height="480" rx="28" fill="url(#card)" stroke="#2E4C76"/>
+  <rect x="290" y="220" width="620" height="76" rx="14" fill="#10294F" stroke="#31588A"/>
+  <rect x="320" y="246" width="170" height="24" rx="12" fill="url(#accent)"/>
+  <rect x="760" y="244" width="120" height="28" rx="14" fill="#12345F" stroke="#2E5E94"/>
+
+  <circle cx="360" cy="410" r="110" fill="#0B2447" stroke="#3D6599" stroke-width="6"/>
+  <circle cx="360" cy="410" r="8" fill="#9AC7FF"/>
+  <path d="M360 410L360 352" stroke="#9AC7FF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M360 410L408 410" stroke="#22C55E" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="520" y="340" width="350" height="30" rx="10" fill="#1A3C6B"/>
+  <rect x="520" y="390" width="290" height="22" rx="8" fill="#173561"/>
+  <rect x="520" y="430" width="320" height="22" rx="8" fill="#173561"/>
+  <rect x="520" y="470" width="220" height="22" rx="8" fill="#173561"/>
+
+  <text x="600" y="110" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="48" font-weight="700" fill="#FFFFFF">Auxilio Time</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Inter, -apple-system, sans-serif" font-size="22" fill="#A8C7EE">Simple time tracking for projects and clients</text>
+</svg>

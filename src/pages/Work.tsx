@@ -14,6 +14,7 @@ import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
+import auxilioTimeImg from "@/assets/portfolio/auxilio-time.svg";
 
 const AUXILIO_WEB_PATH = "/web-services/";
 const AUXILIO_WEB_URL = buildCanonicalUrl(AUXILIO_WEB_PATH);
@@ -86,6 +87,17 @@ const softwareApplicationSchema = {
       author: { "@type": "Organization", name: "Auxilio" },
       offers: { "@type": "Offer", price: "499", priceCurrency: "GBP", description: "Fixed-price website builds from £499" },
       url: AUXILIO_WEB_URL,
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 7,
+      name: "Auxilio Time",
+      description: "Time tracking and timesheet management for projects, clients, and teams.",
+      applicationCategory: "ProductivityApplication",
+      operatingSystem: "Web Browser",
+      author: { "@type": "Organization", name: "Auxilio" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
+      url: "https://time.auxilio.cloud",
     },
   ],
 };
@@ -175,6 +187,16 @@ const productProjects = [
     description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",
     features: ["Small Business", "Fixed-Price Builds", "Monthly Care Plans"],
     gradient: "from-orange-500 to-amber-500",
+  },
+  {
+    name: "Auxilio Time",
+    domain: "time.auxilio.cloud",
+    url: "https://time.auxilio.cloud",
+    industry: "Productivity",
+    image: auxilioTimeImg,
+    description: "Time tracking and timesheet management for projects, clients, and teams with a focused, lightweight workflow.",
+    features: ["Timesheets", "Project Hours", "Client Reporting"],
+    gradient: "from-emerald-500 to-cyan-500",
   },
 ];
 

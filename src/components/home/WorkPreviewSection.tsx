@@ -7,6 +7,7 @@ import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
+import auxilioTimeImg from "@/assets/portfolio/auxilio-time.svg";
 
 const AUXILIO_WEB_PATH = "/web-services/";
 
@@ -59,6 +60,14 @@ const featuredProjects = [
     industry: "Web Services",
     image: auxilioWebImg,
     description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans — fast, modern sites that help local businesses grow online.",
+  },
+  {
+    name: "Auxilio Time",
+    domain: "time.auxilio.cloud",
+    url: "https://time.auxilio.cloud",
+    industry: "Productivity",
+    image: auxilioTimeImg,
+    description: "Time tracking and timesheet management for projects, clients, and teams with a focused, lightweight workflow.",
   },
 ];
 

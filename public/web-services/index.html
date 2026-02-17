@@ -1218,11 +1218,20 @@
 
         <div class="contact-container">
             <!-- Contact Form -->
-            <form class="contact-form">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <input type="text" placeholder="Company name">
-                <textarea placeholder="Tell us about your project"></textarea>
+            <form
+                class="contact-form"
+                method="POST"
+                action="https://formsubmit.co/ajax/naveed.gilani@gmail.com"
+            >
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_subject" value="New contact form submission">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://auxilio.cloud/thank-you">
+                <input type="hidden" name="_template" value="table">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="email" name="email" placeholder="Your email" required>
+                <input type="text" name="company" placeholder="Company name">
+                <textarea name="message" placeholder="Tell us about your project" required></textarea>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
 
@@ -1325,12 +1334,43 @@ function handleLeadForm(e) {
     e.target.innerHTML = '<p style="color:var(--accent);font-weight:600;font-size:1rem;padding:14px 0;">Sent! Check your inbox.</p>';
 }
 
-// Contact form handler
-document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
+// Contact form handler (same delivery flow as main site contact form)
+document.querySelector('.contact-form')?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.textContent : '';
+    const formData = new FormData(form);
+
+    formData.set('_cc', 'naveed@auxilio.cloud,john@auxilio.cloud');
     trackEvent('contact_submit', 'conversion', 'contact_form');
-    form.innerHTML = '<p style="color:var(--accent);font-weight:600;font-size:1rem;padding:14px 0;">Message sent! We will be in touch soon.</p>';
+
+    if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+    }
+
+    try {
+        const response = await fetch('https://formsubmit.co/ajax/naveed.gilani@gmail.com', {
+            method: 'POST',
+            headers: { Accept: 'application/json' },
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error('Form submission failed');
+        }
+
+        alert('Thanks! Your message has been sent.');
+        form.reset();
+    } catch (error) {
+        alert('Something went wrong. Please try again in a moment.');
+    } finally {
+        if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText || 'Send Message';
+        }
+    }
 });
 
 // ===== FORCE SCROLL TO TOP ON LOAD =====

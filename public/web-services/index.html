@@ -672,6 +672,44 @@
         /* ===== PRICING ===== */
         .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
         @media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; } }
+        .pricing-currency {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .pricing-currency-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 700;
+        }
+        .currency-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .currency-btn:hover { border-color: var(--border-hover); color: var(--text); }
+        .currency-btn.active {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-dim);
+        }
+        .pricing-currency-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            margin-top: 10px;
+        }
         .pricing-card {
             background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg);
             padding: 40px; text-align: center; position: relative; will-change: transform;
@@ -693,7 +731,7 @@
             font-size: 3rem; font-weight: 800; color: var(--text); margin: 24px 0;
             letter-spacing: -0.04em;
         }
-        .pricing-price span { font-size: 0.85rem; font-weight: 400; color: var(--text-muted); }
+        .pricing-price .price-meta { font-size: 0.85rem; font-weight: 400; color: var(--text-muted); }
         .pricing-features { list-style: none; text-align: left; margin: 24px 0; }
         .pricing-features li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-secondary); display: flex; align-items: center; gap: 10px; }
         .pricing-features li::before { content: "\2713"; color: var(--accent); font-weight: 700; flex-shrink: 0; }
@@ -1157,10 +1195,16 @@
     <div class="container">
         <h2 style="text-align:center;">Simple, honest pricing</h2>
         <p style="text-align:center;color:var(--text-muted);margin-top:8px;">No hidden fees. No surprise invoices. No lock-in.</p>
+        <div class="pricing-currency" role="group" aria-label="Choose pricing currency">
+            <span class="pricing-currency-label">Currency</span>
+            <button class="currency-btn" type="button" data-currency="GBP">GBP &pound;</button>
+            <button class="currency-btn" type="button" data-currency="USD">USD $</button>
+        </div>
+        <p id="pricingCurrencyNote" class="pricing-currency-note">Showing GBP by default.</p>
         <div class="pricing-grid">
-            <div class="pricing-card"><h3>Starter</h3><p class="desc">Professional online presence</p><div class="pricing-price">&pound;499 <span>one-off</span></div><ul class="pricing-features"><li>3-5 page custom website</li><li>Mobile-optimised design</li><li>Technical SEO setup</li><li>Contact form</li><li>1 round of revisions</li><li>Delivered in 5-7 business days</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Get Started</a></div></div>
-            <div class="pricing-card featured"><div class="pricing-badge">Most Popular</div><h3>Growth</h3><p class="desc">Built to generate leads</p><div class="pricing-price">&pound;799 <span>one-off</span></div><ul class="pricing-features"><li>5-10 page custom website</li><li>Conversion-optimised design</li><li>Full technical SEO + schema</li><li>Blog setup</li><li>Booking widget setup (e.g. Calendly)</li><li>2 rounds of revisions</li><li>Analytics dashboard</li></ul><div class="magnetic"><a href="#contact" class="btn btn-primary">Get Started &rarr;</a></div></div>
-            <div class="pricing-card"><h3>Monthly Care</h3><p class="desc">Keep it running. Cancel anytime.</p><div class="pricing-price">&pound;49 <span>/month</span></div><ul class="pricing-features"><li>Managed hosting + SSL</li><li>Up to 2 content updates/mo</li><li>Uptime monitoring</li><li>Security patches</li><li>Priority support</li><li>Monthly performance snapshot</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Add to Any Plan</a></div></div>
+            <div class="pricing-card"><h3>Starter</h3><p class="desc">Professional online presence</p><div class="pricing-price"><span class="price-value" data-price-gbp="499" data-price-usd="649">&pound;499</span> <span class="price-meta">one-off</span></div><ul class="pricing-features"><li>3-5 page custom website</li><li>Mobile-optimised design</li><li>Technical SEO setup</li><li>Contact form</li><li>1 round of revisions</li><li>Delivered in 5-7 business days</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Get Started</a></div></div>
+            <div class="pricing-card featured"><div class="pricing-badge">Most Popular</div><h3>Growth</h3><p class="desc">Built to generate leads</p><div class="pricing-price"><span class="price-value" data-price-gbp="799" data-price-usd="1049">&pound;799</span> <span class="price-meta">one-off</span></div><ul class="pricing-features"><li>5-10 page custom website</li><li>Conversion-optimised design</li><li>Full technical SEO + schema</li><li>Blog setup</li><li>Booking widget setup (e.g. Calendly)</li><li>2 rounds of revisions</li><li>Analytics dashboard</li></ul><div class="magnetic"><a href="#contact" class="btn btn-primary">Get Started &rarr;</a></div></div>
+            <div class="pricing-card"><h3>Monthly Care</h3><p class="desc">Keep it running. Cancel anytime.</p><div class="pricing-price"><span class="price-value" data-price-gbp="49" data-price-usd="69">&pound;49</span> <span class="price-meta">/month</span></div><ul class="pricing-features"><li>Managed hosting + SSL</li><li>Up to 2 content updates/mo</li><li>Uptime monitoring</li><li>Security patches</li><li>Priority support</li><li>Monthly performance snapshot</li></ul><div class="magnetic"><a href="#contact" class="btn btn-outline">Add to Any Plan</a></div></div>
         </div>
     </div>
 </section>
@@ -1333,6 +1377,76 @@ function handleLeadForm(e) {
     trackEvent('lead_capture', 'conversion', 'email_guide');
     e.target.innerHTML = '<p style="color:var(--accent);font-weight:600;font-size:1rem;padding:14px 0;">Sent! Check your inbox.</p>';
 }
+
+function detectLikelyUSVisitor() {
+    try {
+        const locale = navigator.language || '';
+        if (/\bUS\b/i.test(locale) || locale.toLowerCase().endsWith('-us')) {
+            return true;
+        }
+
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (timezone.startsWith('America/')) {
+            return true;
+        }
+    } catch (error) {
+        console.warn('Geo detection fallback failed:', error);
+    }
+
+    return false;
+}
+
+function updatePricingCurrency(currency, reason = 'manual') {
+    const note = document.getElementById('pricingCurrencyNote');
+    const symbol = currency === 'USD' ? '$' : '£';
+    const attributeName = currency === 'USD' ? 'priceUsd' : 'priceGbp';
+
+    document.querySelectorAll('.price-value').forEach((el) => {
+        const rawAmount = el.dataset[attributeName];
+        if (!rawAmount) return;
+        const amount = Number(rawAmount);
+        if (Number.isNaN(amount)) return;
+        el.textContent = `${symbol}${amount.toLocaleString('en-US')}`;
+    });
+
+    document.querySelectorAll('.currency-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.currency === currency);
+    });
+
+    if (note) {
+        if (reason === 'auto-us') {
+            note.textContent = 'Showing USD based on your location. You can switch currency anytime.';
+        } else if (reason === 'manual') {
+            note.textContent = `Showing ${currency}. We remember your preference on this device.`;
+        } else {
+            note.textContent = 'Showing GBP by default.';
+        }
+    }
+}
+
+function initPricingCurrency() {
+    const savedCurrency = localStorage.getItem('auxilioWebPricingCurrency');
+    const supportedCurrencies = ['GBP', 'USD'];
+
+    if (savedCurrency && supportedCurrencies.includes(savedCurrency)) {
+        updatePricingCurrency(savedCurrency, 'manual');
+    } else if (detectLikelyUSVisitor()) {
+        updatePricingCurrency('USD', 'auto-us');
+    } else {
+        updatePricingCurrency('GBP', 'default');
+    }
+
+    document.querySelectorAll('.currency-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const currency = btn.dataset.currency;
+            if (!currency || !supportedCurrencies.includes(currency)) return;
+            localStorage.setItem('auxilioWebPricingCurrency', currency);
+            updatePricingCurrency(currency, 'manual');
+        });
+    });
+}
+
+initPricingCurrency();
 
 // Contact form handler (same delivery flow as main site contact form)
 document.querySelector('.contact-form')?.addEventListener('submit', async (e) => {

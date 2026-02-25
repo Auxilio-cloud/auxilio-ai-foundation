@@ -55,9 +55,7 @@ export function HeroSection() {
         <div className="max-w-5xl">
           {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-foreground leading-[1.05] uppercase animate-slide-up">
-            We Build{" "}
-            <span className="text-primary italic text-glow-green">AI Applications</span>{" "}
-            That Work
+            Stop Guessing Which AI Is Right Make Them Debate It
           </h1>
           
           {/* Sub-headline */}

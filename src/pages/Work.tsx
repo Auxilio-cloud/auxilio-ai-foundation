@@ -27,7 +27,7 @@ const softwareApplicationSchema = {
       "@type": "SoftwareApplication",
       position: 1,
       name: "Auxilio Promptly",
-      description: "AI-powered prompt engineering and workflow automation platform for teams and enterprises.",
+      description: "Cross-model AI verification tool. Compare and debate responses from OpenAI, Anthropic, Google, xAI, and more.",
       applicationCategory: "ProductivityApplication",
       operatingSystem: "Web Browser",
       author: { "@type": "Organization", name: "Auxilio" },
@@ -131,8 +131,8 @@ const productProjects = [
     url: "https://promptly.digital",
     industry: "AI Tools",
     image: promptlyImg,
-    description: "AI-powered prompt engineering and workflow automation platform for teams and enterprises.",
-    features: ["Prompt Library", "Team Collaboration", "API Integration"],
+    description: "Compare and debate AI responses across models. See where they agree, disagree, and why it matters.",
+    features: ["Cross-Model Debate", "Multi-Provider Compare", "AI Verification"],
     gradient: "from-primary to-accent",
   },
   {
@@ -180,10 +180,10 @@ const productProjects = [
 
 const productOutcomes = [
   {
-    industry: "AI Enablement Teams",
-    metric: "45% faster prompt iteration",
-    kpi: "Time saved per workflow",
-    description: "Reusable libraries and approval flows reduce experimentation cycles.",
+    industry: "AI Verification",
+    metric: "Cross-model blind spot detection",
+    kpi: "Answer confidence",
+    description: "Debate mode surfaces disagreements between AI models, helping users identify what to trust.",
   },
   {
     industry: "Healthcare Operations",
@@ -209,11 +209,11 @@ const Work = () => {
   return (
     <Layout>
       <Seo
-        title="Auxilio Portfolio | Deployed AI Solutions"
-        description="Explore Auxilio’s deployed AI products and enterprise solutions, from intelligent logistics to productivity platforms."
+        title="AI Case Studies & Deployed Projects | Auxilio"
+        description="Explore Auxilio’s deployed AI projects — custom applications, platform integrations, and AI infrastructure built for B2B and enterprise teams."
         canonical={buildCanonicalUrl("/work")}
-        ogTitle="Auxilio Portfolio | Deployed AI Solutions"
-        ogDescription="Real-world AI solutions that enhance business and personal productivity."
+        ogTitle="AI Case Studies & Deployed Projects | Auxilio"
+        ogDescription="Explore Auxilio's deployed AI projects — custom applications, platform integrations, and AI infrastructure built for B2B and enterprise teams."
         structuredData={[
           ...baseStructuredData,
           ...serviceSchemas,

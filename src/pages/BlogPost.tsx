@@ -9,34 +9,34 @@ import { blogPosts } from "@/lib/blogData";
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
   "after-saas-new-software-era": {
-    title: "After SaaS: Why Enterprises Are Quietly Entering a New Software Era",
+    title: "After SaaS: Why Enterprises Are Entering a New Software Era | Auxilio",
     description:
-      "A quiet shift as enterprises move from standardized SaaS toward adaptive, AI-native systems.",
+      "Enterprises are quietly shifting from standardized SaaS to adaptive, AI-native systems. Learn why this transition is reshaping how organizations build and own software.",
   },
   "building-scalable-copy": {
-    title: "Executive Guidance for Building Scalable Copy",
+    title: "Building Scalable AI Copy for B2B | Auxilio",
     description:
-      "Building scalable copy is no longer a creative-only challenge.",
+      "Scalable copy is no longer a creative-only challenge. Discover how B2B teams use AI-driven frameworks to produce consistent, high-quality content at enterprise scale.",
   },
   "ai-infrastructure-readiness": {
-    title: "AI Infrastructure Readiness | Platform & Ops",
+    title: "AI Infrastructure Readiness: A CTO's Guide | Auxilio",
     description:
-      "Reference architecture and operational requirements for dependable enterprise AI platforms.",
+      "A CTO's reference for AI infrastructure readiness — covering platform architecture, operational requirements, and the checklist for dependable enterprise AI systems.",
   },
   "data-readiness-scorecard": {
-    title: "Data Readiness Scorecard | Enterprise AI",
+    title: "Data Readiness Scorecard for AI Adoption | Auxilio",
     description:
-      "How to assess data quality, governance, and access readiness before scaling AI programs.",
+      "Assess your organisation's data quality, governance, and access readiness before scaling AI programs. A practical scorecard for enterprise data and AI teams.",
   },
   "rag-production-playbook": {
-    title: "Production-Ready RAG: A Playbook for Scaling and Emerging Trends in 2026",
+    title: "RAG in Production: The Deployment Playbook | Auxilio",
     description:
-      "A production-ready guide to tuning, evaluating, and scaling RAG pipelines with 2026-era trends.",
+      "A production-ready playbook for tuning, evaluating, and scaling retrieval-augmented generation pipelines — with 2026-era architecture patterns and best practices.",
   },
   "ai-governance-operating-model": {
-    title: "AI Governance Operating Model | Decision Rights",
+    title: "AI Governance Operating Model for Enterprises | Auxilio",
     description:
-      "A governance model covering approvals, controls, and compliance workflows for AI programs.",
+      "Design an AI governance operating model with clear decision rights, approval workflows, and compliance controls. Built for regulated enterprise AI programmes.",
   },
 };
 

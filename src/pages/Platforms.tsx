@@ -141,11 +141,11 @@ const Platforms = () => {
   return (
     <Layout>
       <Seo
-        title="Enterprise AI Platform for Infrastructure & Orchestration | Auxilio"
-        description="Auxilio is an enterprise AI platform delivering secure infrastructure, workflow orchestration, and data integration with governance and observability built in."
+        title="AI Platform Infrastructure & Orchestration | Auxilio"
+        description="Auxilio designs and orchestrates AI-native platform infrastructure for B2B teams — from LLM integration to multi-agent orchestration and enterprise deployment."
         canonical={buildCanonicalUrl("/platforms")}
-        ogTitle="Auxilio Enterprise AI Platform"
-        ogDescription="AI infrastructure, integration, and orchestration for enterprise teams with governance and observability included."
+        ogTitle="AI Platform Infrastructure & Orchestration | Auxilio"
+        ogDescription="Auxilio designs and orchestrates AI-native platform infrastructure for B2B teams — from LLM integration to multi-agent orchestration and enterprise deployment."
         structuredData={[
           ...baseStructuredData,
           ...serviceSchemas,

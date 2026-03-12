@@ -62,11 +62,11 @@ const Contact = () => {
   return (
     <Layout>
       <Seo
-        title="Contact Auxilio | Start a Conversation"
-        description="Get in touch with Auxilio to discuss AI strategy, platform development, or enterprise solutions."
+        title="Work With Auxilio — Start an AI Project"
+        description="Start your AI project with Auxilio. We partner with B2B teams on custom AI applications, platform infrastructure, and AI consulting."
         canonical={buildCanonicalUrl("/contact")}
-        ogTitle="Contact Auxilio"
-        ogDescription="Reach out to discuss AI strategy, platform development, or enterprise solutions."
+        ogTitle="Work With Auxilio — Start an AI Project"
+        ogDescription="Start your AI project with Auxilio. We partner with B2B teams on custom AI applications, platform infrastructure, and AI consulting."
         structuredData={[
           ...baseStructuredData,
           buildBreadcrumbListSchema([

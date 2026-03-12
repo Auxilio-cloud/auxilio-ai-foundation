@@ -11,7 +11,21 @@ import {
 import { Link } from "react-router-dom";
 import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl } from "@/lib/seo";
-import { baseStructuredData, buildBreadcrumbListSchema } from "@/lib/structuredData";
+import { baseStructuredData, buildBreadcrumbListSchema, serviceSchemas } from "@/lib/structuredData";
+
+const enterpriseServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Enterprise AI for Logistics & Operations",
+  provider: {
+    "@type": "Organization",
+    name: "Auxilio",
+    url: "https://www.auxilio.cloud",
+  },
+  description: "Auxilio delivers AI-powered logistics and operations solutions for enterprise teams — intelligent infrastructure that scales with your workflows.",
+  url: "https://www.auxilio.cloud/enterprise",
+  serviceType: "Enterprise AI for Logistics & Operations",
+};
 
 const capabilities = [
   {
@@ -86,13 +100,15 @@ const Enterprise = () => {
   return (
     <Layout>
       <Seo
-        title="Auxilio Logistics | Enterprise AI for Supply Chains"
-        description="Auxilio Logistics delivers enterprise AI for routing, visibility, and supply chain orchestration. Optimize networks, reduce costs, and boost service levels."
+        title="Enterprise AI for Logistics & Operations | Auxilio"
+        description="Auxilio delivers AI-powered logistics and operations solutions for enterprise teams — intelligent infrastructure that scales with your workflows."
         canonical={buildCanonicalUrl("/enterprise")}
-        ogTitle="Auxilio Logistics | Enterprise AI for Supply Chains"
-        ogDescription="Enterprise AI for routing, visibility, and supply chain orchestration."
+        ogTitle="Enterprise AI for Logistics & Operations | Auxilio"
+        ogDescription="Auxilio delivers AI-powered logistics and operations solutions for enterprise teams — intelligent infrastructure that scales with your workflows."
         structuredData={[
           ...baseStructuredData,
+          ...serviceSchemas,
+          enterpriseServiceSchema,
           buildBreadcrumbListSchema([
             { name: "Home", path: "/" },
             { name: "Enterprise", path: "/enterprise" },

@@ -10,11 +10,11 @@ const Blog = () => {
   return (
     <Layout>
       <Seo
-        title="AI Strategy for CTOs | Auxilio Insights"
-        description="Executive AI guidance for CTOs and engineering leaders. Read about AI platform strategy, governance, and infrastructure that move enterprise pilots to production."
+        title="AI Strategy Blog for CTOs & Engineering Leaders | Auxilio"
+        description="AI strategy, infrastructure, and governance insights for CTOs and engineering leaders building AI-native systems. Written by the Auxilio team."
         canonical={buildCanonicalUrl("/blog")}
-        ogTitle="Auxilio Insights | AI Strategy for CTOs"
-        ogDescription="Leadership insights on AI strategy, platform readiness, and governance."
+        ogTitle="AI Strategy Blog for CTOs & Engineering Leaders | Auxilio"
+        ogDescription="AI strategy, infrastructure, and governance insights for CTOs and engineering leaders building AI-native systems."
         structuredData={[
           ...baseStructuredData,
           buildBreadcrumbListSchema([

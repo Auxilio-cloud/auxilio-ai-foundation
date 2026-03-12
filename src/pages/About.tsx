@@ -37,11 +37,11 @@ const About = () => {
   return (
     <Layout>
       <Seo
-        title="About Auxilio | AI-Native Platform Builders"
-        description="Meet the team building AI-native platforms that orchestrate intelligence for modern organizations."
+        title="About Auxilio — AI-Native Platform Builder"
+        description="Auxilio is an AI-native platform builder partnering with B2B teams to design, build, and deploy custom AI applications and infrastructure."
         canonical={buildCanonicalUrl("/about")}
-        ogTitle="About Auxilio"
-        ogDescription="Learn about the Auxilio team and our mission to build AI-native platforms."
+        ogTitle="About Auxilio — AI-Native Platform Builder"
+        ogDescription="Auxilio is an AI-native platform builder partnering with B2B teams to design, build, and deploy custom AI applications and infrastructure."
         structuredData={[
           ...baseStructuredData,
           buildBreadcrumbListSchema([

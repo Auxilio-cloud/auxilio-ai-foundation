@@ -18,7 +18,7 @@ const featuredProjects = [
     url: "https://promptly.digital",
     industry: "AI Tools",
     image: promptlyImg,
-    description: "AI-powered prompt engineering and workflow automation platform.",
+    description: "Compare and debate AI responses across models. See where they agree, disagree, and why it matters.",
   },
   {
     name: "Auxilio Health",

@@ -6,8 +6,15 @@ import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema, buildBlogPostingSchema } from "@/lib/structuredData";
 import { blogPosts } from "@/lib/blogData";
 
+const logisticsWhitepaperPath = "/datasheets/auxilio-logistics-overview-whitepaper.pdf";
+
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
+  "reactive-to-resilient-ai-logistics": {
+    title: "From Reactive to Resilient: How AI Is Transforming Logistics | Auxilio",
+    description:
+      "A practical look at how AI improves visibility, forecasting, routing, and exception management across fragmented logistics operations.",
+  },
   "after-saas-new-software-era": {
     title: "After SaaS: Why Enterprises Are Entering a New Software Era | Auxilio",
     description:
@@ -77,6 +84,221 @@ const posts: Record<
     content: React.ReactNode;
   }
 > = {
+  "reactive-to-resilient-ai-logistics": {
+    title: "From Reactive to Resilient: How AI Is Transforming Logistics",
+    date: "March 19, 2026",
+    datePublished: "2026-03-19",
+    readTime: "5 mins read",
+    content: (
+      <>
+        <p className="lead">
+          Most logistics operations are not broken. They are fragmented. Teams invest in ERP, WMS, and
+          transportation workflows, yet planning still happens in silos, shipments are booked reactively,
+          and critical decisions depend on disconnected spreadsheets, emails, and carrier calls.
+        </p>
+
+        <p>
+          This article distills key ideas from our internal white paper into a practical five-minute read.
+          The full source document goes deeper on integration patterns, ROI assumptions, and control tower
+          design.
+        </p>
+
+        <div className="not-prose my-8 rounded-3xl border border-border bg-card p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+            White Paper
+          </p>
+          <h2 className="text-2xl font-semibold text-foreground mb-3">
+            Download the Auxilio Logistics overview
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-5">
+            Use the PDF for the full framework, supporting figures, and the implementation model behind
+            this summary.
+          </p>
+          <a
+            href={logisticsWhitepaperPath}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Open the full white paper
+          </a>
+        </div>
+
+        <h2>The Core Problem: Lack of Visibility</h2>
+        <p>
+          Most logistics teams are operating with partial visibility across planning, transportation, and
+          supplier performance. That does not always look dramatic day to day, but it compounds into
+          expensive decisions over time.
+        </p>
+        <p>Typical environments suffer from:</p>
+        <ul>
+          <li>Siloed planning across divisions and facilities</li>
+          <li>Reactive shipment booking that limits consolidation</li>
+          <li>Trailer utilization stuck around 65 to 75 percent</li>
+          <li>No real-time supplier performance tracking</li>
+          <li>Disconnected data across ERP, WMS, carrier portals, and spreadsheets</li>
+        </ul>
+
+        <div className="not-prose my-8 rounded-2xl border border-amber-400/30 bg-amber-500/10 p-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-200 mb-2">
+            Impact
+          </p>
+          <p className="text-lg font-semibold text-foreground">
+            Mid-sized operations can lose roughly $3M to $4M annually to avoidable logistics
+            inefficiencies.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            The issue is rarely missing effort. It is missing connection between the data, decisions, and
+            operational context teams need in the moment.
+          </p>
+        </div>
+
+        <h2>How AI Changes the Game</h2>
+        <p>
+          AI starts creating value when it sits on top of connected operational data and helps planners act
+          earlier, with more confidence. In the white paper, the highest-impact use cases are consistent:
+        </p>
+        <ul>
+          <li>Demand forecasting with confidence scoring</li>
+          <li>Route and load optimization across more variables than people can evaluate manually</li>
+          <li>Shipment risk prediction before a service failure becomes visible</li>
+          <li>Supplier performance monitoring across DOT and COT trends</li>
+        </ul>
+        <p>
+          The operating model is straightforward: inputs such as demand signals, shipment history, and
+          supplier data feed an AI layer that produces forecasts, route plans, consolidation opportunities,
+          and risk alerts.
+        </p>
+        <p>
+          The key point is not replacement. AI augments planners. It helps them see patterns, scenarios,
+          and tradeoffs at a scale that manual workflows cannot support.
+        </p>
+
+        <h2>The Shift: From Reactive to Proactive</h2>
+        <p>
+          Once visibility is unified, logistics teams can start answering the questions that matter in real
+          time:
+        </p>
+        <ul>
+          <li>Where are all shipments right now?</li>
+          <li>What risks are starting to emerge?</li>
+          <li>Which loads can be consolidated before they move?</li>
+          <li>Which suppliers are drifting below performance targets?</li>
+        </ul>
+        <p>That shift changes the operating rhythm of the network:</p>
+        <ul>
+          <li>Faster decisions</li>
+          <li>Reduced manual effort</li>
+          <li>Proactive issue resolution instead of escalation after the fact</li>
+          <li>Better decisions that improve over time as models learn from the operation</li>
+        </ul>
+
+        <h2>Measurable ROI</h2>
+        <p>
+          The numbers in the white paper are practical, not theoretical. Organizations that improve
+          visibility and start acting on optimization recommendations typically see:
+        </p>
+
+        <div className="not-prose my-8 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-2xl border border-border bg-card p-5">
+            <p className="text-2xl font-semibold text-foreground mb-2">+15%</p>
+            <p className="text-sm font-semibold text-primary mb-2">Fill rate improvement</p>
+            <p className="text-sm text-muted-foreground">Often worth about $500K in annual savings.</p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-5">
+            <p className="text-2xl font-semibold text-foreground mb-2">40-60%</p>
+            <p className="text-sm font-semibold text-primary mb-2">Reduction in premium freight</p>
+            <p className="text-sm text-muted-foreground">Driven by earlier planning and fewer emergency moves.</p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-5">
+            <p className="text-2xl font-semibold text-foreground mb-2">10-15%</p>
+            <p className="text-sm font-semibold text-primary mb-2">Better forecast accuracy</p>
+            <p className="text-sm text-muted-foreground">Less excess inventory, fewer stockouts, better alignment.</p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-5">
+            <p className="text-2xl font-semibold text-foreground mb-2">95%+</p>
+            <p className="text-sm font-semibold text-primary mb-2">On-time delivery performance</p>
+            <p className="text-sm text-muted-foreground">A stronger baseline for retailers and service-sensitive networks.</p>
+          </div>
+        </div>
+
+        <p>
+          Total impact typically lands in the range of $1.5M to $2.5M in annual savings, depending on the
+          starting point, data quality, and adoption pace.
+        </p>
+
+        <h2>What a Modern Logistics Platform Looks Like</h2>
+        <p>
+          The white paper outlines five capabilities that matter most when moving from fragmented execution
+          to a resilient logistics operating model:
+        </p>
+
+        <h3>1. Control Tower</h3>
+        <p>
+          A single source of truth for live shipment tracking, network-wide visibility, and instant
+          identification of bottlenecks.
+        </p>
+
+        <h3>2. Optimization Engine</h3>
+        <p>
+          Recommendations for consolidation, route selection, and scenario testing across cost, service,
+          and emissions.
+        </p>
+
+        <h3>3. End-to-End Tracking</h3>
+        <p>
+          Full shipment lifecycle visibility with real-time updates across FTL, LTL, air, and ocean
+          movements, without relying on manual carrier calls.
+        </p>
+
+        <h3>4. Supplier Intelligence</h3>
+        <p>
+          Automated scorecards, DOT and COT tracking, and earlier detection of supplier risk before it
+          becomes a service issue.
+        </p>
+
+        <h3>5. Exception Management</h3>
+        <p>
+          Automated alerts, severity-based prioritization, and direct drill-down into the shipments,
+          suppliers, or facilities driving the problem.
+        </p>
+
+        <h2>Implementation: What Actually Works</h2>
+        <p>
+          The implementation lesson is simple: avoid the big-bang transformation. The most successful
+          programs move in phases:
+        </p>
+        <ul>
+          <li>Weeks 1 to 4: establish visibility with connected data and dashboards</li>
+          <li>Weeks 4 to 8: integrate ERP, WMS, tracking, and event data</li>
+          <li>Weeks 8 to 12: activate AI-driven forecasting, optimization, and alerts</li>
+          <li>Months 3 to 6: expand into more advanced automation such as IoT and EDI workflows</li>
+        </ul>
+        <p>
+          That sequencing matters. Teams need trust in the data and operating model before they rely on AI
+          recommendations at scale.
+        </p>
+
+        <h2>Final Thought</h2>
+        <p>
+          The biggest inefficiencies in logistics are usually not hidden. They are simply not connected.
+        </p>
+        <p>
+          Once operations are unified and powered by AI, the pattern becomes clear:
+          <strong> visibility leads to better decisions, and better decisions compound into ROI.</strong>
+        </p>
+        <p>
+          If you want the full framework and supporting detail, read the complete white paper:
+          {" "}
+          <a href={logisticsWhitepaperPath} target="_blank" rel="noreferrer">
+            From Reactive to Resilient: How AI-Powered Logistics Platforms Transform Supply Chain
+            Operations
+          </a>
+          .
+        </p>
+      </>
+    ),
+  },
   "after-saas-new-software-era": {
     title: "After SaaS: Why Enterprises Are Quietly Entering a New Software Era",
     date: "January 10, 2026",

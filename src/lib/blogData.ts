@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    slug: "reactive-to-resilient-ai-logistics",
+    title: "From Reactive to Resilient: How AI Is Transforming Logistics",
+    excerpt:
+      "Why fragmented logistics operations lose millions, and how AI-driven visibility turns reactive networks into resilient ones.",
+    category: "Logistics AI",
+    date: "March 19, 2026",
+    readTime: "5 mins read",
+  },
+  {
     slug: "after-saas-new-software-era",
     title: "After SaaS: Why Enterprises Are Quietly Entering a New Software Era",
     excerpt:

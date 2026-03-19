@@ -66,6 +66,7 @@ const blogAuthor = {
 };
 
 const postHeroImages: Record<string, string> = {
+  "reactive-to-resilient-ai-logistics": "/logistics%20blog%20header.png",
   "after-saas-new-software-era": "/Auxilio%20blog%20saas.jpeg",
   "building-scalable-copy": "/exe%20blog%20header.jpeg",
   "ai-infrastructure-readiness": "/ai%20infra%20blog%20header.jpeg",

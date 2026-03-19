@@ -1910,6 +1910,15 @@ const BlogPost = () => {
   const description = seo?.description || post?.title || "";
   const canonical = buildCanonicalUrl(`/blog/${slug}`);
   const heroImage = slug ? postHeroImages[slug] : null;
+  const isLogisticsHero = slug === "reactive-to-resilient-ai-logistics";
+  const heroBackgroundImage = heroImage
+    ? isLogisticsHero
+      ? `linear-gradient(180deg, rgba(5, 10, 22, 0.72) 0%, rgba(5, 10, 22, 0.42) 40%, rgba(5, 10, 22, 0.66) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.22), rgba(6, 12, 24, 0) 60%), url(${heroImage})`
+      : `linear-gradient(180deg, rgba(5, 10, 22, 0.92) 0%, rgba(5, 10, 22, 0.7) 40%, rgba(5, 10, 22, 0.88) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.35), rgba(6, 12, 24, 0) 60%), url(${heroImage})`
+    : undefined;
+  const heroOverlayClass = isLogisticsHero
+    ? "absolute inset-0 bg-gradient-to-r from-background/55 via-background/28 to-background/12"
+    : "absolute inset-0 bg-gradient-to-r from-background/85 via-background/65 to-background/45";
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -1949,13 +1958,13 @@ const BlogPost = () => {
         style={
           heroImage
             ? {
-                backgroundImage: `linear-gradient(180deg, rgba(5, 10, 22, 0.92) 0%, rgba(5, 10, 22, 0.7) 40%, rgba(5, 10, 22, 0.88) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.35), rgba(6, 12, 24, 0) 60%), url(${heroImage})`,
+                backgroundImage: heroBackgroundImage,
               }
             : undefined
         }
       >
         {heroImage ? (
-          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/65 to-background/45" />
+          <div className={heroOverlayClass} />
         ) : null}
         <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">

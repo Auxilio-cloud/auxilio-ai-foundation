@@ -1911,7 +1911,9 @@ const BlogPost = () => {
   const canonical = buildCanonicalUrl(`/blog/${slug}`);
   const heroImage = slug ? postHeroImages[slug] : null;
   const hasLightHeroTreatment =
-    slug === "reactive-to-resilient-ai-logistics" || slug === "after-saas-new-software-era";
+    slug === "reactive-to-resilient-ai-logistics" ||
+    slug === "after-saas-new-software-era" ||
+    slug === "building-scalable-copy";
   const heroBackgroundImage = heroImage
     ? hasLightHeroTreatment
       ? `linear-gradient(180deg, rgba(5, 10, 22, 0.72) 0%, rgba(5, 10, 22, 0.42) 40%, rgba(5, 10, 22, 0.66) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.22), rgba(6, 12, 24, 0) 60%), url(${heroImage})`

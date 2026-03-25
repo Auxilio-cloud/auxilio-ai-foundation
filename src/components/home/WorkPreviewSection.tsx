@@ -8,6 +8,7 @@ import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
 import auxilioTimeImg from "@/assets/portfolio/auxilio-time.svg";
+import myyaadImg from "@/assets/portfolio/myyaad.png";
 
 const AUXILIO_WEB_PATH = "/web-services/";
 
@@ -69,6 +70,14 @@ const featuredProjects = [
     image: auxilioTimeImg,
     description: "Time tracking and timesheet management for projects, clients, and teams with a focused, lightweight workflow.",
   },
+  {
+    name: "MyYaad",
+    domain: "myyaad.com",
+    url: "https://www.myyaad.com",
+    industry: "Privacy & Security",
+    image: myyaadImg,
+    description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
+  },
 ];
 
 export function WorkPreviewSection() {
@@ -95,7 +104,7 @@ export function WorkPreviewSection() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-12">
           {featuredProjects.map((project, index) => (
             <a
               key={project.name}

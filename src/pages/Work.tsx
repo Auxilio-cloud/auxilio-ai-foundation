@@ -15,6 +15,7 @@ import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
 import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
 import auxilioTimeImg from "@/assets/portfolio/auxilio-time.svg";
+import myyaadImg from "@/assets/portfolio/myyaad.png";
 
 const AUXILIO_WEB_PATH = "/web-services/";
 const AUXILIO_WEB_URL = buildCanonicalUrl(AUXILIO_WEB_PATH);
@@ -98,6 +99,17 @@ const softwareApplicationSchema = {
       author: { "@type": "Organization", name: "Auxilio" },
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
       url: "https://time.auxilio.cloud",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 8,
+      name: "MyYaad",
+      description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
+      applicationCategory: "SecurityApplication",
+      operatingSystem: "macOS, Windows",
+      author: { "@type": "Organization", name: "MyYaad" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "GBP", description: "Free forever" },
+      url: "https://www.myyaad.com",
     },
   ],
 };
@@ -198,6 +210,16 @@ const productProjects = [
     features: ["Timesheets", "Project Hours", "Client Reporting"],
     gradient: "from-emerald-500 to-cyan-500",
   },
+  {
+    name: "MyYaad",
+    domain: "myyaad.com",
+    url: "https://www.myyaad.com",
+    industry: "Privacy & Security",
+    image: myyaadImg,
+    description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
+    features: ["100% Local", "AI Privacy Firewall", "Cross-Provider Shadows"],
+    gradient: "from-violet-500 to-amber-400",
+  },
 ];
 
 const productOutcomes = [
@@ -284,58 +306,57 @@ const Work = () => {
                   Tailored AI platforms built for large-scale operations, compliance, and mission-critical workflows.
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid gap-8">
                 {enterpriseProjects.map((project, index) => (
                   <a
                     key={project.name}
                     href={project.url}
-                    className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                    className="group relative overflow-hidden rounded-[28px] border border-border/80 bg-card/95 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_24px_80px_-32px_rgba(0,217,192,0.35)] animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    {/* Screenshot Image */}
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={project.image}
-                        alt={`${project.name} screenshot`}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-8">
-                      {/* Industry tag */}
-                      <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
-                        {project.industry}
-                      </span>
-
-                      {/* Project name and external link */}
-                      <div className="flex items-start justify-between mb-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
-                          {project.name}
-                        </h2>
-                        <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                    <div className="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)]">
+                      {/* Screenshot Image */}
+                      <div className="aspect-[16/10] overflow-hidden lg:aspect-auto lg:h-full">
+                        <img
+                          src={project.image}
+                          alt={`${project.name} screenshot`}
+                          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                        />
                       </div>
 
-                      {/* Domain */}
-                      <p className="text-sm text-muted-foreground mb-4 font-mono">
-                        {project.domain}
-                      </p>
-
-                      {/* Description */}
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {project.description}
-                      </p>
-
-                      {/* Features */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.features.map((feature) => (
-                          <span
-                            key={feature}
-                            className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
-                          >
-                            {feature}
+                      {/* Content */}
+                      <div className="flex flex-col justify-between p-8 lg:p-10">
+                        <div>
+                          <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+                            {project.industry}
                           </span>
-                        ))}
+
+                          <div className="mb-4 flex items-start justify-between gap-4">
+                            <h2 className="text-2xl font-bold text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                              {project.name}
+                            </h2>
+                            <ArrowUpRight className="h-6 w-6 flex-shrink-0 text-muted-foreground transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-primary" />
+                          </div>
+
+                          <p className="mb-5 text-sm font-mono text-muted-foreground">
+                            {project.domain}
+                          </p>
+
+                          <p className="mb-8 max-w-xl text-base leading-relaxed text-muted-foreground">
+                            {project.description}
+                          </p>
+                        </div>
+
+                        <div className="flex flex-wrap gap-2.5">
+                          {project.features.map((feature) => (
+                            <span
+                              key={feature}
+                              className="rounded-full bg-secondary px-3 py-1.5 text-xs text-secondary-foreground"
+                            >
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </a>
@@ -381,7 +402,7 @@ const Work = () => {
                   Explore our self-serve applications built for teams and individuals looking to deploy AI quickly.
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                 {productProjects.map((project, index) => (
                   <a
                     key={project.name}
@@ -389,49 +410,49 @@ const Work = () => {
                     {...(project.url.startsWith("http") || project.openInNewTab
                       ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
-                    className="group relative bg-card border border-border rounded-2xl overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 animate-slide-up"
+                    className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-border/70 bg-card/95 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_-28px_rgba(0,217,192,0.35)] animate-slide-up"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     {/* Screenshot Image */}
-                    <div className="aspect-video overflow-hidden">
+                    <div className="aspect-[16/9] overflow-hidden border-b border-white/5">
                       <img
                         src={project.image}
                         alt={`${project.name} screenshot`}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
                       />
                     </div>
 
                     {/* Content */}
-                    <div className="p-8">
+                    <div className="flex flex-1 flex-col p-5 md:p-6">
                       {/* Industry tag */}
-                      <span className="inline-block text-xs uppercase tracking-widest text-accent font-semibold mb-4">
+                      <span className="mb-3 inline-block text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
                         {project.industry}
                       </span>
 
                       {/* Project name and external link */}
-                      <div className="flex items-start justify-between mb-4">
-                        <h2 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      <div className="mb-3 flex items-start justify-between gap-3">
+                        <h2 className="text-xl font-bold text-foreground transition-colors group-hover:text-primary md:text-2xl">
                           {project.name}
                         </h2>
-                        <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                        <ArrowUpRight className="h-5 w-5 flex-shrink-0 text-muted-foreground transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary" />
                       </div>
 
                       {/* Domain */}
-                      <p className="text-sm text-muted-foreground mb-4 font-mono">
+                      <p className="mb-3 text-xs font-mono text-muted-foreground">
                         {project.domain}
                       </p>
 
                       {/* Description */}
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
+                      <p className="mb-5 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                         {project.description}
                       </p>
 
                       {/* Features */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="mt-auto flex flex-wrap gap-2">
                         {project.features.map((feature) => (
                           <span
                             key={feature}
-                            className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                            className="rounded-full bg-secondary px-2.5 py-1 text-[11px] text-secondary-foreground"
                           >
                             {feature}
                           </span>

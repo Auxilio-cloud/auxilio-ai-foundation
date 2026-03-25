@@ -13,7 +13,7 @@ import healthImg from "@/assets/portfolio/health.png";
 import financeImg from "@/assets/portfolio/finance.png";
 import legalImg from "@/assets/portfolio/legal.png";
 import logisticsImg from "@/assets/portfolio/logistics.png";
-import auxilioWebImg from "@/assets/portfolio/auxilio-web.svg";
+import auxilioWebImg from "@/assets/portfolio/auxilio-web.png";
 import auxilioTimeImg from "@/assets/portfolio/auxilio-time.svg";
 import myyaadImg from "@/assets/portfolio/myyaad.png";
 

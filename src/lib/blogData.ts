@@ -1,5 +1,14 @@
 export const blogPosts = [
   {
+    slug: "the-ai-remembers-everything",
+    title: "The AI Remembers Everything. Do You Know What?",
+    excerpt:
+      "AI memory is becoming the new privacy battleground. Useful systems do not need raw exposure to personal context.",
+    category: "AI & Privacy",
+    date: "April 13, 2026",
+    readTime: "4 mins read",
+  },
+  {
     slug: "reactive-to-resilient-ai-logistics",
     title: "From Reactive to Resilient: How AI Is Transforming Logistics",
     excerpt:

@@ -5,11 +5,17 @@ import { Seo } from "@/components/Seo";
 import { buildCanonicalUrl, defaultOgImage, siteUrl } from "@/lib/seo";
 import { baseStructuredData, buildBreadcrumbListSchema, buildBlogPostingSchema } from "@/lib/structuredData";
 import { blogPosts } from "@/lib/blogData";
+import { AiMemoryPost } from "@/components/blog";
 
 const logisticsWhitepaperPath = "/datasheets/auxilio-logistics-overview-whitepaper.pdf";
 
 // SEO metadata for each post
 const postSeo: Record<string, { title: string; description: string }> = {
+  "the-ai-remembers-everything": {
+    title: "The AI Remembers Everything. Do You Know What? | Auxilio",
+    description:
+      "A short editorial on AI memory, personal context, and why useful personal AI does not have to mean exposed personal data.",
+  },
   "reactive-to-resilient-ai-logistics": {
     title: "From Reactive to Resilient: How AI Is Transforming Logistics | Auxilio",
     description:
@@ -66,6 +72,7 @@ const blogAuthor = {
 };
 
 const postHeroImages: Record<string, string> = {
+  "the-ai-remembers-everything": "/ai-memory-header.png",
   "reactive-to-resilient-ai-logistics": "/logistics%20blog%20header.png",
   "after-saas-new-software-era": "/Auxilio%20blog%20saas.jpeg",
   "building-scalable-copy": "/exe%20blog%20header.jpeg",
@@ -82,9 +89,18 @@ const posts: Record<
     date: string;
     datePublished: string;
     readTime: string;
+    author?: string;
     content: React.ReactNode;
   }
 > = {
+  "the-ai-remembers-everything": {
+    title: "The AI Remembers Everything. Do You Know What?",
+    date: "April 13, 2026",
+    datePublished: "2026-04-13",
+    readTime: "4 mins read",
+    author: "Auxilio Team",
+    content: <AiMemoryPost />,
+  },
   "reactive-to-resilient-ai-logistics": {
     title: "From Reactive to Resilient: How AI Is Transforming Logistics",
     date: "March 19, 2026",
@@ -1914,6 +1930,10 @@ const BlogPost = () => {
     ? `linear-gradient(180deg, rgba(5, 10, 22, 0.72) 0%, rgba(5, 10, 22, 0.42) 40%, rgba(5, 10, 22, 0.66) 100%), radial-gradient(900px circle at 15% 20%, rgba(28, 44, 82, 0.22), rgba(6, 12, 24, 0) 60%), url(${heroImage})`
     : undefined;
   const heroOverlayClass = "absolute inset-0 bg-gradient-to-r from-background/55 via-background/28 to-background/12";
+  const heroTitleClassName =
+    slug === "the-ai-remembers-everything"
+      ? "text-[2rem] md:text-[2.5rem] font-semibold tracking-tight text-foreground leading-tight"
+      : "text-3xl md:text-4xl font-semibold tracking-tight text-foreground";
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -1963,7 +1983,7 @@ const BlogPost = () => {
         ) : null}
         <div className="container relative z-10 mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+            <h1 className={heroTitleClassName}>
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mt-4">
@@ -1975,7 +1995,7 @@ const BlogPost = () => {
                 <Clock className="w-4 h-4" />
                 {post.readTime}
               </span>
-              <span>By Auxilio Team</span>
+              <span>By {post.author ?? "Auxilio Team"}</span>
             </div>
           </div>
         </div>

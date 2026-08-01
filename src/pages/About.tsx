@@ -31,6 +31,30 @@ const team = [
       },
     ],
   },
+  {
+    name: "Mark Callan",
+    role: "Chief Product Officer",
+    bio: "Mark is a strategic technology leader with over 20 years of experience building and scaling complex platforms across enterprise and startup environments. He combines deep technical expertise in cloud infrastructure, data and pricing optimisation, and governance with a disciplined approach to Agile product delivery and customer-led discovery. Operating at the intersection of AI, product strategy, and execution, he has led global product and engineering teams from initial discovery through launch and live operations, and through the transformation and modernisation of products to improve performance, usability, security, and AI capabilities.",
+    image: "/team/mark-callan.jpg",
+    links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/markdcallan/",
+      },
+    ],
+  },
+  {
+    name: "Abdul-Rahman Mahmood",
+    role: "Principal Technology Consultant",
+    bio: "Abdul-Rahman is a technology strategist, software architect, and cybersecurity expert with 27+ years of experience delivering enterprise-scale solutions across government, financial services, defense, healthcare, and academia. His expertise spans AI-native systems, cryptography, digital forensics, embedded computing, and secure enterprise platforms. He has led the design and delivery of large-scale software products, AI-driven applications, and mission-critical systems, and advises on technology strategy and innovation. A distinguished academician, he also mentors future technology leaders and researches cybersecurity, AI, and secure computing. His current focus is trustworthy AI-native platforms combining security, privacy, and scalable architecture.",
+    image: "/team/abdul-rahman-mahmood.jpg",
+    links: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/armahmood/",
+      },
+    ],
+  },
 ];
 
 const About = () => {

@@ -11,14 +11,18 @@ Auxilio AI Foundation is the marketing and product platform for [auxilio.cloud](
 - `npm run preview` — Serve production build locally
 
 ## Git Workflow
-1. Work on the `backup190126` branch
-2. Push changes to `backup190126`
-3. Create a PR from `backup190126` → `main`
-4. Merge the PR to deploy (Vercel auto-deploys from `main`)
+1. Branch off current `main` — one short-lived branch per change, named for the work (e.g. `add-team-mark-abdul`)
+2. Push that branch to `origin`
+3. Create a PR from the branch → `main`
+4. Merge the PR to deploy (Vercel auto-deploys from `main`), then delete the branch
+
+Do not reuse the dated `backup*` branches as working branches — they are point-in-time
+snapshots of `main`, not feature branches, and they fall behind quickly. To take a new
+snapshot, branch from current `main` as `backupDDMMYY` and push it without opening a PR.
 
 ## Commit Style
 - Use short, imperative subjects: "Add FAQ section", "Fix navbar scroll"
-- Include `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` for AI-assisted commits
+- Include a `Co-Authored-By: <model> <noreply@anthropic.com>` trailer on AI-assisted commits, naming the model that did the work
 - Stage specific files — avoid `git add -A` or `git add .`
 
 ## PR Format
@@ -56,7 +60,7 @@ supabase/         — Supabase project config
 ## Do Not
 - Modify files in `src/components/ui/` — these are managed by shadcn/ui
 - Commit `.env` files — use `VITE_` prefix for env vars, document new ones
-- Push directly to `main` — always go through `backup190126` → PR
+- Push directly to `main` — always go through a feature branch → PR
 
 ## Environment Variables
 - Use `VITE_` prefix for all client-side env vars

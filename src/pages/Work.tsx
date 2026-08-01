@@ -28,6 +28,17 @@ const softwareApplicationSchema = {
     {
       "@type": "SoftwareApplication",
       position: 1,
+      name: "MyYaad",
+      description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
+      applicationCategory: "SecurityApplication",
+      operatingSystem: "macOS, Windows",
+      author: { "@type": "Organization", name: "MyYaad" },
+      offers: { "@type": "Offer", price: "0", priceCurrency: "GBP", description: "Free forever" },
+      url: "https://www.myyaad.com",
+    },
+    {
+      "@type": "SoftwareApplication",
+      position: 2,
       name: "Auxilio Promptly",
       description: "Cross-model AI verification tool. Compare and debate responses from OpenAI, Anthropic, Google, xAI, and more.",
       applicationCategory: "ProductivityApplication",
@@ -38,7 +49,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "SoftwareApplication",
-      position: 2,
+      position: 3,
       name: "Auxilio Health",
       description: "Intelligent personal healthcare management with AI-driven aids to understanding aspects of personal health.",
       applicationCategory: "HealthApplication",
@@ -49,7 +60,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "SoftwareApplication",
-      position: 3,
+      position: 4,
       name: "Auxilio Finance",
       description: "Financial intelligence and management platform for tracking and analyzing personal financial positions with AI-driven advice.",
       applicationCategory: "FinanceApplication",
@@ -60,7 +71,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "SoftwareApplication",
-      position: 4,
+      position: 5,
       name: "Auxilio Legal",
       description: "Legal intelligence and workflows for simplified everyday legal tasks and workflows.",
       applicationCategory: "BusinessApplication",
@@ -71,7 +82,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "SoftwareApplication",
-      position: 5,
+      position: 6,
       name: "Auxilio Logistics",
       description: "Intelligent logistics and supply chain management with AI-powered route optimization and tracking.",
       applicationCategory: "BusinessApplication",
@@ -82,7 +93,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "ProfessionalService",
-      position: 6,
+      position: 7,
       name: "Auxilio Web",
       description: "Professional web design for small businesses. Fixed-price builds with ongoing care plans.",
       author: { "@type": "Organization", name: "Auxilio" },
@@ -91,7 +102,7 @@ const softwareApplicationSchema = {
     },
     {
       "@type": "SoftwareApplication",
-      position: 7,
+      position: 8,
       name: "Auxilio Time",
       description: "Time tracking and timesheet management for projects, clients, and teams.",
       applicationCategory: "ProductivityApplication",
@@ -99,17 +110,6 @@ const softwareApplicationSchema = {
       author: { "@type": "Organization", name: "Auxilio" },
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD", description: "Free tier available" },
       url: "https://time.auxilio.cloud",
-    },
-    {
-      "@type": "SoftwareApplication",
-      position: 8,
-      name: "MyYaad",
-      description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
-      applicationCategory: "SecurityApplication",
-      operatingSystem: "macOS, Windows",
-      author: { "@type": "Organization", name: "MyYaad" },
-      offers: { "@type": "Offer", price: "0", priceCurrency: "GBP", description: "Free forever" },
-      url: "https://www.myyaad.com",
     },
   ],
 };
@@ -149,6 +149,16 @@ const enterpriseOutcomes = [
 ];
 
 const productProjects = [
+  {
+    name: "MyYaad",
+    domain: "myyaad.com",
+    url: "https://www.myyaad.com",
+    industry: "Privacy & Security",
+    image: myyaadImg,
+    description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
+    features: ["100% Local", "AI Privacy Firewall", "Cross-Provider Shadows"],
+    gradient: "from-violet-500 to-amber-400",
+  },
   {
     name: "Auxilio Promptly",
     domain: "promptly.digital",
@@ -209,16 +219,6 @@ const productProjects = [
     description: "Time tracking and timesheet management for projects, clients, and teams with a focused, lightweight workflow.",
     features: ["Timesheets", "Project Hours", "Client Reporting"],
     gradient: "from-emerald-500 to-cyan-500",
-  },
-  {
-    name: "MyYaad",
-    domain: "myyaad.com",
-    url: "https://www.myyaad.com",
-    industry: "Privacy & Security",
-    image: myyaadImg,
-    description: "Privacy-first AI vault that protects personal data when using ChatGPT, Claude, Gemini, and DeepSeek with realistic local shadow values.",
-    features: ["100% Local", "AI Privacy Firewall", "Cross-Provider Shadows"],
-    gradient: "from-violet-500 to-amber-400",
   },
 ];
 
